@@ -11,7 +11,6 @@ Takım X
 - Selin Moralı: Team Member/Developer
 - Asrın Sıla Şimşek: Team Member/Developer
 - Haluk Mert Özdemir: Team Member/Developer
-- Mehmet Fırat Fidan: Team Member/Developer
 
 ## Ürün İsmi
 
