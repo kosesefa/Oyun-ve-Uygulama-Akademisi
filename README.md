@@ -6,7 +6,7 @@ Takım X
 
 ## Takım Elemanları
 
-- Sefa Köse: Product Owner
+- Mehmet Fırat Fidan: Product Owner
 - Sefa Köse: Scrum Master
 - Selin Moralı: Team Member/Developer
 - Asrın Sıla Şimşek: Team Member/Developer
