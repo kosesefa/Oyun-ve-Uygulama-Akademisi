@@ -37,7 +37,7 @@ https://trello.com/b/UlNJC9rW/project-management
 # Sprint 1
 
 - **Sprint Notları**: x
-- 
+
 - **Sprint içinde tamamlanması tahmin edilen puan**: x
 
 - **Puan tamamlama mantığı**: x
