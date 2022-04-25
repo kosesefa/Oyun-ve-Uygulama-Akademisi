@@ -1,6 +1,6 @@
 # **Takım İsmi**
 
-Takım X
+ATONAL
 
 # Ürün İle İlgili Bilgiler
 
