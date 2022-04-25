@@ -1,1 +1,1 @@
-# Oyun-ve-Uygulama-Akademisi
+# OyunVeUygulamaAkademisi
