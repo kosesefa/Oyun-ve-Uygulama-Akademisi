@@ -30,7 +30,7 @@ X
 
 ## Product Backlog URL
 
-[Miro Backlog Board](https://miro.com/app/board/uXjVOSSCpsI=/)
+https://trello.com/b/UlNJC9rW/project-management
 
 ---
 
