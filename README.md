@@ -18,7 +18,7 @@ Takım X
 
 ## Ürün Açıklaması
 
-- X
+X
 
 ## Ürün Özellikleri
 
