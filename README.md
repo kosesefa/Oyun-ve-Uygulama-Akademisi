@@ -52,7 +52,7 @@ https://trello.com/b/UlNJC9rW/project-management
 
 - **Sprint Review**: x
 
-- **Sprint Retrospective:**x
+- **Sprint Retrospective:** x
 - 
 -**Diğer Notlar**:
 - N/A
