@@ -26,6 +26,7 @@ X
 
 ## Hedef Kitle
 
+- Windows bilgisayar kullanıcıları,
 - 12 yaş ve üstü,
 - Macera ve puzzle oyunlarını seven,
 - Bağımsız oyunlar oynayan genel oyuncu kitlesi.
