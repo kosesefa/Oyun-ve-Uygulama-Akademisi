@@ -53,7 +53,7 @@ https://miro.com/app/board/uXjVO5siros=/
 - **Sprint Review**: x
 
 - **Sprint Retrospective:** x
-- 
+
 -**Diğer Notlar**:
 - N/A
 
