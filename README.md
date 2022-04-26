@@ -14,11 +14,11 @@ ATONAL
 
 ## Ürün İsmi
 
-Otis: A Seeker After Truth
+Otis: A Seeker of the Truth
 
 ## Ürün Açıklaması
 
-X
+Üç boyutlu low poly grafiklere sahip bir macera ve bulmaca oyunudur. Oyunda ilerledikçe ortaya çıkan puzzle, bilmece ve bulmacaları çözerek hikayenin sonuna ulaşmaya çalışır.
 
 ## Ürün Özellikleri
 
