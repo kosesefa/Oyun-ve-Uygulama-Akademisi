@@ -14,7 +14,7 @@ ATONAL
 
 ## Ürün İsmi
 
---X--
+X
 
 ## Ürün Açıklaması
 
