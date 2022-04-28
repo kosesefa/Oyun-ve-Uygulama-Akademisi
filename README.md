@@ -18,7 +18,7 @@ Otis: A Seeker of the Truth
 
 ## Ürün Açıklaması
 
-Üç boyutlu low poly grafiklere sahip bir macera ve bulmaca oyunudur. Oyunda ilerledikçe ortaya çıkan bulmaca çözerek hikayenin sonuna ulaşmaya çalışır.
+Üç boyutlu low poly grafiklere sahip bir macera ve bulmaca oyunudur. Oyunda ilerledikçe ortaya çıkan bulmacaları çözen karakterimiz, hikayenin sonuna ulaşmaya çalışır.
 
 ## Ürün Özellikleri
 
