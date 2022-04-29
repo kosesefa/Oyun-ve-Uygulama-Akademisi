@@ -14,7 +14,7 @@ ATONAL
 
 ## Ürün İsmi
 
-Otis: A Seeker of the Truth
+Otis: Seeker of the Truth
 
 ## Ürün Açıklaması
 
