@@ -43,9 +43,9 @@ https://miro.com/app/board/uXjVO5siros=/
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan
 
-- **Puan tamamlama mantığı**: x
+- **Puan tamamlama mantığı**: Proje boyunca toplam tamamlanması gereken 330 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in 100 ile başlaması gerektiğine karar verildi.
 
-- **Backlog düzeni ve Story seçimleri**: x
+- **Backlog düzeni ve Story seçimleri**: Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmış ve tamamlanmıştır.
 
 - **Daily Scrum**: x
 
