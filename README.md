@@ -49,12 +49,16 @@ https://miro.com/app/board/uXjVO5siros=/
 
 - **Daily Scrum**: Daily Scrum toplantılarımız çeşitli koşullar sebebiyle bazen Discord bazen de Whatsapp üzerinden gerçekleşmiştir. Daily Scrum toplantısı örneği jpeg ve word olarak Readme dosyası üzerinden tarafımızca paylaşılmaktadır.
 
-- **Sprint board update**: ![alt text] 
+- **Sprint board update**: ![Backlog-1](https://user-images.githubusercontent.com/99612318/167272372-aedb74e8-0e90-4bfd-a2ea-2943d0ee3538.png)
+![Backlog-2](https://user-images.githubusercontent.com/99612318/167272375-4a530540-85ac-4a06-ac89-28d0c95140e5.png)
+![Backlog-3](https://user-images.githubusercontent.com/99612318/167272379-b0633764-686f-4d0f-bdf1-ad57945ad5dc.png)
+
+- **Ürün Durumu**: ![ÇevreTasarım](https://user-images.githubusercontent.com/99612318/167272359-bac8c336-bc8d-4416-974f-c4c3c9f01f54.png)
+![Karakter-1](https://user-images.githubusercontent.com/99612318/167272366-b214bb36-62ee-437e-a861-12a19315b4fd.png)
+![Kapı-1](https://user-images.githubusercontent.com/99612318/167272369-e7196d1f-8b93-4218-9f0c-095f44ca78da.png)
 
 
-- **Ürün Durumu**: 
-
-- **Sprint Review**: x![Cinemachine](https://user-images.githubusercontent.com/99612318/167272342-c3ffe6b1-9418-42cf-9f81-c5444b8dab63.png)
+- **Sprint Review**: 
 
 
 - **Sprint Retrospective:** x
