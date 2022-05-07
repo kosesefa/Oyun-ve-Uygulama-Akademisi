@@ -39,9 +39,9 @@ https://miro.com/app/board/uXjVO5siros=/
 
 # Sprint 1
 
-- **Sprint Notları**: x
+- **Sprint Notları**: Product backlog item'lara tıklandığında görevlerin detayları okunabilir.
 
-- **Sprint içinde tamamlanması tahmin edilen puan**: x
+- **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan
 
 - **Puan tamamlama mantığı**: x
 
