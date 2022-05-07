@@ -58,13 +58,16 @@ https://miro.com/app/board/uXjVO5siros=/
 ![Kapı-1](https://user-images.githubusercontent.com/99612318/167272369-e7196d1f-8b93-4218-9f0c-095f44ca78da.png)
 
 
-- **Sprint Review**: 
+- **Sprint Review**: Alınan Kararlar: Oyunumuzda kullanacağımız assetler konusunda karar verilmiştir. Karakter kontrol sistemi ve karakter assetine karar verilmiş ancak bu sprint içerisinde karakter kontrol görevi tam bitmediği için bir sonraki sprinte atanmıştır.Çevre düzenlemesi ve level dizayn görevleri bir sonraki sprint için de devam edecektir. 
+- Sprint Review Katılımcıları:
+- Sefa Köse, Selin Moralı, Haluk Mert Özdemir, M.Fırat Fidan, Asrın Sıla Şimşek.
 
 
-- **Sprint Retrospective:** x
-
--**Diğer Notlar**:
-- N/A
+- **Sprint Retrospective**:
+- Takım içi görev dağılımları yeniden gözden geçirilmiştir.
+- Puan sistemi ufak değişikliklerle güncellenmiş olup bir sonraki sprint için hedeflenen puan belirlenmiştir. 
+- Görevler için ekstra efor ve zaman developerlardan rica edilmiştir.
+- Oyun içi mekanik ve kod kısımlarına daha ağırlık verilmesi planlanmış olup, ekstra araştırmalar yapılacaktır.
 
 ---
 
