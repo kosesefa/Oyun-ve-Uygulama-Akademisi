@@ -47,7 +47,8 @@ https://miro.com/app/board/uXjVO5siros=/
 
 - **Backlog düzeni ve Story seçimleri**: Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmış ve tamamlanmıştır.
 
-- **Daily Scrum**: Daily Scrum toplantılarımız çeşitli koşullar sebebiyle bazen Discord bazen de Whatsapp üzerinden gerçekleşmiştir. Daily Scrum toplantısı örneği jpeg ve word olarak Readme dosyası üzerinden tarafımızca paylaşılmaktadır.
+- **Daily Scrum**: Daily Scrum toplantılarımız çeşitli koşullar sebebiyle bazen Discord bazen de Whatsapp üzerinden gerçekleşmiştir. Daily Scrum toplantısı örneği jpeg ve word olarak Readme dosyası üzerinden tarafımızca paylaşılmaktadır. [Daily Sprint .docx](https://github.com/kosesefa/Oyun-ve-Uygulama-Akademisi/files/8646089/Daily.Sprint.docx)
+
 
 - **Sprint board update**: ![Backlog-1](https://user-images.githubusercontent.com/99612318/167272372-aedb74e8-0e90-4bfd-a2ea-2943d0ee3538.png)
 ![Backlog-2](https://user-images.githubusercontent.com/99612318/167272375-4a530540-85ac-4a06-ac89-28d0c95140e5.png)
