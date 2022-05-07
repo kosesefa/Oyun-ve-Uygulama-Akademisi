@@ -62,6 +62,8 @@ https://miro.com/app/board/uXjVO5siros=/
 - Sprint Review Katılımcıları: Sefa Köse, Selin Moralı, Haluk Mert Özdemir, M.Fırat Fidan, Asrın Sıla Şimşek.
 
 
+
+
 - **Sprint Retrospective**:
 - Takım içi görev dağılımları yeniden gözden geçirilmiştir.
 - Puan sistemi ufak değişikliklerle güncellenmiş olup bir sonraki sprint için hedeflenen puan belirlenmiştir. 
