@@ -22,7 +22,7 @@ Otis: Seeker of the Truth
 
 ## Ürün Özellikleri
 
-X
+Karakterimiz Otis bir gün daha önce hiç görmediği, çevresinde enterasan bitkilerin bulunduğu bir evrende uyanır. Bu evreni anlamak ve tanımak adına Otis bir gezintiye çıkar. Amacı gerçeği bulmaktır. Çeşitli bulmaca ve maceralarla adım adım gerçeğe yaklaşır
 
 ## Hedef Kitle
 
