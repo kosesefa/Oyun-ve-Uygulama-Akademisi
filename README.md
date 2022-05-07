@@ -1,4 +1,4 @@
-# **Takım İsmi**
+﻿# **Takım İsmi**
 
 ATONAL
 
@@ -49,9 +49,10 @@ https://miro.com/app/board/uXjVO5siros=/
 
 - **Daily Scrum**: Daily Scrum toplantılarımız çeşitli koşullar sebebiyle bazen Discord bazen de Whatsapp üzerinden gerçekleşmiştir. Daily Scrum toplantısı örneği jpeg ve word olarak Readme dosyası üzerinden tarafımızca paylaşılmaktadır.
 
-- **Sprint board update**: x
+- **Sprint board update**: 
 
-- **Ürün Durumu**: x
+
+- **Ürün Durumu**: 
 
 - **Sprint Review**: x
 
