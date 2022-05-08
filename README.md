@@ -57,6 +57,7 @@ https://miro.com/app/board/uXjVO5siros=/
 - **Ürün Durumu**: ![ÇevreTasarım](https://user-images.githubusercontent.com/99612318/167272359-bac8c336-bc8d-4416-974f-c4c3c9f01f54.png)
 ![Karakter-1](https://user-images.githubusercontent.com/99612318/167272366-b214bb36-62ee-437e-a861-12a19315b4fd.png)
 ![Kapı-1](https://user-images.githubusercontent.com/99612318/167272369-e7196d1f-8b93-4218-9f0c-095f44ca78da.png)
+![script](https://user-images.githubusercontent.com/73489969/167296152-3febafc3-3c6c-4ea4-b73a-b6f250feeac8.png)
 
 
 - **Sprint Review**: Alınan Kararlar: Oyunumuzda kullanacağımız assetler konusunda karar verilmiştir. Karakter kontrol sistemi ve karakter assetine karar verilmiş ancak bu sprint içerisinde karakter kontrol görevi tam bitmediği için bir sonraki sprinte atanmıştır.Çevre düzenlemesi ve level dizayn görevleri bir sonraki sprint için de devam edecektir. 
