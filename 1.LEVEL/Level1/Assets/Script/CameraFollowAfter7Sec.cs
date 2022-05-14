@@ -8,21 +8,24 @@ public class CameraFollowAfter7Sec : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AnimatedCamera.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 97;
+        TPCamera.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 98;
         StartCoroutine("CameraActions");
+        
     }
-
 
     IEnumerator CameraActions()
     {
 
         yield return new WaitForSeconds(ActionCameraPlayTime);
-        AnimatedCamera.SetActive(true);
-        TPCamera.SetActive(false);
+        TPCamera.SetActive(true);
+        AnimatedCamera.SetActive(false);
+        Debug.Log("Kamera aktiviteleri");
 
     }
 
-    [SerializeField] public GameObject AnimatedCamera;     
-    [SerializeField] public GameObject TPCamera;
+    [SerializeField] public GameObject TPCamera;     
+    [SerializeField] public GameObject AnimatedCamera;
     [SerializeField] public float ActionCameraPlayTime;
     
 }

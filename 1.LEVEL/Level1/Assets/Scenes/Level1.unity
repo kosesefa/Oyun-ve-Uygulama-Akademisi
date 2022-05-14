@@ -2033,21 +2033,6 @@ PlayableDirector:
   m_SceneBindings: []
   m_ExposedReferences:
     m_References: []
---- !u!114 &857342074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857342067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9750880fce60e54e89912a8e8445e12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimatedCamera: {fileID: 857342067}
-  TPCamera: {fileID: 1141939782}
-  ActionCameraPlayTime: 12.5
 --- !u!33 &885887460
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3030,6 +3015,7 @@ GameObject:
   - component: {fileID: 1141939786}
   - component: {fileID: 1141939785}
   - component: {fileID: 1141939787}
+  - component: {fileID: 1141939788}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -3066,7 +3052,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8825561, y: 1}
+    m_SensorSize: {x: 1.4638845, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3165,6 +3151,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1141939788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141939782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9750880fce60e54e89912a8e8445e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TPCamera: {fileID: 857342067}
+  AnimatedCamera: {fileID: 1141939782}
+  ActionCameraPlayTime: 10
 --- !u!1 &1186110973
 GameObject:
   m_ObjectHideFlags: 0
@@ -3346,26 +3347,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230374517}
   m_Mesh: {fileID: 4300000, guid: a797bea746bba59439067b50859ce461, type: 3}
---- !u!1 &1306188784 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 974238578668270704, guid: c708a3b79cd542b42bbfedb17e213bc1, type: 3}
-  m_PrefabInstance: {fileID: 2015896019}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1306188791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306188784}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9750880fce60e54e89912a8e8445e12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimatedCamera: {fileID: 0}
-  TPCamera: {fileID: 0}
-  ActionCameraPlayTime: 0
 --- !u!1 &1319650313
 GameObject:
   m_ObjectHideFlags: 0
@@ -5309,7 +5290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3203261902030645159, guid: c708a3b79cd542b42bbfedb17e213bc1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3310401929785838246, guid: c708a3b79cd542b42bbfedb17e213bc1, type: 3}
       propertyPath: m_LocalPosition.x
