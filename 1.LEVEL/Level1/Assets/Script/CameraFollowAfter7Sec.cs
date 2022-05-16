@@ -10,8 +10,7 @@ public class CameraFollowAfter7Sec : MonoBehaviour
     {
         AnimatedCamera.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 97;
         TPCamera.GetComponent<Cinemachine.CinemachineVirtualCamera>().Priority = 98;
-        StartCoroutine("CameraActions");
-        
+        StartCoroutine("CameraActions");  
     }
 
     IEnumerator CameraActions()
