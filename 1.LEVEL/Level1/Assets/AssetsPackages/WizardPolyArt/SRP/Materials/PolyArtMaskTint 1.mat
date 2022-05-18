@@ -67,6 +67,8 @@ Material:
     - _Float1: 0
     - _Metal: 0
     - _Metallic: 0.3
+    - _QueueControl: 0
+    - _QueueOffset: 0
     - _Sm: 0
     - _Smoothness: 0
     - __dirty: 0
