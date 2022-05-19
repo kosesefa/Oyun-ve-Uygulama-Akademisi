@@ -6,7 +6,11 @@ using UnityEngine.UI;
 public class PickUp : MonoBehaviour
 {
     public Image Crosshair;
+<<<<<<< Updated upstream
     public float _Distance;         //Etkileþime girebilmek için nesneyle karakter arasýndaki maksimum mesafe
+=======
+    public float _Distance;
+>>>>>>> Stashed changes
     void Update()
     {
         Vector3 _forward = transform.TransformDirection(Vector3.forward);
