@@ -9,6 +9,7 @@ public class PickUp : MonoBehaviour
 
     public float _Distance;  //Etkileþime girebilmek için nesneyle karakter arasýndaki maksimum mesafe
     public GameObject KeyInHand;
+
     
 
     void Update()
