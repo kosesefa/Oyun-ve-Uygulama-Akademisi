@@ -37909,11 +37909,11 @@ GameObject:
   - component: {fileID: 1466734829}
   m_Layer: 0
   m_Name: Key in Hand
-  m_TagString: Collectable
+  m_TagString: Collected
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1466734828
 Transform:
   m_ObjectHideFlags: 0
@@ -78309,7 +78309,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8458961, y: 1}
+    m_SensorSize: {x: 0.8224456, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -82134,6 +82134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Crosshair: {fileID: 1020922597}
   _Distance: 7
+  KeyInHand: {fileID: 1466734827}
 --- !u!33 &5565772321580728682
 MeshFilter:
   m_ObjectHideFlags: 0
