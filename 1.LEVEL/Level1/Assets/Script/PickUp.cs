@@ -8,6 +8,9 @@ public class PickUp : MonoBehaviour
     public Image Crosshair;
 
     public float _Distance;  //Etkileþime girebilmek için nesneyle karakter arasýndaki maksimum mesafe
+    public GameObject KeyInHand;
+
+    
 
     void Update()
     {
@@ -24,6 +27,7 @@ public class PickUp : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Destroy(hit.collider.gameObject);
+                    KeyInHand.SetActive(true);
                 }
             }
         }
