@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4220449232380aa458612e8b1a955231
+guid: 3563d1888ce68a74e9c5c23045ea0c12
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Shadows Into Light
+  - Morris Roman
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
