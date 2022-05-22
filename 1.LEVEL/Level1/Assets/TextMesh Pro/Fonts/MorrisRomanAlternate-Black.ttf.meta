@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 11fa0dc137cab79449d7df9e7e4ce354
+guid: 2aa9a59a31519884eb01a9f8d56a9c35
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,10 +9,8 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Kalam
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: 4ed90b5b1d2701f4e903ec6da8547847, type: 3}
-  - {fileID: 12800000, guid: 1efd73290c6eb25488474e971ef74525, type: 3}
+  - Morris Roman Alternate
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
