@@ -39,7 +39,10 @@ public class CamMoving : MonoBehaviour
 
     void Start()
     {
-        
+        Cam1.SetActive(true);
+        Cam2.SetActive(false);
+        Cam3.SetActive(false);
+        Cam4.SetActive(false);
     }
 
 
@@ -50,31 +53,42 @@ public class CamMoving : MonoBehaviour
     }
     void CamTimer()
     {
-        Cam1.GetComponent<Transform>().position = Cam1.GetComponent<Transform>().position + new Vector3(Cam1_VectorX * -0.001f, 0 , -0.001f * Cam1_VectorZ);
-        if (frame == MaxMovementFrame1)
+        if (frame >= 0 && frame <= MaxMovementFrame1)
         {
-            Cam1.SetActive(false);
-            Cam2.SetActive(true);
+            Cam1.GetComponent<Transform>().position = Cam1.GetComponent<Transform>().position + new Vector3(Cam1_VectorX * -0.001f, 0, -0.001f * Cam1_VectorZ);
+            if (frame == MaxMovementFrame1)
+            {
+                Cam1.SetActive(false);
+                Cam2.SetActive(true);
+            }
         }
-
-        Cam2.GetComponent<Transform>().position = Cam2.GetComponent<Transform>().position + new Vector3(Cam2_VectorX * -0.001f, 0, -0.001f * Cam2_VectorZ);    
-        if (frame == MaxMovementFrame2)
+        if (((frame >= MaxMovementFrame1) && (frame <= MaxMovementFrame2)))
         {
-            Cam2.SetActive(false);
-            Cam3.SetActive(true);
+            Cam2.GetComponent<Transform>().position = Cam2.GetComponent<Transform>().position + new Vector3(Cam2_VectorX * -0.001f, 0, -0.001f * Cam2_VectorZ);
+            if (frame == MaxMovementFrame2)
+            {
+                Cam2.SetActive(false);
+                Cam3.SetActive(true);
+            }
         }
-        Cam3.GetComponent<Transform>().position = Cam3.GetComponent<Transform>().position + new Vector3(Cam3_VectorX * -0.001f, 0, -0.001f * Cam3_VectorZ);
-        if (frame == MaxMovementFrame3)
+        if ((frame >= MaxMovementFrame2 && frame <= MaxMovementFrame3))
         {
-            Cam3.SetActive(false);
-            Cam4.SetActive(true);
+            Cam3.GetComponent<Transform>().position = Cam3.GetComponent<Transform>().position + new Vector3(Cam3_VectorX * -0.001f, 0, -0.001f * Cam3_VectorZ);
+            if (frame == MaxMovementFrame3)
+            {
+                Cam3.SetActive(false);
+                Cam4.SetActive(true);
+            }
         }
-        Cam4.GetComponent<Transform>().position = Cam4.GetComponent<Transform>().position + new Vector3(Cam4_VectorX * -0.001f, 0, -0.001f * Cam4_VectorZ);
-        if (frame == MaxMovementFrame4)
+        if ((frame >= MaxMovementFrame3))
         {
-            Cam4.SetActive(false);
-            Cam1.SetActive(true);
-            frame = 0;
+            Cam4.GetComponent<Transform>().position = Cam4.GetComponent<Transform>().position + new Vector3(Cam4_VectorX * -0.001f, 0, -0.001f * Cam4_VectorZ);
+            if (frame == MaxMovementFrame4)
+            {
+                Cam4.SetActive(false);
+                Cam1.SetActive(true);
+                frame = 0;
+            }
         }
 
 
