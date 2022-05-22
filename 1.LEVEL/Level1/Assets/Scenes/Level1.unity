@@ -37568,7 +37568,7 @@ GameObject:
   - component: {fileID: 1210530992}
   - component: {fileID: 1210530991}
   - component: {fileID: 1210530995}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37982,7 +37982,7 @@ GameObject:
   - component: {fileID: 1346884119}
   - component: {fileID: 1346884118}
   - component: {fileID: 1346884117}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38107,7 +38107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383614881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 7.94}
+  m_LocalPosition: {x: 0.04, y: 0, z: 7.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -73400,7 +73400,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh80730
+  m_Name: pb_Mesh25982
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -74443,7 +74443,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974238577355429978}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.33, z: 0}
+  m_LocalPosition: {x: 0, y: 0.32999992, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -78568,7 +78568,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7781155, y: 1}
+    m_SensorSize: {x: 1.7784522, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -82310,7 +82310,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2147483647
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -82397,7 +82397,11 @@ MonoBehaviour:
   KeyInHand: {fileID: 1466734827}
   holdRange: 15
   holdParent: {fileID: 1383614882}
-  moveForce: 800
+  moveForce: 10
+  positionDistance: 0
+  character: {fileID: 5542111180004417880}
+  pushObject: 1
+  pullObject: 1
 --- !u!33 &5565772321580728682
 MeshFilter:
   m_ObjectHideFlags: 0
