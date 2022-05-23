@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CamMoving : MonoBehaviour
 {
-    //[Order("Cam1")]
+    //Moving camera tool for the background of the opening scene
     [ShowOnly] public float frame = 0;
     [Space(10)]
     [Header("Camera 1 Settings")]
@@ -34,8 +34,6 @@ public class CamMoving : MonoBehaviour
     [SerializeField] int MaxMovementFrame4;
     [SerializeField] float Cam4_VectorX;
     [SerializeField] float Cam4_VectorZ;
-    //[Space(10)]
-
 
     void Start()
     {
