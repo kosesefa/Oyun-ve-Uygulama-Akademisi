@@ -13,16 +13,20 @@ public class PickUp : MonoBehaviour
     [SerializeField] public float holdRange;
     private GameObject heldObject;
     public Transform holdParent;
-    [SerializeField] public float moveForce;
+    [SerializeField] float moveForce;
+
+    public float positionDistance;
+
+    [SerializeField] GameObject character;
+    [SerializeField] bool pushObject=true;
+    [SerializeField] bool pullObject=true;
 
     
-
-
-    
-    void Update()
+    void FixedUpdate()
     {
         PickUpYourHand();
         HoldItem();
+        bugCheck();
     }
 
 
@@ -51,6 +55,7 @@ public class PickUp : MonoBehaviour
             }
         }
     }
+
     void HoldItem()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -92,6 +97,17 @@ public class PickUp : MonoBehaviour
             Vector3 moveDirection = (holdParent.position - heldObject.transform.position);
             heldObject.GetComponent<Rigidbody>().AddForce(moveDirection*moveForce);
         }
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f && pushObject) // forward
+        {
+            Debug.Log("MOUSE WHEEL");
+            holdParent.transform.position = holdParent.transform.position + holdParent.transform.forward;
+
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f && pullObject) // backwards
+        {
+            holdParent.transform.position= holdParent.transform.position -holdParent.transform.forward;
+
+        }
     }
     void dropObject()
     {
@@ -101,5 +117,25 @@ public class PickUp : MonoBehaviour
 
         heldObject.transform.parent = null;
         heldObject = null;
+    }
+    void bugCheck()
+    {
+        positionDistance = Vector3.Distance(holdParent.transform.position, character.transform.position);
+        if (positionDistance<8f)
+        {
+            pullObject = false;
+        }
+        else
+        {
+            pullObject = true;
+        }
+        if (positionDistance>11f)
+        {
+            pushObject = false;
+        }
+        else
+        {
+            pushObject = true;
+        }
     }
 }
