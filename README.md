@@ -81,7 +81,7 @@ https://miro.com/app/board/uXjVO5siros=/
 
 - **Backlog düzeni ve Story seçimleri**: Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmış ve tamamlanmıştır.
 
-- **Daily Scrum**: Daily Scrum toplantılarımız çeşitli koşullar sebebiyle bazen Discord bazen de Whatsapp üzerinden gerçekleşmiştir. Daily Scrum toplantısı örneği jpeg ve word olarak Readme dosyası üzerinden tarafımızca paylaşılmaktadır. [Sprint-2 Daily Scrum.pdf](https://github.com/kosesefa/Oyun-ve-Uygulama-Akademisi/files/8755282/Sprint-2.Daily.Scrum.pdf)
+- **Daily Scrum**: Daily Scrum toplantılarımız çeşitli koşullar sebebiyle bazen Discord bazen de Whatsapp üzerinden gerçekleşmiştir. Daily Scrum toplantısı örneği jpeg ve PDF olarak Readme dosyası üzerinden tarafımızca paylaşılmaktadır. [Sprint-2 Daily Scrum.pdf](https://github.com/kosesefa/Oyun-ve-Uygulama-Akademisi/files/8755282/Sprint-2.Daily.Scrum.pdf)
 
 
 
