@@ -3519,7 +3519,6 @@ GameObject:
   m_Component:
   - component: {fileID: 215127282}
   - component: {fileID: 215127281}
-  - component: {fileID: 215127283}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -3575,23 +3574,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &215127283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215127280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc674a20e8858b9428f56321a66844a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playButton: {fileID: 1232028706}
-  SettingsButton: {fileID: 1482354695}
-  quitButton: {fileID: 664414531}
-  AccelerationX: 2
-  AccelerationY: 2
 --- !u!1 &215546798
 GameObject:
   m_ObjectHideFlags: 0
@@ -12874,7 +12856,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890401695}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12887,7 +12869,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.8114, y: -0.00052738}
+  m_AnchoredPosition: {x: 6.8113174, y: -0.00051116943}
   m_SizeDelta: {x: 436.0284, y: 459.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &894336515
@@ -18804,19 +18786,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1300396795}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1784741632}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1300396795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25928,7 +25898,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1784741630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891aae8e94bf9cf4f860c576aa7bbb08, type: 3}
+  m_Script: {fileID: 11500000, guid: 42c787956a24de64cbf712cd84517953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1792117586
