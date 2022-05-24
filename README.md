@@ -73,6 +73,39 @@ https://miro.com/app/board/uXjVO5siros=/
 ---
 
 # Sprint 2
+- **Sprint Notları**: Product backlog item'lara tıklandığında görevlerin detayları okunabilir.
+
+- **Sprint içinde tamamlanması tahmin edilen puan**: 90 Puan
+
+- **Puan tamamlama mantığı**: Proje boyunca toplam tamamlanması gereken 330 puanlık backlog bulunmaktadır. 2.sprint boyunca tamamlanması gereken puan ise 90 olarak belirlenmiştir.
+
+- **Backlog düzeni ve Story seçimleri**: Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmış ve tamamlanmıştır.
+
+- **Daily Scrum**: Daily Scrum toplantılarımız çeşitli koşullar sebebiyle bazen Discord bazen de Whatsapp üzerinden gerçekleşmiştir. Daily Scrum toplantısı örneği jpeg ve PDF olarak Readme dosyası üzerinden tarafımızca paylaşılmaktadır. [Sprint-2 Daily Scrum.pdf](https://github.com/kosesefa/Oyun-ve-Uygulama-Akademisi/files/8755282/Sprint-2.Daily.Scrum.pdf)
+
+
+
+- **Sprint board update**: ![Ekran görüntüsü 2022-05-22 191756](https://user-images.githubusercontent.com/99612318/169840081-98172d2e-2121-41b1-9e70-df2a606de27d.png)
+![Ekran görüntüsü 2022-05-22 192045](https://user-images.githubusercontent.com/99612318/169840114-3d0afe5c-6881-4398-98fb-18c96ef85103.png)
+![Ekran görüntüsü 2022-05-23 034244](https://user-images.githubusercontent.com/99612318/169840125-73dc6d86-38ac-47cc-a701-5e91d3509d88.png)
+
+- **Ürün Durumu**: ![UI Kısmı](https://user-images.githubusercontent.com/99612318/169840881-d92928fb-4133-4105-b214-f529b1f16f86.png)
+![Çevre ve Karakter](https://user-images.githubusercontent.com/99612318/169840891-f6010c7f-aaa0-4628-b2bd-b4929b7024d1.png)
+![KameraScript](https://user-images.githubusercontent.com/99612318/169841599-24a757e4-4cec-4894-b1d9-2733744fc4cb.png)
+![pickUp1](https://user-images.githubusercontent.com/99612318/169842026-d5efa700-df93-482f-b437-ec3ece168230.png)
+![PickUp2](https://user-images.githubusercontent.com/99612318/169842036-f07d780f-eb3e-46dd-b061-bbd4218aae55.png)
+
+- **Sprint Review**: Alınan Kararlar: İlk sprint içerisinde yapılması planlanan ancak bu sprinte sarkan Karakter Kontrol sistemi bu sprint içinde tamamlandı. Oyunun UI kısmına dair planlanan Ana Sayfa teması tamamlandı. Oyun içerisine eklenmesi planlanan müzik ve ses dosyaları belirlendi ve oyuna eklendi. İlk sahne tamamlanmış olup bir sonraki sahne için çalışmalara başlandı.
+- Sprint Review Katılımcıları: Sefa Köse, Selin Moralı, Haluk Mert Özdemir, M.Fırat Fidan, Asrın Sıla Şimşek.
+
+------
+- **Sprint Retrospective**:
+- Karaktere eklenmesi planlanan yeni mekanikler belirlendi.
+- Tasarlanacak yeni sahne için yol haritası belirlendi.
+- Oyuna eklenmesi planlanan bulmacalar için çalışmalara başlanması kararlaştırıldı.
+- Developerlar ile oyunun genel durumu üzerine konuşuldu ve son sprint için ekstra çalışılması gerektiği belirlendi.
+
+---
 
 
 ---

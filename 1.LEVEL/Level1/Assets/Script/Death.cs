@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Death : MonoBehaviour
 {
+    //death animation script
     public Animator animator;
     private void OnTriggerEnter(Collider other)
     {

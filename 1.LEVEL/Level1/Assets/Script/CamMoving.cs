@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CamMoving : MonoBehaviour
 {
-    //[Order("Cam1")]
+    //Moving camera tool for the background of the opening scene
     [ShowOnly] public float frame = 0;
     [Space(10)]
     [Header("Camera 1 Settings")]
