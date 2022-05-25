@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) && Death.isDead==false)
         {
             if (GameIsPaused)
             {
@@ -35,6 +35,7 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
+        Cursor.visible=true;
         StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
         StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
         pauseMenuUI.SetActive(true);
