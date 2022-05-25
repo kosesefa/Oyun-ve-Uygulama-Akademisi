@@ -4,7 +4,6 @@ using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SaveLoad : MonoBehaviour

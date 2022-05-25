@@ -36,10 +36,11 @@ public class MainMenu : MonoBehaviour
     }
     public void NewGame()
     {
+        Cursor.visible = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void LoadGame()
     {
-
+ 
     }
 }
