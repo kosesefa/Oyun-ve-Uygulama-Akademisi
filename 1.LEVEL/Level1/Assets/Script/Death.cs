@@ -15,8 +15,8 @@ public class Death : MonoBehaviour
 
     public void Start()
     {
-        StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
-        StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
+        //StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
+        //StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
         canvas.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)

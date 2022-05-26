@@ -25,9 +25,16 @@ public class SaveLoad : MonoBehaviour
     }
     public void Load()
     {
-
+        if (File.Exists(Application.dataPath + "/" + "Save.atonal"))
+        {
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            FileStream file = File.Open(Application.dataPath + "/" + "Save.atonal", FileMode.Open);
+            SaveManagement save = (SaveManagement)binaryFormatter.Deserialize(file);
+            SceneManager.LoadScene(save.Level);
+        }
     }
 }
+[Serializable]
 public class SaveManagement
 {
     public int Level;

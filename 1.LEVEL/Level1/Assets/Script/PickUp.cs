@@ -5,28 +5,35 @@ using UnityEngine.UI;
 
 public class PickUp : MonoBehaviour
 {
+    [Space(15)]
     public Image Crosshair;
-
+    [Space(15)]
     public float _Distance;             //Max distance between character and object to be able to interact
     public GameObject KeyInHand;
-
+    [Space(15)]
     [SerializeField] public float holdRange;
     private GameObject heldObject;
     public Transform holdParent;
     [SerializeField] float moveForce;
-
+    [Space(15)]
     public float positionDistance;
-
+    [Space(15)]
     [SerializeField] GameObject character;
     [SerializeField] bool pushObject=true;
     [SerializeField] bool pullObject=true;
+    [Space(15)]                                            //public Transform holdParentOriginalPos;
+    [SerializeField] float maxPushDistance;
+    [SerializeField] float maxPullDistance;
+    private void Start()
+    {
 
-    
+    }
+
     void Update()
     {
         PickUpYourHand();
-        HoldItem();
         bugCheck();
+        HoldItem();
     }
 
     void PickUpYourHand()
@@ -99,7 +106,6 @@ public class PickUp : MonoBehaviour
         else if (Input.GetAxis("Mouse ScrollWheel") < 0f && pullObject) // Object pull
         {
             holdParent.transform.position= holdParent.transform.position -holdParent.transform.forward;
-
         }
     }
     void dropObject()
@@ -107,14 +113,14 @@ public class PickUp : MonoBehaviour
         Rigidbody heldRig = heldObject.GetComponent<Rigidbody>();
         heldRig.useGravity = true;
         heldRig.drag = 1;
-
+       
         heldObject.transform.parent = null;
         heldObject = null;
     }
     void bugCheck()     //Max & Min push-pull distance to avoid bugs
     {
         positionDistance = Vector3.Distance(holdParent.transform.position, character.transform.position);
-        if (positionDistance<8f)
+        if ( positionDistance<maxPullDistance )
         {
             pullObject = false;
         }
@@ -122,7 +128,7 @@ public class PickUp : MonoBehaviour
         {
             pullObject = true;
         }
-        if (positionDistance>11f)
+        if ( positionDistance>maxPushDistance )
         {
             pushObject = false;
         }
