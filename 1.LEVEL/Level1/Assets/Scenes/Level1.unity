@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.23199281, g: 0.15542963, b: 0.21731111, a: 1}
+  m_IndirectSpecularColor: {r: 0.23196292, g: 0.15539989, b: 0.21728572, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -80955,6 +80955,7 @@ GameObject:
   - component: {fileID: 974238577355429974}
   - component: {fileID: 7018120647121007275}
   - component: {fileID: 7018120647121007276}
+  - component: {fileID: 7018120647121007277}
   m_Layer: 2
   m_Name: PlayerArmature
   m_TagString: Player
@@ -84065,7 +84066,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7785234, y: 1}
+    m_SensorSize: {x: 1.7780083, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -89565,6 +89566,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7018120647121007277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974238577355429978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17a833b0c785e04da0b3b932674d312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ForceMagnitude: 5
 --- !u!1 &7040040431993173240
 GameObject:
   m_ObjectHideFlags: 0
