@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+using System;
+using UnityEngine.Rendering;
 
 public class MainMenu : MonoBehaviour
 {
@@ -11,7 +15,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject optionButton;
     [SerializeField] GameObject quitButton;
     [SerializeField] GameObject newGame;
-    [SerializeField] GameObject resumeGame;
+    [SerializeField] GameObject loadGame;
+    [SerializeField] GameObject loadGameText;
     private void Start()
     {
         playbutton.SetActive(true);
@@ -19,7 +24,7 @@ public class MainMenu : MonoBehaviour
         optionButton.SetActive(true);
         quitButton.SetActive(true);
         newGame.SetActive(false);
-        resumeGame.SetActive(false);
+        loadGame.SetActive(false);
     }
     public void PlayGame()
     {
@@ -28,7 +33,15 @@ public class MainMenu : MonoBehaviour
         optionButton.SetActive(false);
         quitButton.SetActive(false);
         newGame.SetActive(true);
-        resumeGame.SetActive(true);
+        loadGame.SetActive(true);
+        if (File.Exists(Application.dataPath + "/" + "Save.atonal"))
+        {
+            loadGameText.GetComponent<TextMeshProUGUI>().color = new Color32(255,255,255,255);
+        }
+        else
+        {
+            loadGameText.GetComponent<TextMeshProUGUI>().color = new Color32(168,157,157,255);
+        }
     }
     public void QuitGame()
     {

@@ -21471,7 +21471,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: resume game
+  m_text: load game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
   m_sharedMaterial: {fileID: 5700735926780883933, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
@@ -26222,7 +26222,8 @@ MonoBehaviour:
   optionButton: {fileID: 1482354695}
   quitButton: {fileID: 664414531}
   newGame: {fileID: 1811394391}
-  resumeGame: {fileID: 1898354556}
+  loadGame: {fileID: 1898354556}
+  loadGameText: {fileID: 1465463963}
 --- !u!1001 &1792117586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27539,7 +27540,7 @@ GameObject:
   - component: {fileID: 1898354558}
   - component: {fileID: 1898354557}
   m_Layer: 5
-  m_Name: Resume Game
+  m_Name: Load Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
