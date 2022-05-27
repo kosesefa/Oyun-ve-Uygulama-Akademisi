@@ -19,11 +19,13 @@ public class PickUp : MonoBehaviour
     public float positionDistance;
     [Space(15)]
     [SerializeField] GameObject character;
-    [SerializeField] bool pushObject=true;
-    [SerializeField] bool pullObject=true;
+    [SerializeField] bool pushObject = true;
+    [SerializeField] bool pullObject = true;
     [Space(15)]                                            //public Transform holdParentOriginalPos;
     [SerializeField] float maxPushDistance;
     [SerializeField] float maxPullDistance;
+    [Space(15)]
+    [SerializeField] Animator animator;
     private void Start()
     {
 
@@ -35,6 +37,11 @@ public class PickUp : MonoBehaviour
         bugCheck();
         HoldItem();
     }
+    /*void PickUpYourHandEvents()
+    {
+        PickUpYourHand();
+    }
+    */
 
     void PickUpYourHand()
     {
@@ -52,6 +59,7 @@ public class PickUp : MonoBehaviour
                 {
                     Destroy(hit.collider.gameObject);
                     KeyInHand.SetActive(true);
+                    animator.SetTrigger("PickUp");
                 }
             }
         }
@@ -61,10 +69,10 @@ public class PickUp : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (heldObject==null)
+            if (heldObject == null)
             {
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position,transform.TransformDirection(Vector3.forward),out hit, holdRange))
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, holdRange))
                 {
                     PickUpObject(hit.transform.gameObject);
                 }
@@ -74,7 +82,7 @@ public class PickUp : MonoBehaviour
                 dropObject();
             }
         }
-        if (heldObject!=null)
+        if (heldObject != null)
         {
             MoveObject();
         }
@@ -86,17 +94,17 @@ public class PickUp : MonoBehaviour
             Rigidbody objRig = pickObj.GetComponent<Rigidbody>();
             objRig.useGravity = false;
             objRig.drag = 15;
-            
+
             objRig.transform.parent = holdParent;
             heldObject = pickObj;
         }
     }
     void MoveObject()
     {
-        if (Vector3.Distance(heldObject.transform.position,holdParent.position) > 0.1f)
+        if (Vector3.Distance(heldObject.transform.position, holdParent.position) > 0.1f)
         {
             Vector3 moveDirection = (holdParent.position - heldObject.transform.position);
-            heldObject.GetComponent<Rigidbody>().AddForce(moveDirection*moveForce);
+            heldObject.GetComponent<Rigidbody>().AddForce(moveDirection * moveForce);
         }
         if (Input.GetAxis("Mouse ScrollWheel") > 0f && pushObject) // Object push
         {
@@ -105,7 +113,7 @@ public class PickUp : MonoBehaviour
         }
         else if (Input.GetAxis("Mouse ScrollWheel") < 0f && pullObject) // Object pull
         {
-            holdParent.transform.position= holdParent.transform.position -holdParent.transform.forward;
+            holdParent.transform.position = holdParent.transform.position - holdParent.transform.forward;
         }
     }
     void dropObject()
@@ -113,14 +121,15 @@ public class PickUp : MonoBehaviour
         Rigidbody heldRig = heldObject.GetComponent<Rigidbody>();
         heldRig.useGravity = true;
         heldRig.drag = 1;
-       
+
         heldObject.transform.parent = null;
         heldObject = null;
+        holdParent.transform.localPosition = new Vector3(0, 0, 7.94f);
     }
     void bugCheck()     //Max & Min push-pull distance to avoid bugs
     {
         positionDistance = Vector3.Distance(holdParent.transform.position, character.transform.position);
-        if ( positionDistance<maxPullDistance )
+        if (positionDistance < maxPullDistance)
         {
             pullObject = false;
         }
@@ -128,7 +137,7 @@ public class PickUp : MonoBehaviour
         {
             pullObject = true;
         }
-        if ( positionDistance>maxPushDistance )
+        if (positionDistance > maxPushDistance)
         {
             pushObject = false;
         }
@@ -136,5 +145,9 @@ public class PickUp : MonoBehaviour
         {
             pushObject = true;
         }
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        holdParent.transform.position = new Vector3(holdParent.position.x, 0, holdParent.position.z);
     }
 }

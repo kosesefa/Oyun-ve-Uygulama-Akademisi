@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using StarterAssets;
 
 public class Death : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Death : MonoBehaviour
     [SerializeField] GameObject canvas;
     public static bool isDead = false;
 
+    ThirdPersonController thirdPersonController;
 
 
     public void Start()
@@ -18,6 +20,8 @@ public class Death : MonoBehaviour
         //StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
         //StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
         canvas.SetActive(false);
+        thirdPersonController = this.gameObject.GetComponent<ThirdPersonController>();
+        //thirdPersonController = GameObject.FindGameObjectWithTag("Player").GetComponent<ThirdPersonController>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -30,8 +34,8 @@ public class Death : MonoBehaviour
             StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
             StarterAssets.ThirdPersonController.LockCameraPosition = true;
-
-            StartCoroutine(deathTime());
+            thirdPersonController.enabled = false;
+            //StartCoroutine(deathTime());
         }
     }
 
@@ -42,12 +46,14 @@ public class Death : MonoBehaviour
         isDead = false;
         Time.timeScale = 1;
         SceneManager.LoadScene("Level1");
-        
+        thirdPersonController.enabled = true;
+
 
     }
-    IEnumerator deathTime()
+    /*IEnumerator deathTime()
     {
         yield return new WaitForSecondsRealtime(1);
-        Time.timeScale = 0; 
+        Time.timeScale = 0;
     }
+    */
 }

@@ -21,11 +21,11 @@ public class SaveLoad : MonoBehaviour
         BinaryFormatter binary = new BinaryFormatter();
         FileStream file = File.Create(Application.dataPath + "/" + "Save.atonal");
         SaveManagement save = new SaveManagement();
-        save.Level= SceneManager.GetActiveScene().buildIndex;
-        binary.Serialize(file,save);
+        save.Level = SceneManager.GetActiveScene().buildIndex;
+        binary.Serialize(file, save);
         file.Close();
-        anim.SetBool("saved",true);
-        
+       // anim.SetBool("saved", true);
+
     }
     public void Load()
     {
