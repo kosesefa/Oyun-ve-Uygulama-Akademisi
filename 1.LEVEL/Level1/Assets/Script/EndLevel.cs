@@ -6,11 +6,10 @@ using UnityEngine;
 public class EndLevel : MonoBehaviour
 {
     public bool isEndOfLevel = false;
-   
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             isEndOfLevel = true;
         }

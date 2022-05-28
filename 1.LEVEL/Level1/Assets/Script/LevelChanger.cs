@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.IMGUI.Controls;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,21 +12,20 @@ public class LevelChanger : MonoBehaviour
     private int levelToLoad;
 
     public EndLevel _endLevel;
-   
-    void Start()
-    {
-        
-    }
+
+    public ColumnTrigger _columnTrigger;
 
     // Update is called once per frame
     void Update()
     {
-        if (_endLevel.isEndOfLevel)
+        if (_columnTrigger.door.GetComponent<BoxCollider>().enabled == true)
         {
-            FadeToNextLevel();
+            if (_endLevel.isEndOfLevel)
+            {
+                FadeToNextLevel();
+            }
         }
     }
-
     public void FadeToNextLevel()
     {
         FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);

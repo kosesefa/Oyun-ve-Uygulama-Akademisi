@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.23199295, g: 0.15542983, b: 0.21731162, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3076,7 +3076,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 610608121}
-  _endLevel: {fileID: 3143349009446204072}
+  _endLevel: {fileID: 3143349009446204074}
+  _columnTrigger: {fileID: 1155258556}
 --- !u!1 &616257679 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1890285136377723559, guid: 0d566226705e41e4db1e71089f637688, type: 3}
@@ -40252,7 +40253,7 @@ GameObject:
   - component: {fileID: 1155258557}
   - component: {fileID: 1155258556}
   m_Layer: 0
-  m_Name: Column (2)
+  m_Name: Column Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40270,6 +40271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cead9e3bedfa4891b1b0117b3a5d82f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  door: {fileID: 1692052174015735737}
 --- !u!65 &1155258557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40298,13 +40300,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155258555}
-  m_LocalRotation: {x: 0, y: 0.584462, z: 0, w: 0.8114211}
+  m_LocalRotation: {x: -0, y: 0.584462, z: -0, w: 0.8114211}
   m_LocalPosition: {x: 44.16, y: 36.69, z: 126.9}
-  m_LocalScale: {x: 1.52, y: 3.33, z: 1.49}
+  m_LocalScale: {x: 1.5199999, y: 3.33, z: 1.4899999}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 71.53, z: 0}
 --- !u!1 &1156340751
 GameObject:
@@ -40706,7 +40708,7 @@ GameObject:
   - component: {fileID: 1210530995}
   m_Layer: 1
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40782,7 +40784,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210530990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.607, y: 27.69, z: 15.99}
+  m_LocalPosition: {x: 39.87, y: 36.42, z: 126.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77476,7 +77478,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 71.53, z: 0}
 --- !u!1 &1717517726
 GameObject:
@@ -78515,7 +78517,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh136018
+  m_Name: pb_Mesh26158
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -81204,7 +81206,7 @@ GameObject:
   - component: {fileID: 1711813854331159660}
   m_Layer: 0
   m_Name: GateKey
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82198,8 +82200,8 @@ GameObject:
   - component: {fileID: 3143349009446204070}
   - component: {fileID: 899484130021803628}
   - component: {fileID: 3143349009446204071}
-  - component: {fileID: 3143349009446204072}
   - component: {fileID: 3143349009446204073}
+  - component: {fileID: 3143349009446204074}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -83124,7 +83126,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8047161635211709887}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.25, y: 26, z: 14.3}
+  m_LocalPosition: {x: 25.3, y: 32.4, z: 110.3}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -84529,7 +84531,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2448861388193345065, guid: f12ad1adb9f3e1d4bb8a13303968486d, type: 3}
---- !u!114 &3143349009446204072
+--- !u!65 &3143349009446204073
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692052174015735737}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 3.6433525, y: 1.7742062, z: 6.375726}
+  m_Center: {x: -0.32570767, y: 3.5311465, z: -0.25403902}
+--- !u!114 &3143349009446204074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84542,19 +84557,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEndOfLevel: 0
---- !u!65 &3143349009446204073
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1692052174015735737}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.6433525, y: 1.7742062, z: 6.375726}
-  m_Center: {x: -0.32570767, y: 3.5311465, z: -0.25403902}
 --- !u!33 &3143349010470338618
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -84688,7 +84690,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3203261900684282765}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9760005, y: 2.4191337, z: -2.737287}
+  m_LocalPosition: {x: 0.9760005, y: 2.4191337, z: -2.7372844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -84725,7 +84727,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7782178, y: 1}
+    m_SensorSize: {x: 1.778169, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -88601,7 +88603,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5542111180004417880}
   m_LocalRotation: {x: 0.121998966, y: -0, z: -0, w: 0.9925302}
-  m_LocalPosition: {x: 0.9760005, y: 2.4191337, z: -2.737287}
+  m_LocalPosition: {x: 0.9760005, y: 2.4191337, z: -2.7372844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
