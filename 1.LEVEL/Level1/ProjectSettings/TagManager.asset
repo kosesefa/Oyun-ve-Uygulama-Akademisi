@@ -9,6 +9,7 @@ TagManager:
   - Collectable
   - Collected
   - GameManager
+  - Key
   layers:
   - Default
   - TransparentFX
