@@ -10,6 +10,7 @@ TagManager:
   - Collected
   - GameManager
   - Key
+  - NPC
   layers:
   - Default
   - TransparentFX
