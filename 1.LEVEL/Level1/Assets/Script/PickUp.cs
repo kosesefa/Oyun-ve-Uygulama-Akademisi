@@ -26,9 +26,10 @@ public class PickUp : MonoBehaviour
     [SerializeField] float maxPullDistance;
     [Space(15)]
     [SerializeField] Animator animator;
+    [Space(15)]
+    [SerializeField] LayerMask layerMask;
     private void Start()
     {
-
     }
 
     void Update()
@@ -60,6 +61,7 @@ public class PickUp : MonoBehaviour
                     Destroy(hit.collider.gameObject);
                     KeyInHand.SetActive(true);
                     animator.SetTrigger("PickUp");
+
                 }
             }
         }
@@ -95,7 +97,7 @@ public class PickUp : MonoBehaviour
             objRig.useGravity = false;
             objRig.drag = 15;
 
-            objRig.transform.parent = holdParent;
+            objRig.transform.parent = holdParent.transform.parent;
             heldObject = pickObj;
         }
     }
@@ -150,4 +152,14 @@ public class PickUp : MonoBehaviour
     {
         holdParent.transform.position = new Vector3(holdParent.position.x, 0, holdParent.position.z);
     }
+    /*IEnumerator  PickUpandTime()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        RaycastHit hit;
+        Physics.Raycast();
+        hit.collider.gameObject.transform.parent = handPos.transform;
+
+
+    }
+    */
 }

@@ -17,11 +17,9 @@ public class Death : MonoBehaviour
 
     public void Start()
     {
-        //StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
-        //StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
+        
         canvas.SetActive(false);
         thirdPersonController = this.gameObject.GetComponent<ThirdPersonController>();
-        //thirdPersonController = GameObject.FindGameObjectWithTag("Player").GetComponent<ThirdPersonController>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -35,23 +33,9 @@ public class Death : MonoBehaviour
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
             StarterAssets.ThirdPersonController.LockCameraPosition = true;
             thirdPersonController.enabled = false;
-            //StartCoroutine(deathTime());
         }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("OnGround") || other.CompareTag("NPC"))
-        {
-            animator.enabled=false;
-            canvas.SetActive(true);
-            isDead = true;
-            Cursor.visible = true;
-            StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
-            StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
-            StarterAssets.ThirdPersonController.LockCameraPosition = true;
-            thirdPersonController.enabled = false;
-        }
-    }
+
     public void Restart()
     {
         Cursor.visible = false;
@@ -63,10 +47,19 @@ public class Death : MonoBehaviour
 
 
     }
-    /*IEnumerator deathTime()
+    private void OnTriggerExit(Collider other)
     {
-        yield return new WaitForSecondsRealtime(1);
-        Time.timeScale = 0;
+        if (other.CompareTag("OnGround") || other.CompareTag("NPC"))
+        {
+            animator.enabled = false;
+            canvas.SetActive(true);
+            isDead = true;
+            Cursor.visible = true;
+            StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
+            StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
+            StarterAssets.ThirdPersonController.LockCameraPosition = true;
+            thirdPersonController.enabled = false;
+        }
     }
-    */
+
 }
