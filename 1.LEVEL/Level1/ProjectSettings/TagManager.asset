@@ -8,14 +8,16 @@ TagManager:
   - CinemachineTarget
   - Collectable
   - Collected
+  - GameManager
+  - Key
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - CamIgnore
   - Water
   - UI
-  - 
+  - IgnoreCam
   - 
   - 
   - 

@@ -7,7 +7,7 @@ public class ShowOnlyDrawer : PropertyDrawer
     public override void OnGUI(Rect position, SerializedProperty prop, GUIContent label)
     {
         string valueStr;
-
+                                        //For the ReadOnly frame variable in CamMoving
         switch (prop.propertyType)
         {
             case SerializedPropertyType.Integer:

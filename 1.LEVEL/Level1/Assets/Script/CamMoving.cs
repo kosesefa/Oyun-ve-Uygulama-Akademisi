@@ -4,38 +4,43 @@ using UnityEngine;
 
 public class CamMoving : MonoBehaviour
 {
-    //[Order("Cam1")]
+    //Moving camera tool for the background of the opening scene
     [ShowOnly] public float frame = 0;
     [Space(10)]
     [Header("Camera 1 Settings")]
     [SerializeField] GameObject Cam1;
-    [Range(0, 5000)]
+    [Range(0, 300)]
     [SerializeField] int MaxMovementFrame1;
     [SerializeField] float Cam1_VectorX;
     [SerializeField] float Cam1_VectorZ;
     [Space(10)]
     [Header("Camera 2 Settings")]
     [SerializeField] GameObject Cam2;
-    [Range(0,10000)]
+    [Range(0,600)]
     [SerializeField] int MaxMovementFrame2;
     [SerializeField] float Cam2_VectorX;
     [SerializeField] float Cam2_VectorZ;
     [Space(10)]
     [Header("Camera 3 Settings")]
     [SerializeField] GameObject Cam3;
-    [Range(0,15000)]
+    [Range(0,900)]
     [SerializeField] int MaxMovementFrame3;
     [SerializeField] float Cam3_VectorX;
     [SerializeField] float Cam3_VectorZ;
     [Space(10)]
     [Header("Camera 4 Settings")]
     [SerializeField] GameObject Cam4;
-    [Range(0, 15000)]
+    [Range(0, 1200)]
     [SerializeField] int MaxMovementFrame4;
     [SerializeField] float Cam4_VectorX;
     [SerializeField] float Cam4_VectorZ;
-    //[Space(10)]
-
+    [Space(10)]
+    [Header("Camera 5 Settings")]
+    [SerializeField] GameObject Cam5;
+    [Range(0, 1500)]
+    [SerializeField] int MaxMovementFrame5;
+    [SerializeField] float Cam5_VectorX;
+    [SerializeField] float Cam5_VectorZ;
 
     void Start()
     {
@@ -43,14 +48,15 @@ public class CamMoving : MonoBehaviour
         Cam2.SetActive(false);
         Cam3.SetActive(false);
         Cam4.SetActive(false);
+        Cam5.SetActive(false);
     }
-
 
     void FixedUpdate()
     {
         frame++;
         CamTimer();
     }
+
     void CamTimer()
     {
         if (frame >= 0 && frame <= MaxMovementFrame1)
@@ -80,19 +86,26 @@ public class CamMoving : MonoBehaviour
                 Cam4.SetActive(true);
             }
         }
-        if ((frame >= MaxMovementFrame3))
+        if ((frame >= MaxMovementFrame3 && frame <= MaxMovementFrame4))
         {
             Cam4.GetComponent<Transform>().position = Cam4.GetComponent<Transform>().position + new Vector3(Cam4_VectorX * -0.001f, 0, -0.001f * Cam4_VectorZ);
             if (frame == MaxMovementFrame4)
             {
                 Cam4.SetActive(false);
+                Cam5.SetActive(true);
+            }
+        }
+        
+        if ((frame >= MaxMovementFrame4))
+        {
+            Cam5.GetComponent<Transform>().position = Cam5.GetComponent<Transform>().position + new Vector3(Cam5_VectorX * -0.001f, 0, -0.001f * Cam5_VectorZ);
+            if (frame == MaxMovementFrame5)
+            {
+                Cam5.SetActive(false);
                 Cam1.SetActive(true);
                 frame = 0;
             }
         }
-
-
-
     }
 }
 
