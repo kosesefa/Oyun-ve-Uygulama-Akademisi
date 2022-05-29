@@ -18,7 +18,7 @@ public class LevelChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_columnTrigger.door.GetComponent<BoxCollider>().enabled == true)
+        if (_columnTrigger.door.GetComponent<BoxCollider>().enabled)
         {
             if (_endLevel.isEndOfLevel)
             {
