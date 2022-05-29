@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f1a1107a-3ec7-47f6-8bdd-46fa14111063" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Level1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Level1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Lighting Settings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Lighting Settings.lighting" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/ColumnTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/ColumnTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/LevelChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/LevelChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,8 @@
       <updated>1653677237840</updated>
       <workItem from="1653677268795" duration="3042000" />
       <workItem from="1653759384146" duration="3948000" />
-      <workItem from="1653770158121" duration="3511000" />
+      <workItem from="1653770158121" duration="3790000" />
+      <workItem from="1653822445264" duration="2671000" />
     </task>
     <servers />
   </component>
