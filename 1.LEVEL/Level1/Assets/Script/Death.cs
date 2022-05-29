@@ -25,7 +25,7 @@ public class Death : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("OnGround"))
+        if (other.CompareTag("OnGround") || other.CompareTag("NPC"))
         {
             animator.SetTrigger("death");
             canvas.SetActive(true);
@@ -38,7 +38,20 @@ public class Death : MonoBehaviour
             //StartCoroutine(deathTime());
         }
     }
-
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("OnGround") || other.CompareTag("NPC"))
+        {
+            animator.enabled=false;
+            canvas.SetActive(true);
+            isDead = true;
+            Cursor.visible = true;
+            StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
+            StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
+            StarterAssets.ThirdPersonController.LockCameraPosition = true;
+            thirdPersonController.enabled = false;
+        }
+    }
     public void Restart()
     {
         Cursor.visible = false;
