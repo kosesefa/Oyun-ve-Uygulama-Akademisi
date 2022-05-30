@@ -6,21 +6,26 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-
     public GameObject pauseMenuUI;
-
+    private void Start()
+    {
+        NPCDialogue.canEsc = true;
+    }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) && Death.isDead==false)
+
+        if (Input.GetKeyDown(KeyCode.Escape) && Death.isDead == false && NPCDialogue.canEsc == true)
         {
             if (GameIsPaused)
             {
                 ResumeGame();
-            } else
+            }
+            else
             {
                 PauseGame();
             }
         }
+
     }
 
     public void ResumeGame()
@@ -29,17 +34,15 @@ public class PauseMenu : MonoBehaviour
         StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
         StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1.0f;
         GameIsPaused = false;
     }
 
     public void PauseGame()
     {
-        Cursor.visible=true;
+        Cursor.visible = true;
         StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
         StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
         pauseMenuUI.SetActive(true);
-        Time.timeScale = 0.0f;
         GameIsPaused = true;
     }
 
