@@ -9,10 +9,6 @@ TagManager:
   - Collectable
   - Collected
   - GameManager
-  - Key
-  - NPC
-  - hand
-  - handPosition
   layers:
   - Default
   - TransparentFX
@@ -20,8 +16,8 @@ TagManager:
   - CamIgnore
   - Water
   - UI
-  - IgnoreCam
-  - Ground
+  - 
+  - 
   - 
   - 
   - 
