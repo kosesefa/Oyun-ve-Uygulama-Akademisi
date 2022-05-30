@@ -7,7 +7,8 @@ public class CursorManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
+        Cursor.visible = false;
+        StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
         StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
     }
 

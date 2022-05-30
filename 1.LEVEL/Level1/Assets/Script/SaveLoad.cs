@@ -8,20 +8,24 @@ using UnityEngine.SceneManagement;
 
 public class SaveLoad : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
+    [SerializeField] GameObject saved;
+    Animator anim;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
     public void Save()
     {
         BinaryFormatter binary = new BinaryFormatter();
         FileStream file = File.Create(Application.dataPath + "/" + "Save.atonal");
         SaveManagement save = new SaveManagement();
-        save.Level= SceneManager.GetActiveScene().buildIndex;
-        binary.Serialize(file,save);
+        save.Level = SceneManager.GetActiveScene().buildIndex;
+        binary.Serialize(file, save);
         file.Close();
+       // anim.SetBool("saved", true);
+
     }
     public void Load()
     {
@@ -31,6 +35,9 @@ public class SaveLoad : MonoBehaviour
             FileStream file = File.Open(Application.dataPath + "/" + "Save.atonal", FileMode.Open);
             SaveManagement save = (SaveManagement)binaryFormatter.Deserialize(file);
             SceneManager.LoadScene(save.Level);
+        }
+        else
+        {
         }
     }
 }
