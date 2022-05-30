@@ -9,7 +9,6 @@ TagManager:
   - Collectable
   - Collected
   - GameManager
-  - Key
   layers:
   - Default
   - TransparentFX
@@ -17,7 +16,7 @@ TagManager:
   - CamIgnore
   - Water
   - UI
-  - IgnoreCam
+  - 
   - 
   - 
   - 
