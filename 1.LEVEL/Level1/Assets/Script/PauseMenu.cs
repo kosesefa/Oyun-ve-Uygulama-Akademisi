@@ -7,9 +7,12 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject CharacterController;
     private void Start()
     {
         NPCDialogue.canEsc = true;
+        CharacterController = new GameObject();
+        CharacterController = GameObject.Find("PlayerArmature");
     }
     private void Update()
     {
@@ -39,6 +42,7 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
+
         Cursor.visible = true;
         StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
         StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;

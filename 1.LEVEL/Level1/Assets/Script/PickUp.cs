@@ -99,7 +99,6 @@ public class PickUp : MonoBehaviour
     }
     void MoveObject()
     {
-        Debug.Log(heldObject.name);
         if (Vector3.Distance(heldObject.transform.position, holdParent.position) > 0.1f)
         {
             Vector3 moveDirection = (holdParent.position - heldObject.transform.position);
