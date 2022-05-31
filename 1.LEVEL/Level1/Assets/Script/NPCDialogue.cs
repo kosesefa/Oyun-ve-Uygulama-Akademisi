@@ -21,19 +21,26 @@ public class NPCDialogue : MonoBehaviour
     //Canvas TextPanel = new Canvas();
     public GameObject panel;
     public Font _font;
+    public Font _TMPfont;
     private GameObject myGO;
     private GameObject myText;
+    private GameObject infoText;
+    private GameObject infoTextCanvas;
+    private Canvas _canvas;
     private Canvas myCanvas;
     private Text text;
+    private Text _infoText;
     private RectTransform rectTransform;
     private RectTransform rectTransformTextDC;
     private RectTransform rectTransformButton;
+    private RectTransform rectTransformInfoText;
     bool inDialogueSize = false;
     [SerializeField] GameObject DialogueVirtualCamera;
     [SerializeField] GameObject DialogueDollyCart;
     public static bool canEsc = true;
     public GameObject DialogueContinue;
     public GameObject TextDC;
+    [SerializeField] LayerMask layermask;
 
 
 
@@ -52,6 +59,14 @@ public class NPCDialogue : MonoBehaviour
         myGO.name = "Canvas Dialogue";
         myGO.AddComponent<Canvas>();
 
+        infoTextCanvas = new GameObject();
+        infoTextCanvas.name = "Ýnfo Canvas";
+        infoTextCanvas.AddComponent<Canvas>();
+        infoTextCanvas.AddComponent<CanvasScaler>();
+        infoTextCanvas.AddComponent<GraphicRaycaster>();
+        _canvas = infoTextCanvas.GetComponent<Canvas>();
+        _canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+
         panel = new GameObject();
 
         myCanvas = myGO.GetComponent<Canvas>();
@@ -68,15 +83,14 @@ public class NPCDialogue : MonoBehaviour
         panel.GetComponent<Image>().color = new Color32(55, 55, 55, 237);
         panel.GetComponent<Image>().raycastTarget = true;
         panel.GetComponent<Image>().maskable = true;
-        panel.GetComponent<Transform>().localPosition = new Vector3(0, -316.72f, 0f);
+        panel.GetComponent<Transform>().localPosition = new Vector3(0, -194, 0f);
         panel.GetComponent<Transform>().localScale = new Vector3(11.68f, 2.56f, 1);
-        panel.tag = "DialogueScreen";
 
 
         // Text
         myText = new GameObject();
+        myText.transform.parent = myGO.transform;
         myText.name = "Dialogue";
-        myText.tag = "DialogueScreen";
         myText.transform.SetSiblingIndex(666);
         text = myText.AddComponent<Text>();
         text.transform.GetComponent<Text>().text = "“…- different grunts and deep voices-…Human… Those who come here fail to see how surprising reality can be.The eyes given to you are only for seeing, you cannot look beyond… There is a door on the hill ahead.You will need the most primitive human intelligence to open this door.It is waiting for you behind another door.";
@@ -87,8 +101,27 @@ public class NPCDialogue : MonoBehaviour
 
         // Text position
         rectTransform = text.GetComponent<RectTransform>();
-        rectTransform.localPosition = new Vector3(0, -360, 0);
+        rectTransform.localPosition = new Vector3(0, -229, 0);
         rectTransform.sizeDelta = new Vector2(1071, 243);
+
+        // Info Text
+        infoText = new GameObject();
+        infoText.name = "Info Text";
+        infoText.transform.parent = infoTextCanvas.transform;
+        infoText.transform.SetSiblingIndex(666);
+        _infoText = infoText.AddComponent<Text>();
+        _infoText.transform.GetComponent<Text>().text = "Press F to Talk";
+        _infoText.transform.GetComponent<Text>().font = _font;
+        _infoText.transform.GetComponent<Text>().fontSize = 29;
+        _infoText.transform.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
+        _infoText.transform.GetComponent<Text>().alignment = TextAnchor.LowerCenter;
+
+
+        rectTransformInfoText = _infoText.GetComponent<RectTransform>();
+        rectTransformInfoText.localPosition = new Vector3(0, -472f, 0);
+        rectTransformInfoText.sizeDelta = new Vector2(858.4f, 137f);
+        infoText.transform.GetComponent<Text>().fontSize = 53; ;
+        rectTransformInfoText = infoText.GetComponent<RectTransform>();
 
 
         //Button
@@ -104,7 +137,7 @@ public class NPCDialogue : MonoBehaviour
         DialogueContinue.GetComponent<Image>().color = new Color32(1, 1, 1, 0);
         DialogueContinue.AddComponent<Button>();
         DialogueContinue.transform.GetComponent<Transform>().localScale = new Vector3(1, 1, 1);
-        DialogueContinue.transform.GetComponent<Transform>().localPosition = new Vector3(427, -383, 0);
+        DialogueContinue.transform.GetComponent<Transform>().localPosition = new Vector3(427, -274, 0);
         rectTransformButton = TextDC.GetComponent<RectTransform>();
         rectTransformTextDC = DialogueContinue.GetComponent<RectTransform>();
         rectTransformTextDC.sizeDelta = new Vector2(172, 82);
@@ -115,7 +148,7 @@ public class NPCDialogue : MonoBehaviour
         TextDC.transform.GetComponent<Transform>().localPosition = new Vector3(88.9f, -33, 0);
         DialogueContinue.GetComponent<Button>().onClick.AddListener(() => DialogueContinueOnClickEvent());
 
-
+        infoTextCanvas.SetActive(false);
         myGO.SetActive(false);
 
     }
@@ -127,18 +160,23 @@ public class NPCDialogue : MonoBehaviour
         StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
         DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().Priority = 5;
         myGO.SetActive(false);
+        infoTextCanvas.SetActive(true);
         //inDialogueSize = false;
 
     }
 
     private void OnTriggerStay(Collider collider)
     {
-        Debug.Log("OnColliderEnter");
-        inDialogueSize = true;
+        if (collider.gameObject.layer != LayerMask.NameToLayer("Key"))
+        {
+            inDialogueSize = true;
+            infoTextCanvas.SetActive(true);
+        }
     }
     private void OnTriggerExit(Collider other)
     {
         inDialogueSize = false;
+        infoTextCanvas.SetActive(false);
     }
 
     void Update()
@@ -146,10 +184,10 @@ public class NPCDialogue : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F) && inDialogueSize == true)
         {
+            infoTextCanvas.SetActive(true);
             myGO.SetActive(true);
             DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().Priority = 11;
             DialogueDollyCart.SetActive(true);
-            Debug.Log("Ýçinde");
             canEsc = false;
             Cursor.visible = true;
             StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;

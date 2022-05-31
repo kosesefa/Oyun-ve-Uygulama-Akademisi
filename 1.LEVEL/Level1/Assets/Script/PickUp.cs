@@ -27,9 +27,15 @@ public class PickUp : MonoBehaviour
     [Space(15)]
     [SerializeField] Animator animator;
     [Space(15)]
-    [SerializeField] LayerMask layerMask;
+    //public GameObject putÝtem;
+    PutItem putItem;
+
+
     private void Start()
     {
+        Application.targetFrameRate = 50;
+        putItem = new PutItem();
+        
     }
 
     void Update()
@@ -59,8 +65,9 @@ public class PickUp : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Destroy(hit.collider.gameObject);
-                    KeyInHand.SetActive(true);
+                    //KeyInHand.SetActive(true);
                     animator.SetTrigger("PickUp");
+                    PutItem.GateKeyinHand.SetActive(true);
 
                 }
             }
@@ -76,6 +83,7 @@ public class PickUp : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, holdRange))
                 {
+                    //hit.point - (rayDir * -1 * yourValue);
                     PickUpObject(hit.transform.gameObject);
                 }
             }
@@ -87,6 +95,28 @@ public class PickUp : MonoBehaviour
         if (heldObject != null)
         {
             MoveObject();
+        }
+    }
+    void MoveObject()
+    {
+        Debug.Log(heldObject.name);
+        if (Vector3.Distance(heldObject.transform.position, holdParent.position) > 0.1f)
+        {
+            Vector3 moveDirection = (holdParent.position - heldObject.transform.position);
+            heldObject.GetComponent<Rigidbody>().AddForce(moveDirection * moveForce);
+            //heldObject.GetComponent<Rigidbody>().velocity = Vector3.Slerp(heldObject.transform.position, moveDirection, 99);
+            //heldObject.GetComponent<Rigidbody>().MovePosition(Vector3.Slerp(heldObject.transform.position, moveDirection, 3));
+            //holdParent.GetComponent<Rigidbody>().MovePosition(Vector3.Slerp(holdParent.transform.position, moveDirection, 3));
+            //holdParent.transform.Translate(Vector3.Slerp(holdParent.transform.position, moveDirection, 3));
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f && pushObject) // Object push
+        {
+            holdParent.transform.position = holdParent.transform.position + holdParent.transform.forward;
+
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f && pullObject) // Object pull
+        {
+            holdParent.transform.position = holdParent.transform.position - holdParent.transform.forward;
         }
     }
     void PickUpObject(GameObject pickObj)
@@ -101,23 +131,7 @@ public class PickUp : MonoBehaviour
             heldObject = pickObj;
         }
     }
-    void MoveObject()
-    {
-        if (Vector3.Distance(heldObject.transform.position, holdParent.position) > 0.1f)
-        {
-            Vector3 moveDirection = (holdParent.position - heldObject.transform.position);
-            heldObject.GetComponent<Rigidbody>().AddForce(moveDirection * moveForce);
-        }
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f && pushObject) // Object push
-        {
-            holdParent.transform.position = holdParent.transform.position + holdParent.transform.forward;
 
-        }
-        else if (Input.GetAxis("Mouse ScrollWheel") < 0f && pullObject) // Object pull
-        {
-            holdParent.transform.position = holdParent.transform.position - holdParent.transform.forward;
-        }
-    }
     void dropObject()
     {
         Rigidbody heldRig = heldObject.GetComponent<Rigidbody>();
@@ -152,14 +166,5 @@ public class PickUp : MonoBehaviour
     {
         holdParent.transform.position = new Vector3(holdParent.position.x, 0, holdParent.position.z);
     }
-    /*IEnumerator  PickUpandTime()
-    {
-        yield return new WaitForSecondsRealtime(1);
-        RaycastHit hit;
-        Physics.Raycast();
-        hit.collider.gameObject.transform.parent = handPos.transform;
 
-
-    }
-    */
 }
