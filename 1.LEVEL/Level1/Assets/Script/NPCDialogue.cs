@@ -19,6 +19,7 @@ public class NPCDialogue : MonoBehaviour
     [SerializeField] string Dialogue7;
     */
     //Canvas TextPanel = new Canvas();
+    public AudioSource audio;
     public GameObject panel;
     public Font _font;
     public Font _TMPfont;
@@ -190,10 +191,12 @@ public class NPCDialogue : MonoBehaviour
             DialogueDollyCart.SetActive(true);
             canEsc = false;
             Cursor.visible = true;
+            audio.Play();
             StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
             Cursor.lockState = CursorLockMode.None;
             ControllerDisable();
+           
 
         }
     }
