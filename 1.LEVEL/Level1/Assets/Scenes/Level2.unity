@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.08026367, g: 0.09965569, b: 0.30106124, a: 1}
+  m_IndirectSpecularColor: {r: 0.15716988, g: 0.1277671, b: 0.41103274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -395,7 +395,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52823722}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 105.32862, y: 7.942831, z: 265.1129}
@@ -6095,7 +6095,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1173077, y: 1}
+    m_SensorSize: {x: 2.137864, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7818,9 +7818,6 @@ MonoBehaviour:
   maxPushDistance: 20
   maxPullDistance: 6
   animator: {fileID: 1808747147}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 127
 --- !u!114 &1122932673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63208,18 +63205,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.4643135, y: 0.60326195, z: 2.2230797}
   m_Center: {x: -0.0014972687, y: 0.30163097, z: -0.0000019073486}
---- !u!114 &8311916476776665232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8659582758146359512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8316764949479172342
 GameObject:
   m_ObjectHideFlags: 0
@@ -63852,7 +63837,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8570550752641512522}
   - component: {fileID: 7834562612362257290}
-  - component: {fileID: 8311916476776665232}
   - component: {fileID: 1216780896}
   m_Layer: 0
   m_Name: Point Light
