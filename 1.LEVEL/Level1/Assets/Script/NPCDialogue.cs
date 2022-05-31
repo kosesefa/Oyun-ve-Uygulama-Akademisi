@@ -10,39 +10,39 @@ using Cinemachine.Utility;
 public class NPCDialogue : MonoBehaviour
 {
     //Dialogues
-    /*[SerializeField] string Dialogue1;
-    [SerializeField] string Dialogue2;
-    [SerializeField] string Dialogue3;
-    [SerializeField] string Dialogue4;
-    [SerializeField] string Dialogue5;
-    [SerializeField] string Dialogue6;
-    [SerializeField] string Dialogue7;
-    */
-    //Canvas TextPanel = new Canvas();
     public AudioSource audio;
     public GameObject panel;
     public Font _font;
     public Font _TMPfont;
     private GameObject myGO;
     private GameObject myText;
+    private GameObject myText2;
     private GameObject infoText;
     private GameObject infoTextCanvas;
     private Canvas _canvas;
     private Canvas myCanvas;
     private Text text;
+    private Text text2;
     private Text _infoText;
     private RectTransform rectTransform;
+    private RectTransform rectTransform2;
     private RectTransform rectTransformTextDC;
     private RectTransform rectTransformButton;
     private RectTransform rectTransformInfoText;
     bool inDialogueSize = false;
     [SerializeField] GameObject DialogueVirtualCamera;
     [SerializeField] GameObject DialogueDollyCart;
+    [SerializeField] GameObject DialogueVirtualCamera2;
+    [SerializeField] GameObject DialogueDollyCart2;
     public static bool canEsc = true;
     public GameObject DialogueContinue;
     public GameObject TextDC;
     [SerializeField] LayerMask layermask;
-
+    public int ContinueCount = 0;
+    [SerializeField] GameObject NPC;
+    [SerializeField] GameObject Otis;
+    //private string Line1 = "…- deðiþik homurtular ve derin sesler-… ";
+    //private string Line2 = "Ýnsan… Buraya gelenler gerçekliðin ne kadar þaþýrtýcý olabileceðini göremiyorlar. Size verilen gözler sadece görmenize yarýyor, daha ötesine bakamýyorsunuz… Ýleride, tepede bir kapý var. Bu kapýyý açabilmek için en ilkel insan zekasýna ihtiyacýn olacak. Baþka bir kapýnýn ardýnda seni bekliyor.”";
 
 
     //RectTransform m_RectTransform;
@@ -86,6 +86,7 @@ public class NPCDialogue : MonoBehaviour
         panel.GetComponent<Image>().maskable = true;
         panel.GetComponent<Transform>().localPosition = new Vector3(0, -194, 0f);
         panel.GetComponent<Transform>().localScale = new Vector3(11.68f, 2.56f, 1);
+        myGO.SetActive(false);
 
 
         // Text
@@ -94,16 +95,29 @@ public class NPCDialogue : MonoBehaviour
         myText.name = "Dialogue";
         myText.transform.SetSiblingIndex(666);
         text = myText.AddComponent<Text>();
-        text.transform.GetComponent<Text>().text = "“…- different grunts and deep voices-…Human… Those who come here fail to see how surprising reality can be.The eyes given to you are only for seeing, you cannot look beyond… There is a door on the hill ahead.You will need the most primitive human intelligence to open this door.It is waiting for you behind another door.";
+        text.transform.GetComponent<Text>().text = "…- deðiþik homurtular ve derin sesler-… " + "\n\nÝnsan… Buraya gelenler gerçekliðin ne kadar þaþýrtýcý olabileceðini göremiyorlar. Size verilen gözler sadece görmenize yarýyor, daha ötesine bakamýyorsunuz… Ýleride, tepede bir kapý var. Bu kapýyý açabilmek için en ilkel insan zekasýna ihtiyacýn olacak. Baþka bir kapýnýn ardýnda seni bekliyor.”";
         text.transform.GetComponent<Text>().font = _font;
         text.transform.GetComponent<Text>().fontSize = 29;
         rectTransform = myText.GetComponent<RectTransform>();
+        // Text 2
+        myText2 = new GameObject();
+        myText2.transform.parent = myGO.transform;
+        myText2.name = "Dialogue2";
+        myText2.transform.SetSiblingIndex(667);
+        text2 = myText2.AddComponent<Text>();
+        text2.transform.GetComponent<Text>().text = "“Buna göre, gördüðüm her þeyin yanlýþ ve hayali olduðunu varsayýyorum; Yanýltýcý belleðimin temsil ettiði nesnelerden hiçbirinin var olmadýðýna inanýyorum; Sanýrým hiçbir duyuya sahip deðilim; Bedenin, figürün, uzantýnýn, hareketin ve yerin sadece zihnimin kurgularý olduðuna inanýyorum. O halde, doðru kabul edilebilecek ne var? Belki de sadece bu, kesinlikle kesin bir þey olmadýðý.”";
+        text2.transform.GetComponent<Text>().font = _font;
+        text2.transform.GetComponent<Text>().fontSize = 29;
+        rectTransform2 = myText2.GetComponent<RectTransform>();
 
 
         // Text position
         rectTransform = text.GetComponent<RectTransform>();
         rectTransform.localPosition = new Vector3(0, -229, 0);
         rectTransform.sizeDelta = new Vector2(1071, 243);
+        rectTransform2 = text.GetComponent<RectTransform>();
+        rectTransform2.localPosition = new Vector3(0, -229, 0);
+        rectTransform2.sizeDelta = new Vector2(1071, 243);
 
         // Info Text
         infoText = new GameObject();
@@ -156,13 +170,37 @@ public class NPCDialogue : MonoBehaviour
 
     void DialogueContinueOnClickEvent()
     {
-        Cursor.visible = false;
-        StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
-        StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
-        DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().Priority = 5;
-        myGO.SetActive(false);
-        infoTextCanvas.SetActive(true);
-        //inDialogueSize = false;
+        Debug.Log(ContinueCount);
+        if (ContinueCount == 0)
+        {
+            myText.SetActive(true);
+            DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().Priority = 20;
+            DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().LookAt = Otis.transform;
+
+            text.transform.GetComponent<Text>().text = "“Buna göre, gördüðüm her þeyin yanlýþ ve hayali olduðunu varsayýyorum; Yanýltýcý belleðimin temsil ettiði nesnelerden hiçbirinin var olmadýðýna inanýyorum; Sanýrým hiçbir duyuya sahip deðilim; Bedenin, figürün, uzantýnýn, hareketin ve yerin sadece zihnimin kurgularý olduðuna inanýyorum. O halde, doðru kabul edilebilecek ne var? Belki de sadece bu, kesinlikle kesin bir þey olmadýðý.”";
+            ContinueCount++;
+        }
+        else if (ContinueCount==1)
+        {
+            //myText.SetActive(false);
+            //myText2.SetActive(true);
+            DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().LookAt = NPC.transform;
+            ContinueCount++;
+            text.transform.GetComponent<Text>().text = "....";
+
+        }
+        else 
+        {
+            text.transform.GetComponent<Text>().text = "…- deðiþik homurtular ve derin sesler-… Ýnsan… Buraya gelenler gerçekliðin ne kadar þaþýrtýcý olabileceðini göremiyorlar. Size verilen gözler sadece görmenize yarýyor, daha ötesine bakamýyorsunuz… Ýleride, tepede bir kapý var. Bu kapýyý açabilmek için en ilkel insan zekasýna ihtiyacýn olacak. Baþka bir kapýnýn ardýnda seni bekliyor.”";
+            Cursor.visible = false;
+            StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
+            StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
+            infoTextCanvas.SetActive(true);
+            myGO.SetActive(false);
+            ContinueCount++;
+            DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().Priority = 5;
+        }
+
 
     }
 
@@ -185,10 +223,12 @@ public class NPCDialogue : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F) && inDialogueSize == true)
         {
-            infoTextCanvas.SetActive(true);
+            DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().LookAt = NPC.transform;
+            infoTextCanvas.SetActive(false);
             myGO.SetActive(true);
-            DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().Priority = 11;
+            DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().Priority = 15;
             DialogueDollyCart.SetActive(true);
+            DialogueDollyCart2.SetActive(true);
             canEsc = false;
             Cursor.visible = true;
             audio.Play();
@@ -196,7 +236,8 @@ public class NPCDialogue : MonoBehaviour
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
             Cursor.lockState = CursorLockMode.None;
             ControllerDisable();
-           
+            ContinueCount = 0 ;
+
 
         }
     }

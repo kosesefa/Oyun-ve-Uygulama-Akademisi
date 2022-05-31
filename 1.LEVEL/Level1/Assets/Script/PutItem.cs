@@ -28,7 +28,7 @@ public class PutItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && PickUp.isTaken==true)
         {
             CanPut = true;
         }
