@@ -29,6 +29,7 @@ public class PickUp : MonoBehaviour
     [Space(15)]
     //public GameObject put›tem;
     PutItem putItem;
+    public static bool isTaken = false;
 
 
     private void Start()
@@ -68,6 +69,7 @@ public class PickUp : MonoBehaviour
                     //KeyInHand.SetActive(true);
                     animator.SetTrigger("PickUp");
                     PutItem.GateKeyinHand.SetActive(true);
+                    isTaken = true;
 
                 }
             }
