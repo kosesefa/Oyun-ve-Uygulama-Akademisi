@@ -27,9 +27,37 @@ public class PickUp : MonoBehaviour
     [Space(15)]
     [SerializeField] Animator animator;
     [Space(15)]
-    [SerializeField] LayerMask layerMask;
+    //public GameObject put›tem;
+    PutItem putItem;
+    public static GameObject Light1;
+    public static GameObject Light2;
+    public static GameObject Light3;
+    public static GameObject Light4;
+    public static GameObject Light5;
+    public static bool canTake = false;
+    public static bool isTaken = false;
+
+
     private void Start()
     {
+        Application.targetFrameRate = 50;
+        putItem = new PutItem();
+        Light1 = new GameObject();
+        Light2 = new GameObject();
+        Light3 = new GameObject();
+        Light4 = new GameObject();
+        Light5 = new GameObject();
+        Light1 = GameObject.FindGameObjectWithTag("Light1");
+        Light2 = GameObject.FindGameObjectWithTag("Light2");
+        Light3 = GameObject.FindGameObjectWithTag("Light3");
+        Light4 = GameObject.FindGameObjectWithTag("Light4");
+        Light5 = GameObject.FindGameObjectWithTag("Light5");
+        Light1.SetActive(false);
+        Light2.SetActive(false);
+        Light3.SetActive(false);
+        Light4.SetActive(false);
+        Light5.SetActive(false);
+
     }
 
     void Update()
@@ -46,22 +74,27 @@ public class PickUp : MonoBehaviour
 
     void PickUpYourHand()
     {
-        Vector3 _forward = transform.TransformDirection(Vector3.forward);
-        RaycastHit hit;
-        Crosshair.color = Color.white;
-
-        if (Physics.Raycast(transform.position, _forward, out hit))
+        if (canTake == true)
         {
-            Debug.DrawLine(transform.position, hit.point, Color.red);
-            if (hit.distance <= _Distance && hit.collider.gameObject.tag == "Collectable")
-            {
-                Crosshair.color = Color.red;
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    Destroy(hit.collider.gameObject);
-                    KeyInHand.SetActive(true);
-                    animator.SetTrigger("PickUp");
+            Vector3 _forward = transform.TransformDirection(Vector3.forward);
+            RaycastHit hit;
+            Crosshair.color = Color.white;
 
+            if (Physics.Raycast(transform.position, _forward, out hit))
+            {
+                Debug.DrawLine(transform.position, hit.point, Color.red);
+                if (hit.distance <= _Distance && hit.collider.gameObject.tag == "Collectable")
+                {
+                    Crosshair.color = Color.red;
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        Destroy(hit.collider.gameObject);
+                        //KeyInHand.SetActive(true);
+                        animator.SetTrigger("PickUp");
+                        PutItem.GateKeyinHand.SetActive(true);
+                        isTaken = true;
+
+                    }
                 }
             }
         }
@@ -76,6 +109,7 @@ public class PickUp : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, holdRange))
                 {
+                    //hit.point - (rayDir * -1 * yourValue);
                     PickUpObject(hit.transform.gameObject);
                 }
             }
@@ -87,6 +121,27 @@ public class PickUp : MonoBehaviour
         if (heldObject != null)
         {
             MoveObject();
+        }
+    }
+    void MoveObject()
+    {
+        if (Vector3.Distance(heldObject.transform.position, holdParent.position) > 0.1f)
+        {
+            Vector3 moveDirection = (holdParent.position - heldObject.transform.position);
+            heldObject.GetComponent<Rigidbody>().AddForce(moveDirection * moveForce);
+            //heldObject.GetComponent<Rigidbody>().velocity = Vector3.Slerp(heldObject.transform.position, moveDirection, 99);
+            //heldObject.GetComponent<Rigidbody>().MovePosition(Vector3.Slerp(heldObject.transform.position, moveDirection, 3));
+            //holdParent.GetComponent<Rigidbody>().MovePosition(Vector3.Slerp(holdParent.transform.position, moveDirection, 3));
+            //holdParent.transform.Translate(Vector3.Slerp(holdParent.transform.position, moveDirection, 3));
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f && pushObject) // Object push
+        {
+            holdParent.transform.position = holdParent.transform.position + holdParent.transform.forward;
+
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f && pullObject) // Object pull
+        {
+            holdParent.transform.position = holdParent.transform.position - holdParent.transform.forward;
         }
     }
     void PickUpObject(GameObject pickObj)
@@ -101,23 +156,7 @@ public class PickUp : MonoBehaviour
             heldObject = pickObj;
         }
     }
-    void MoveObject()
-    {
-        if (Vector3.Distance(heldObject.transform.position, holdParent.position) > 0.1f)
-        {
-            Vector3 moveDirection = (holdParent.position - heldObject.transform.position);
-            heldObject.GetComponent<Rigidbody>().AddForce(moveDirection * moveForce);
-        }
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f && pushObject) // Object push
-        {
-            holdParent.transform.position = holdParent.transform.position + holdParent.transform.forward;
 
-        }
-        else if (Input.GetAxis("Mouse ScrollWheel") < 0f && pullObject) // Object pull
-        {
-            holdParent.transform.position = holdParent.transform.position - holdParent.transform.forward;
-        }
-    }
     void dropObject()
     {
         Rigidbody heldRig = heldObject.GetComponent<Rigidbody>();
@@ -152,14 +191,5 @@ public class PickUp : MonoBehaviour
     {
         holdParent.transform.position = new Vector3(holdParent.position.x, 0, holdParent.position.z);
     }
-    /*IEnumerator  PickUpandTime()
-    {
-        yield return new WaitForSecondsRealtime(1);
-        RaycastHit hit;
-        Physics.Raycast();
-        hit.collider.gameObject.transform.parent = handPos.transform;
 
-
-    }
-    */
 }

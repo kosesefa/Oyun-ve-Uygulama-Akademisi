@@ -17,7 +17,7 @@ public class Death : MonoBehaviour
 
     public void Start()
     {
-        
+
         canvas.SetActive(false);
         thirdPersonController = this.gameObject.GetComponent<ThirdPersonController>();
     }

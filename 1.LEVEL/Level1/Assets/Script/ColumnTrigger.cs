@@ -10,6 +10,7 @@ public class ColumnTrigger : MonoBehaviour
     public GameObject doorBoxCollider;
     public GameObject doorLight;
     public Animator _animator;
+    public AudioSource _audioSource;
     //private Animation _animaton;
 
    
@@ -29,7 +30,7 @@ public class ColumnTrigger : MonoBehaviour
             door.GetComponent<BoxCollider>().enabled = true;
             doorBoxCollider.GetComponent<BoxCollider>().enabled = false; 
             doorLight.SetActive(true);
-            
+            _audioSource.Play();    
             _animator.SetBool("isLightOut",true);
             _animator.SetBool("isLightIn",false); 
 

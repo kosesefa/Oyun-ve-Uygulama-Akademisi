@@ -13,6 +13,13 @@ TagManager:
   - NPC
   - hand
   - handPosition
+  - Slime
+  - Lights
+  - Light1
+  - Light2
+  - Light3
+  - Light4
+  - Light5
   layers:
   - Default
   - TransparentFX
@@ -22,7 +29,7 @@ TagManager:
   - UI
   - IgnoreCam
   - Ground
-  - 
+  - Key
   - 
   - 
   - 
