@@ -108,6 +108,17 @@
               </e>
             </e>
           </e>
+          <e p="EmaceArt" t="Include">
+            <e p="NecroPoly Free" t="Include">
+              <e p="Editor" t="Include">
+                <e p="WelcomeWindow.cs" t="Include" />
+              </e>
+              <e p="Thanks" t="Include">
+                <e p="Thanks.txt" t="Include" />
+              </e>
+              <e p="Thanks.txt" t="Include" />
+            </e>
+          </e>
           <e p="Off Axis Studios" t="Include">
             <e p="Polyworks" t="Include">
               <e p="Shaders" t="Include">
@@ -178,6 +189,7 @@
         </e>
         <e p="Script" t="Include">
           <e p="AIPatrol.cs" t="Include" />
+          <e p="BugFixer.cs" t="Include" />
           <e p="CameraFollowAfter7Sec.cs" t="Include" />
           <e p="CamMoving.cs" t="Include" />
           <e p="ColumnTrigger.cs" t="Include" />
@@ -189,12 +201,18 @@
           <e p="IntroController.cs" t="Include" />
           <e p="LevelChanger.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
-          <e p="MainMenuButtonAnimation.cs" t="Include" />
+          <e p="MovingPlatform.cs" t="Include" />
+          <e p="NPCDialogue.cs" t="Include" />
+          <e p="NPCDialogue2.cs" t="Include" />
           <e p="PauseMenu.cs" t="Include" />
           <e p="PickUp.cs" t="Include" />
+          <e p="PlatformColumn.cs" t="Include" />
           <e p="PushObject.cs" t="Include" />
+          <e p="PutItem.cs" t="Include" />
           <e p="ReadOnly.cs" t="Include" />
           <e p="SaveLoad.cs" t="Include" />
+          <e p="SoundManager.cs" t="Include" />
+          <e p="TouchSound.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
