@@ -36,7 +36,7 @@ Material:
     - _EnableFog: 0
     - _EnableRotation: 0
     - _Exposure: 1
-    - _FogFill: 0.5
+    - _FogFill: 0.342
     - _FogHeight: 1
     - _FogIntensity: 1
     - _FogMessage: 0
