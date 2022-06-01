@@ -22,10 +22,8 @@ public class NPCDialogue : MonoBehaviour
     private Canvas _canvas;
     private Canvas myCanvas;
     private Text text;
-    private Text text2;
     private Text _infoText;
     private RectTransform rectTransform;
-    private RectTransform rectTransform2;
     private RectTransform rectTransformTextDC;
     private RectTransform rectTransformButton;
     private RectTransform rectTransformInfoText;
@@ -95,25 +93,12 @@ public class NPCDialogue : MonoBehaviour
         text.transform.GetComponent<Text>().font = _font;
         text.transform.GetComponent<Text>().fontSize = 29;
         rectTransform = myText.GetComponent<RectTransform>();
-        // Text 2
-        myText2 = new GameObject();
-        myText2.transform.parent = DialogueGO.transform;
-        myText2.name = "Dialogue2";
-        myText2.transform.SetSiblingIndex(667);
-        text2 = myText2.AddComponent<Text>();
-        text2.transform.GetComponent<Text>().text = "“Buna göre, gördüðüm her þeyin yanlýþ ve hayali olduðunu varsayýyorum; Yanýltýcý belleðimin temsil ettiði nesnelerden hiçbirinin var olmadýðýna inanýyorum; Sanýrým hiçbir duyuya sahip deðilim; Bedenin, figürün, uzantýnýn, hareketin ve yerin sadece zihnimin kurgularý olduðuna inanýyorum. O halde, doðru kabul edilebilecek ne var? Belki de sadece bu, kesinlikle kesin bir þey olmadýðý.”";
-        text2.transform.GetComponent<Text>().font = _font;
-        text2.transform.GetComponent<Text>().fontSize = 29;
-        rectTransform2 = myText2.GetComponent<RectTransform>();
 
 
         // Text position
         rectTransform = text.GetComponent<RectTransform>();
         rectTransform.localPosition = new Vector3(0, -229, 0);
         rectTransform.sizeDelta = new Vector2(1071, 243);
-        rectTransform2 = text.GetComponent<RectTransform>();
-        rectTransform2.localPosition = new Vector3(0, -229, 0);
-        rectTransform2.sizeDelta = new Vector2(1071, 243);
 
         // Info Text
         infoText = new GameObject();
@@ -195,12 +180,14 @@ public class NPCDialogue : MonoBehaviour
             DialogueGO.SetActive(false);
             ContinueCount++;
             DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().Priority = 5;
+            inDialogueSize = true;
+            StartCoroutine(LightsScript());
         }
 
 
     }
 
-    private void OnTriggerStay(Collider collider)
+    private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.layer != LayerMask.NameToLayer("Key"))
         {
@@ -219,6 +206,7 @@ public class NPCDialogue : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F) && inDialogueSize == true)
         {
+            inDialogueSize = false;
             DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().LookAt = NPC.transform;
             infoTextCanvas.SetActive(false);
             DialogueGO.SetActive(true);
@@ -230,18 +218,25 @@ public class NPCDialogue : MonoBehaviour
             StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
             Cursor.lockState = CursorLockMode.None;
-            ControllerDisable();
             ContinueCount = 0 ;
+            PickUp.canTake = true;
 
 
         }
     }
-    public void ControllerDisable()
+    IEnumerator LightsScript()
     {
+        yield return new WaitForSeconds(3);
+        PickUp.Light1.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        PickUp.Light2.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        PickUp.Light3.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        PickUp.Light4.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        PickUp.Light5.SetActive(true);
 
-    }
-    public void ControllerEnable()
-    {
 
     }
 }

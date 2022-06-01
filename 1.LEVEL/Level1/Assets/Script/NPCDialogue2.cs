@@ -161,9 +161,10 @@ public class NPCDialogue2 : MonoBehaviour
             infoTextCanvas.SetActive(true);
             DialogueGO.SetActive(false);
             DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().Priority = 5;
+            infoTextCanvas.SetActive(true);
     }
 
-    private void OnTriggerStay(Collider collider)
+    private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.layer != LayerMask.NameToLayer("Key"))
         {
@@ -193,18 +194,7 @@ public class NPCDialogue2 : MonoBehaviour
             StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
             Cursor.lockState = CursorLockMode.None;
-            ControllerDisable();
-            ContinueCount = 0;
-
-
         }
     }
-    public void ControllerDisable()
-    {
 
-    }
-    public void ControllerEnable()
-    {
-
-    }
 }
