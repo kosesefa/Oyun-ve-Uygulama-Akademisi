@@ -29,6 +29,12 @@ public class PickUp : MonoBehaviour
     [Space(15)]
     //public GameObject put›tem;
     PutItem putItem;
+    public static GameObject Light1;
+    public static GameObject Light2;
+    public static GameObject Light3;
+    public static GameObject Light4;
+    public static GameObject Light5;
+    public static bool canTake = false;
     public static bool isTaken = false;
 
 
@@ -36,7 +42,22 @@ public class PickUp : MonoBehaviour
     {
         Application.targetFrameRate = 50;
         putItem = new PutItem();
-        
+        Light1 = new GameObject();
+        Light2 = new GameObject();
+        Light3 = new GameObject();
+        Light4 = new GameObject();
+        Light5 = new GameObject();
+        Light1 = GameObject.FindGameObjectWithTag("Light1");
+        Light2 = GameObject.FindGameObjectWithTag("Light2");
+        Light3 = GameObject.FindGameObjectWithTag("Light3");
+        Light4 = GameObject.FindGameObjectWithTag("Light4");
+        Light5 = GameObject.FindGameObjectWithTag("Light5");
+        Light1.SetActive(false);
+        Light2.SetActive(false);
+        Light3.SetActive(false);
+        Light4.SetActive(false);
+        Light5.SetActive(false);
+
     }
 
     void Update()
@@ -53,24 +74,27 @@ public class PickUp : MonoBehaviour
 
     void PickUpYourHand()
     {
-        Vector3 _forward = transform.TransformDirection(Vector3.forward);
-        RaycastHit hit;
-        Crosshair.color = Color.white;
-
-        if (Physics.Raycast(transform.position, _forward, out hit))
+        if (canTake == true)
         {
-            Debug.DrawLine(transform.position, hit.point, Color.red);
-            if (hit.distance <= _Distance && hit.collider.gameObject.tag == "Collectable")
-            {
-                Crosshair.color = Color.red;
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    Destroy(hit.collider.gameObject);
-                    //KeyInHand.SetActive(true);
-                    animator.SetTrigger("PickUp");
-                    PutItem.GateKeyinHand.SetActive(true);
-                    isTaken = true;
+            Vector3 _forward = transform.TransformDirection(Vector3.forward);
+            RaycastHit hit;
+            Crosshair.color = Color.white;
 
+            if (Physics.Raycast(transform.position, _forward, out hit))
+            {
+                Debug.DrawLine(transform.position, hit.point, Color.red);
+                if (hit.distance <= _Distance && hit.collider.gameObject.tag == "Collectable")
+                {
+                    Crosshair.color = Color.red;
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        Destroy(hit.collider.gameObject);
+                        //KeyInHand.SetActive(true);
+                        animator.SetTrigger("PickUp");
+                        PutItem.GateKeyinHand.SetActive(true);
+                        isTaken = true;
+
+                    }
                 }
             }
         }
