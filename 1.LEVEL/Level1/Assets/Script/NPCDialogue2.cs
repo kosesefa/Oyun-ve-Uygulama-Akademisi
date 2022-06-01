@@ -7,7 +7,7 @@ using TMPro;
 using Cinemachine;
 using Cinemachine.Utility;
 
-public class NPCDialogue : MonoBehaviour
+public class NPCDialogue2 : MonoBehaviour
 {
     //Dialogues
     public AudioSource audio;
@@ -40,7 +40,6 @@ public class NPCDialogue : MonoBehaviour
     [SerializeField] GameObject Otis;
     //private string Line1 = "…- deðiþik homurtular ve derin sesler-… ";
     //private string Line2 = "Ýnsan… Buraya gelenler gerçekliðin ne kadar þaþýrtýcý olabileceðini göremiyorlar. Size verilen gözler sadece görmenize yarýyor, daha ötesine bakamýyorsunuz… Ýleride, tepede bir kapý var. Bu kapýyý açabilmek için en ilkel insan zekasýna ihtiyacýn olacak. Baþka bir kapýnýn ardýnda seni bekliyor.”";
-
 
     //RectTransform m_RectTransform;
 
@@ -91,21 +90,11 @@ public class NPCDialogue : MonoBehaviour
         myText.name = "Dialogue";
         myText.transform.SetSiblingIndex(666);
         text = myText.AddComponent<Text>();
-        text.transform.GetComponent<Text>().text = "…- deðiþik homurtular ve derin sesler-… " + "\n\nÝnsan… Buraya gelenler gerçekliðin ne kadar þaþýrtýcý olabileceðini göremiyorlar. Size verilen gözler sadece görmenize yarýyor, daha ötesine bakamýyorsunuz… Ýleride, tepede bir kapý var. Bu kapýyý açabilmek için en ilkel insan zekasýna ihtiyacýn olacak. Baþka bir kapýnýn ardýnda seni bekliyor.”";
+        text.transform.GetComponent<Text>().text = " Ýnsan yazgýsýný kabul etmeli mi yoksa onunla oynayabilir mi? Bu bölgede insanüstü özellikler elde edeceksin.Yaratmanýn ve taklit etmenin gücünü bulacaksýn. Ayrýca daha önce görmediðin canlýlar ile karþýlaþacaksýn.Gerçeðin yolunda karþýna çýkacak engelleri aþacaksýn. ";
         text.transform.GetComponent<Text>().font = _font;
         text.transform.GetComponent<Text>().fontSize = 29;
         rectTransform = myText.GetComponent<RectTransform>();
-        // Text 2
-        myText2 = new GameObject();
-        myText2.transform.parent = DialogueGO.transform;
-        myText2.name = "Dialogue2";
-        myText2.transform.SetSiblingIndex(667);
-        text2 = myText2.AddComponent<Text>();
-        text2.transform.GetComponent<Text>().text = "“Buna göre, gördüðüm her þeyin yanlýþ ve hayali olduðunu varsayýyorum; Yanýltýcý belleðimin temsil ettiði nesnelerden hiçbirinin var olmadýðýna inanýyorum; Sanýrým hiçbir duyuya sahip deðilim; Bedenin, figürün, uzantýnýn, hareketin ve yerin sadece zihnimin kurgularý olduðuna inanýyorum. O halde, doðru kabul edilebilecek ne var? Belki de sadece bu, kesinlikle kesin bir þey olmadýðý.”";
-        text2.transform.GetComponent<Text>().font = _font;
-        text2.transform.GetComponent<Text>().fontSize = 29;
-        rectTransform2 = myText2.GetComponent<RectTransform>();
-
+       
 
         // Text position
         rectTransform = text.GetComponent<RectTransform>();
@@ -166,38 +155,12 @@ public class NPCDialogue : MonoBehaviour
 
     void DialogueContinueOnClickEvent()
     {
-        Debug.Log(ContinueCount);
-        if (ContinueCount == 0)
-        {
-            myText.SetActive(true);
-            DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().Priority = 20;
-            DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().LookAt = Otis.transform;
-
-            text.transform.GetComponent<Text>().text = "“Buna göre, gördüðüm her þeyin yanlýþ ve hayali olduðunu varsayýyorum; Yanýltýcý belleðimin temsil ettiði nesnelerden hiçbirinin var olmadýðýna inanýyorum; Sanýrým hiçbir duyuya sahip deðilim; Bedenin, figürün, uzantýnýn, hareketin ve yerin sadece zihnimin kurgularý olduðuna inanýyorum. O halde, doðru kabul edilebilecek ne var? Belki de sadece bu, kesinlikle kesin bir þey olmadýðý.”";
-            ContinueCount++;
-        }
-        else if (ContinueCount==1)
-        {
-            //myText.SetActive(false);
-            //myText2.SetActive(true);
-            DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().LookAt = NPC.transform;
-            ContinueCount++;
-            text.transform.GetComponent<Text>().text = "....";
-
-        }
-        else 
-        {
-            text.transform.GetComponent<Text>().text = "…- deðiþik homurtular ve derin sesler-… Ýnsan… Buraya gelenler gerçekliðin ne kadar þaþýrtýcý olabileceðini göremiyorlar. Size verilen gözler sadece görmenize yarýyor, daha ötesine bakamýyorsunuz… Ýleride, tepede bir kapý var. Bu kapýyý açabilmek için en ilkel insan zekasýna ihtiyacýn olacak. Baþka bir kapýnýn ardýnda seni bekliyor.”";
             Cursor.visible = false;
             StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
             infoTextCanvas.SetActive(true);
             DialogueGO.SetActive(false);
-            ContinueCount++;
             DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().Priority = 5;
-        }
-
-
     }
 
     private void OnTriggerStay(Collider collider)
@@ -231,7 +194,7 @@ public class NPCDialogue : MonoBehaviour
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
             Cursor.lockState = CursorLockMode.None;
             ControllerDisable();
-            ContinueCount = 0 ;
+            ContinueCount = 0;
 
 
         }
