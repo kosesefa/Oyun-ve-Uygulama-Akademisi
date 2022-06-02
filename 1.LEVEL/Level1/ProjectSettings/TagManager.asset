@@ -20,6 +20,11 @@ TagManager:
   - Light3
   - Light4
   - Light5
+  - Level2PassWall
+  - Level2GateCanvas
+  - Level2TextZone
+  - Level2GateCanvas2
+  - Level2Text
   layers:
   - Default
   - TransparentFX
