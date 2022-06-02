@@ -10,7 +10,7 @@ using Cinemachine.Utility;
 public class NPCDialogue : MonoBehaviour
 {
     //Dialogues
-    public AudioSource audio;
+    public AudioSource NPCAudio;
     public GameObject panel;
     public Font _font;
     public Font _TMPfont;
@@ -214,7 +214,7 @@ public class NPCDialogue : MonoBehaviour
             DialogueDollyCart.SetActive(true);
             canEsc = false;
             Cursor.visible = true;
-            //audio.Play();
+            NPCAudio.Play();
             StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
             Cursor.lockState = CursorLockMode.None;
