@@ -36,11 +36,12 @@ public class SecondGameZone : MonoBehaviour
     public int ContinueCountSecondGame = 0;
     [SerializeField] GameObject NPCSecondGame;
     [SerializeField] GameObject OtisSecondGame;
-    public GameObject WriteLineSecondGame;
+    //public GameObject WriteLineSecondGame;
     public string password = "ABACCA";
     [SerializeField] public GameObject typePassword;
     public int continueCounter = 0;
     public TMP_InputField typePass;
+    public GameObject MainCanvasSecondGame;
 
     //private string Line1 = "…- deðiþik homurtular ve derin sesler-… ";
     //private string Line2 = "Ýnsan… Buraya gelenler gerçekliðin ne kadar þaþýrtýcý olabileceðini göremiyorlar. Size verilen gözler sadece görmenize yarýyor, daha ötesine bakamýyorsunuz… Ýleride, tepede bir kapý var. Bu kapýyý açabilmek için en ilkel insan zekasýna ihtiyacýn olacak. Baþka bir kapýnýn ardýnda seni bekliyor.”";
@@ -50,8 +51,8 @@ public class SecondGameZone : MonoBehaviour
 
 
     void Start()
-    {;
-        
+    {
+        typePassword.SetActive(false);
         DialogueDollyCartSecondGame.SetActive(false);
 
         DialogueGOSecondGame = new GameObject();
@@ -154,21 +155,23 @@ public class SecondGameZone : MonoBehaviour
         infoTextCanvasSecondGame.SetActive(false);
         DialogueGOSecondGame.SetActive(false);
 
+        MainCanvasSecondGame.SetActive(false);
     }
 
     void DialogueContinueOnClickEvent()
     {
-        if (continueCounter==0)
+        if (continueCounter == 0)
         {
             //DialogueGOSecondGame.SetActive(false);
             textSecondGame.enabled = false;
             panel.SetActive(false);
             continueCounter++;
             typePass.Select();
+            MainCanvasSecondGame.SetActive(true);
 
         }
 
-        else if (continueCounter==1)
+        else if (continueCounter == 1)
         {
             string typePassword = typePass.GetComponent<TMP_InputField>().text;
             if (typePassword == "ABACCA")
@@ -189,18 +192,20 @@ public class SecondGameZone : MonoBehaviour
         */
     }
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnTriggerStay(Collider collider)
     {
         if (collider.gameObject.layer != LayerMask.NameToLayer("Key"))
         {
             inDialogueSizeSecondGame = true;
             infoTextCanvasSecondGame.SetActive(true);
+            typePassword.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other)
     {
         inDialogueSizeSecondGame = false;
         infoTextCanvasSecondGame.SetActive(false);
+        typePassword.SetActive(false);
     }
 
     void Update()
@@ -221,6 +226,22 @@ public class SecondGameZone : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Death.thirdPersonController.enabled = false;
             //rigidbody.constraints = RigidbodyConstraints.None;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            DialogueGOSecondGame.SetActive(false);
+            DialogueDollyCartSecondGame.SetActive(false);
+            //inDialogueSizeSecondGame = false;
+            infoTextCanvasSecondGame.SetActive(true);
+            canEscSecondGame = true;
+            DialogueVirtualCameraSecondGame.GetComponent<CinemachineVirtualCamera>().Priority = 5;
+            StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
+            StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
+            Cursor.visible = false;
+            Death.thirdPersonController.enabled = true;
+            textSecondGame.enabled = true;
+            panel.SetActive(true);
+            continueCounter = 0;
         }
     }
 

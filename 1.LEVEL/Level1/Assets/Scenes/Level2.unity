@@ -44329,11 +44329,11 @@ MonoBehaviour:
   ContinueCountSecondGame: 0
   NPCSecondGame: {fileID: 519735643}
   OtisSecondGame: {fileID: 1847062211}
-  WriteLineSecondGame: {fileID: 0}
   password: ABACCA
   typePassword: {fileID: 2095537808}
   continueCounter: 0
   typePass: {fileID: 1510893878}
+  MainCanvasSecondGame: {fileID: 378356537}
 --- !u!65 &1364056226
 BoxCollider:
   m_ObjectHideFlags: 0
