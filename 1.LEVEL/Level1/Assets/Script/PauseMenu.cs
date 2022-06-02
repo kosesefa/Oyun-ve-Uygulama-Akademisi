@@ -17,7 +17,7 @@ public class PauseMenu : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape) && Death.isDead == false && NPCDialogue.canEsc == true)
+        if (Input.GetKeyDown(KeyCode.Escape) && Death.isDead == false && NPCDialogue.canEsc == true && SecondGameZone.canEscSecondGame==true)
         {
             if (GameIsPaused)
             {

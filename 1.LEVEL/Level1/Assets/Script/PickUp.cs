@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PickUp : MonoBehaviour
 {
@@ -40,23 +41,26 @@ public class PickUp : MonoBehaviour
 
     private void Start()
     {
-        Application.targetFrameRate = 50;
-        putItem = new PutItem();
-        Light1 = new GameObject();
-        Light2 = new GameObject();
-        Light3 = new GameObject();
-        Light4 = new GameObject();
-        Light5 = new GameObject();
-        Light1 = GameObject.FindGameObjectWithTag("Light1");
-        Light2 = GameObject.FindGameObjectWithTag("Light2");
-        Light3 = GameObject.FindGameObjectWithTag("Light3");
-        Light4 = GameObject.FindGameObjectWithTag("Light4");
-        Light5 = GameObject.FindGameObjectWithTag("Light5");
-        Light1.SetActive(false);
-        Light2.SetActive(false);
-        Light3.SetActive(false);
-        Light4.SetActive(false);
-        Light5.SetActive(false);
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+
+            putItem = new PutItem();
+            Light1 = new GameObject();
+            Light2 = new GameObject();
+            Light3 = new GameObject();
+            Light4 = new GameObject();
+            Light5 = new GameObject();
+            Light1 = GameObject.FindGameObjectWithTag("Light1");
+            Light2 = GameObject.FindGameObjectWithTag("Light2");
+            Light3 = GameObject.FindGameObjectWithTag("Light3");
+            Light4 = GameObject.FindGameObjectWithTag("Light4");
+            Light5 = GameObject.FindGameObjectWithTag("Light5");
+            Light1.SetActive(false);
+            Light2.SetActive(false);
+            Light3.SetActive(false);
+            Light4.SetActive(false);
+            Light5.SetActive(false);
+        }
 
     }
 

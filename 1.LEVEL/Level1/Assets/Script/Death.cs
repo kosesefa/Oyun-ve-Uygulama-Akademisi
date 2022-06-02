@@ -12,7 +12,7 @@ public class Death : MonoBehaviour
     [SerializeField] GameObject canvas;
     public static bool isDead = false;
 
-    ThirdPersonController thirdPersonController;
+    public static ThirdPersonController thirdPersonController;
 
 
     public void Start()
