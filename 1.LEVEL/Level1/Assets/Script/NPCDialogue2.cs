@@ -16,13 +16,11 @@ public class NPCDialogue2 : MonoBehaviour
     public Font _TMPfont;
     private GameObject DialogueGO;
     private GameObject myText;
-    private GameObject myText2;
     private GameObject infoText;
     private GameObject infoTextCanvas;
     private Canvas _canvas;
     private Canvas myCanvas;
     private Text text;
-    private Text text2;
     private Text _infoText;
     private RectTransform rectTransform;
     private RectTransform rectTransform2;
@@ -46,10 +44,6 @@ public class NPCDialogue2 : MonoBehaviour
     void Start()
     {
         DialogueDollyCart.SetActive(false);
-
-        Rect rect = new Rect(1071.2f, 243.1f, 1071.2f, 243.1f);
-        rect.height = 243.1f;
-        rect.width = 1071.2f;
 
         DialogueGO = new GameObject();
         DialogueGO.name = "Canvas Dialogue";
