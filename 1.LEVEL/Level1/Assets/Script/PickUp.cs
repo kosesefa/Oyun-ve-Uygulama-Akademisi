@@ -44,7 +44,6 @@ public class PickUp : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
 
-            putItem = new PutItem();
             Light1 = new GameObject();
             Light2 = new GameObject();
             Light3 = new GameObject();
@@ -92,7 +91,7 @@ public class PickUp : MonoBehaviour
                     Crosshair.color = Color.red;
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        Destroy(hit.collider.gameObject);
+                        hit.collider.gameObject.SetActive(false);
                         //KeyInHand.SetActive(true);
                         animator.SetTrigger("PickUp");
                         PutItem.GateKeyinHand.SetActive(true);

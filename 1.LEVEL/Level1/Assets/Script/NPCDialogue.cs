@@ -182,6 +182,7 @@ public class NPCDialogue : MonoBehaviour
             DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().Priority = 5;
             inDialogueSize = true;
             StartCoroutine(LightsScript());
+            canEsc = true;
         }
 
 
@@ -214,10 +215,9 @@ public class NPCDialogue : MonoBehaviour
             DialogueDollyCart.SetActive(true);
             canEsc = false;
             Cursor.visible = true;
-            NPCAudio.Play();
             StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
-            Cursor.lockState = CursorLockMode.None;
+            NPCAudio.Play();
             ContinueCount = 0 ;
             PickUp.canTake = true;
 
