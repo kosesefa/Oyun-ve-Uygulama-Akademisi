@@ -42,6 +42,7 @@ public class SecondGameZone : MonoBehaviour
     public int continueCounter = 0;
     public TMP_InputField typePass;
     public GameObject MainCanvasSecondGame;
+    public bool inSize = false;
 
     //private string Line1 = "…- deðiþik homurtular ve derin sesler-… ";
     //private string Line2 = "Ýnsan… Buraya gelenler gerçekliðin ne kadar þaþýrtýcý olabileceðini göremiyorlar. Size verilen gözler sadece görmenize yarýyor, daha ötesine bakamýyorsunuz… Ýleride, tepede bir kapý var. Bu kapýyý açabilmek için en ilkel insan zekasýna ihtiyacýn olacak. Baþka bir kapýnýn ardýnda seni bekliyor.”";
@@ -166,8 +167,8 @@ public class SecondGameZone : MonoBehaviour
             textSecondGame.enabled = false;
             panel.SetActive(false);
             continueCounter++;
-            typePass.Select();
             MainCanvasSecondGame.SetActive(true);
+            typePass.Select();
 
         }
 
@@ -199,6 +200,7 @@ public class SecondGameZone : MonoBehaviour
             inDialogueSizeSecondGame = true;
             infoTextCanvasSecondGame.SetActive(true);
             typePassword.SetActive(true);
+            inSize = true;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -206,6 +208,7 @@ public class SecondGameZone : MonoBehaviour
         inDialogueSizeSecondGame = false;
         infoTextCanvasSecondGame.SetActive(false);
         typePassword.SetActive(false);
+        inSize = false;
     }
 
     void Update()
@@ -227,7 +230,7 @@ public class SecondGameZone : MonoBehaviour
             Death.thirdPersonController.enabled = false;
             //rigidbody.constraints = RigidbodyConstraints.None;
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && inSize==true)
         {
             DialogueGOSecondGame.SetActive(false);
             DialogueDollyCartSecondGame.SetActive(false);
