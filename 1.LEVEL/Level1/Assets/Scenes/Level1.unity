@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.23217553, g: 0.15560667, b: 0.21749136, a: 1}
+  m_IndirectSpecularColor: {r: 0.23199281, g: 0.15542963, b: 0.21731111, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5070,15 +5070,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753381203}
-  m_LocalRotation: {x: 0.74424255, y: 0.022165116, z: 0.042001117, w: 0.6662188}
-  m_LocalPosition: {x: -22.7, y: 17.8, z: 3.1}
-  m_LocalScale: {x: 1101, y: 1079.2343, z: 1519.4131}
+  m_LocalRotation: {x: 0.07231938, y: 0.8633891, z: 0.23324409, w: 0.4415047}
+  m_LocalPosition: {x: -32.795, y: -6.1565, z: 4.6779}
+  m_LocalScale: {x: 1285.8579, y: 1260.4376, z: 1774.5225}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 682151917}
   m_Father: {fileID: 885487110}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: -82.586, y: 29.124, z: -27.613}
+  m_LocalEulerAnglesHint: {x: -19.81, y: -237.8, z: -339.412}
 --- !u!65 &753381205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7789,7 +7789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6910ff37e2b83cf4caecf536b0d79e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCAudio: {fileID: 0}
+  NPCAudio: {fileID: 95206231491182084}
   panel: {fileID: 0}
   _font: {fileID: 12800000, guid: 3563d1888ce68a74e9c5c23045ea0c12, type: 3}
   _TMPfont: {fileID: 12800000, guid: 3563d1888ce68a74e9c5c23045ea0c12, type: 3}
