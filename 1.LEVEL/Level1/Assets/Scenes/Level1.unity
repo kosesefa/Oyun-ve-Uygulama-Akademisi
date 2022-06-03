@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.23199281, g: 0.15542963, b: 0.21731111, a: 1}
+  m_IndirectSpecularColor: {r: 0.23217553, g: 0.15560667, b: 0.21749136, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -47727,8 +47727,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.68057835, y: 0.11903519, z: 0.65689224}
-  m_Center: {x: -0.012300069, y: -0.48327026, z: 0.002952804}
+  m_Size: {x: 0.68057835, y: 0.35137376, z: 0.65689224}
+  m_Center: {x: -0.012300069, y: -0.44858617, z: 0.002952804}
 --- !u!33 &2077787213
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -57047,22 +57047,22 @@ PrefabInstance:
     - target: {fileID: 4968972877439700192, guid: 19181b8cfe0114ff9990b5a6462c094f, type: 3}
       propertyPath: _columnTrigger
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2077787211}
     - target: {fileID: 4968972877439700193, guid: 19181b8cfe0114ff9990b5a6462c094f, type: 3}
       propertyPath: m_RootOrder
       value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 4968972877439700193, guid: 19181b8cfe0114ff9990b5a6462c094f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -133
+      value: 45.82
       objectReference: {fileID: 0}
     - target: {fileID: 4968972877439700193, guid: 19181b8cfe0114ff9990b5a6462c094f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 32.82
       objectReference: {fileID: 0}
     - target: {fileID: 4968972877439700193, guid: 19181b8cfe0114ff9990b5a6462c094f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -404
+      value: 126.99
       objectReference: {fileID: 0}
     - target: {fileID: 4968972877439700193, guid: 19181b8cfe0114ff9990b5a6462c094f, type: 3}
       propertyPath: m_LocalRotation.w
