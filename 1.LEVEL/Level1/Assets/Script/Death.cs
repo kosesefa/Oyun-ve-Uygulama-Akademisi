@@ -42,7 +42,7 @@ public class Death : MonoBehaviour
         StarterAssets.ThirdPersonController.LockCameraPosition = false;
         isDead = false;
         Time.timeScale = 1;
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         thirdPersonController.enabled = true;
 
 

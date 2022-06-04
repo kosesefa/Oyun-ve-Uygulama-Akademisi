@@ -11,13 +11,14 @@ public class PauseMenu : MonoBehaviour
     private void Start()
     {
         NPCDialogue.canEsc = true;
-        CharacterController = new GameObject();
+
         CharacterController = GameObject.Find("PlayerArmature");
+        CharacterController.AddComponent<CharacterController>(); ;
     }
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape) && Death.isDead == false && NPCDialogue.canEsc == true && SecondGameZone.canEscSecondGame==true)
+        if (Input.GetKeyDown(KeyCode.Escape) && RockDialogue.RockCanESC==true && NPCDialogue2.SecondNPCCanEsc==true && SoundManager.inControllsMenu ==false && ControlsButton.inControllsMenu==false && Death.isDead == false && NPCDialogue.canEsc == true && SecondGameZone.canEscSecondGame==true)
         {
             if (GameIsPaused)
             {
@@ -42,12 +43,13 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
-
+        
         Cursor.visible = true;
         StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
         StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
         pauseMenuUI.SetActive(true);
         GameIsPaused = true;
+        
     }
 
     public void QuitGame()

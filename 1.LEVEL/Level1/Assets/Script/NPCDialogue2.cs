@@ -30,7 +30,7 @@ public class NPCDialogue2 : MonoBehaviour
     bool inDialogueSize = false;
     [SerializeField] GameObject DialogueVirtualCamera;
     [SerializeField] GameObject DialogueDollyCart;
-    public static bool canEsc = true;
+    public static bool SecondNPCCanEsc = true;
     public GameObject DialogueContinue;
     public GameObject TextDC;
     public int ContinueCount = 0;
@@ -149,13 +149,15 @@ public class NPCDialogue2 : MonoBehaviour
 
     void DialogueContinueOnClickEvent()
     {
-            Cursor.visible = false;
-            StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
-            StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
-            infoTextCanvas.SetActive(true);
-            DialogueGO.SetActive(false);
-            DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().Priority = 5;
-            infoTextCanvas.SetActive(true);
+        Cursor.visible = false;
+        StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
+        StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
+        infoTextCanvas.SetActive(true);
+        DialogueGO.SetActive(false);
+        DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().Priority = 5;
+        infoTextCanvas.SetActive(true);
+        SecondNPCCanEsc = true;
+        StartCoroutine(LightsScript());
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -182,13 +184,28 @@ public class NPCDialogue2 : MonoBehaviour
             DialogueGO.SetActive(true);
             DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().Priority = 15;
             DialogueDollyCart.SetActive(true);
-            canEsc = false;
+            SecondNPCCanEsc = false;
             Cursor.visible = true;
             NPCAudio.Play();
             StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
             Cursor.lockState = CursorLockMode.None;
         }
+    }
+    IEnumerator LightsScript()
+    {
+        yield return new WaitForSeconds(1.5f);
+        PickUp.Light1.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        PickUp.Light2.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        PickUp.Light3.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        PickUp.Light4.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        PickUp.Light5.SetActive(true);
+
+
     }
 
 }

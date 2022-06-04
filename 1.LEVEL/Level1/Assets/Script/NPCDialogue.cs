@@ -226,7 +226,7 @@ public class NPCDialogue : MonoBehaviour
     }
     IEnumerator LightsScript()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.5f);
         PickUp.Light1.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         PickUp.Light2.SetActive(true);
