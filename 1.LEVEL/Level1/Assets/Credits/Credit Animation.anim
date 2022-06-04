@@ -30,7 +30,11 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 17.966667
+<<<<<<< Updated upstream
+        time: 18
+=======
+        time: 17.983334
+>>>>>>> Stashed changes
         value: 0
         inSlope: 0
         outSlope: 0
@@ -50,7 +54,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -867
+        value: -504
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -58,8 +62,13 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 17.966667
-        value: 118
+<<<<<<< Updated upstream
+        time: 18
+        value: 76
+=======
+        time: 17.983334
+        value: 64
+>>>>>>> Stashed changes
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -101,7 +110,11 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 17.966667
+<<<<<<< Updated upstream
+    m_StopTime: 18
+=======
+    m_StopTime: 17.983334
+>>>>>>> Stashed changes
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -130,7 +143,11 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 17.966667
+<<<<<<< Updated upstream
+        time: 18
+=======
+        time: 17.983334
+>>>>>>> Stashed changes
         value: 0
         inSlope: 0
         outSlope: 0
@@ -150,7 +167,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -867
+        value: -504
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -158,8 +175,13 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 17.966667
-        value: 118
+<<<<<<< Updated upstream
+        time: 18
+        value: 76
+=======
+        time: 17.983334
+        value: 64
+>>>>>>> Stashed changes
         inSlope: 0
         outSlope: 0
         tangentMode: 136

@@ -36,11 +36,7 @@ public class NPCDialogue : MonoBehaviour
     public int ContinueCount = 0;
     [SerializeField] GameObject NPC;
     [SerializeField] GameObject Otis;
-    //private string Line1 = "…- deðiþik homurtular ve derin sesler-… ";
-    //private string Line2 = "Ýnsan… Buraya gelenler gerçekliðin ne kadar þaþýrtýcý olabileceðini göremiyorlar. Size verilen gözler sadece görmenize yarýyor, daha ötesine bakamýyorsunuz… Ýleride, tepede bir kapý var. Bu kapýyý açabilmek için en ilkel insan zekasýna ihtiyacýn olacak. Baþka bir kapýnýn ardýnda seni bekliyor.”";
 
-
-    //RectTransform m_RectTransform;
 
     void Start()
     {
@@ -55,7 +51,7 @@ public class NPCDialogue : MonoBehaviour
         DialogueGO.AddComponent<Canvas>();
 
         infoTextCanvas = new GameObject();
-        infoTextCanvas.name = "Ýnfo Canvas";
+        infoTextCanvas.name = "Info Canvas";
         infoTextCanvas.AddComponent<Canvas>();
         infoTextCanvas.AddComponent<CanvasScaler>();
         infoTextCanvas.AddComponent<GraphicRaycaster>();
@@ -70,16 +66,14 @@ public class NPCDialogue : MonoBehaviour
         DialogueGO.AddComponent<GraphicRaycaster>();
 
 
-
-
         //Panel Settings
         panel.transform.parent = DialogueGO.transform;
         panel.AddComponent<Image>();
         panel.GetComponent<Image>().color = new Color32(55, 55, 55, 237);
         panel.GetComponent<Image>().raycastTarget = true;
         panel.GetComponent<Image>().maskable = true;
-        panel.GetComponent<Transform>().localPosition = new Vector3(0, -194, 0f);
-        panel.GetComponent<Transform>().localScale = new Vector3(11.68f, 2.56f, 1);
+        panel.GetComponent<Transform>().localPosition = new Vector3(0, -210, 0f);
+        panel.GetComponent<Transform>().localScale = new Vector3(11.68f, 3f, 1);
         DialogueGO.SetActive(false);
 
 
@@ -89,7 +83,7 @@ public class NPCDialogue : MonoBehaviour
         myText.name = "Dialogue";
         myText.transform.SetSiblingIndex(666);
         text = myText.AddComponent<Text>();
-        text.transform.GetComponent<Text>().text = "…- deðiþik homurtular ve derin sesler-… " + "\n\nÝnsan… Buraya gelenler gerçekliðin ne kadar þaþýrtýcý olabileceðini göremiyorlar. Size verilen gözler sadece görmenize yarýyor, daha ötesine bakamýyorsunuz… Ýleride, tepede bir kapý var. Bu kapýyý açabilmek için en ilkel insan zekasýna ihtiyacýn olacak. Baþka bir kapýnýn ardýnda seni bekliyor.”";
+        text.transform.GetComponent<Text>().text = "…degisik homurtular ve derin sesler… " + "\n\nInsan… Buraya gelenler gerçekligin ne kadar sasirtici olabilecegini göremiyorlar. Size verilen gözler sadece görmenize yariyor, daha ötesine bakamiyorsunuz… Ileride, tepede bir kap? var. Bu kapiyi açabilmek için en ilkel insan zekasina ihtiyacin olacak. Baska bir kapinin ardinda seni bekliyor.";
         text.transform.GetComponent<Text>().font = _font;
         text.transform.GetComponent<Text>().fontSize = 29;
         rectTransform = myText.GetComponent<RectTransform>();
@@ -97,7 +91,7 @@ public class NPCDialogue : MonoBehaviour
 
         // Text position
         rectTransform = text.GetComponent<RectTransform>();
-        rectTransform.localPosition = new Vector3(0, -229, 0);
+        rectTransform.localPosition = new Vector3(0, -220, 0);
         rectTransform.sizeDelta = new Vector2(1071, 243);
 
         // Info Text
@@ -106,7 +100,7 @@ public class NPCDialogue : MonoBehaviour
         infoText.transform.parent = infoTextCanvas.transform;
         infoText.transform.SetSiblingIndex(666);
         _infoText = infoText.AddComponent<Text>();
-        _infoText.transform.GetComponent<Text>().text = "Press F to Talk";
+        _infoText.transform.GetComponent<Text>().text = "Konusmak icin F'ye basin.";
         _infoText.transform.GetComponent<Text>().font = _font;
         _infoText.transform.GetComponent<Text>().fontSize = 29;
         _infoText.transform.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
@@ -114,7 +108,7 @@ public class NPCDialogue : MonoBehaviour
 
 
         rectTransformInfoText = _infoText.GetComponent<RectTransform>();
-        rectTransformInfoText.localPosition = new Vector3(0, -472f, 0);
+        rectTransformInfoText.localPosition = new Vector3(0, -450f, 0);
         rectTransformInfoText.sizeDelta = new Vector2(858.4f, 137f);
         infoText.transform.GetComponent<Text>().fontSize = 53; ;
         rectTransformInfoText = infoText.GetComponent<RectTransform>();
@@ -133,15 +127,15 @@ public class NPCDialogue : MonoBehaviour
         DialogueContinue.GetComponent<Image>().color = new Color32(1, 1, 1, 0);
         DialogueContinue.AddComponent<Button>();
         DialogueContinue.transform.GetComponent<Transform>().localScale = new Vector3(1, 1, 1);
-        DialogueContinue.transform.GetComponent<Transform>().localPosition = new Vector3(427, -274, 0);
+        DialogueContinue.transform.GetComponent<Transform>().localPosition = new Vector3(427, -300, 0);
         rectTransformButton = TextDC.GetComponent<RectTransform>();
         rectTransformTextDC = DialogueContinue.GetComponent<RectTransform>();
         rectTransformTextDC.sizeDelta = new Vector2(172, 82);
         rectTransformButton.sizeDelta = new Vector2(315, 100);
-        TextDC.transform.GetComponent<Text>().text = "Continue";
+        TextDC.transform.GetComponent<Text>().text = "Devam et";
         TextDC.transform.GetComponent<Text>().font = _font;
         TextDC.transform.GetComponent<Text>().fontSize = 45;
-        TextDC.transform.GetComponent<Transform>().localPosition = new Vector3(88.9f, -33, 0);
+        TextDC.transform.GetComponent<Transform>().localPosition = new Vector3(88.9f, -40, 0);
         DialogueContinue.GetComponent<Button>().onClick.AddListener(() => DialogueContinueOnClickEvent());
 
         infoTextCanvas.SetActive(false);
@@ -158,7 +152,7 @@ public class NPCDialogue : MonoBehaviour
             DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().Priority = 20;
             DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().LookAt = Otis.transform;
 
-            text.transform.GetComponent<Text>().text = "“Buna göre, gördüðüm her þeyin yanlýþ ve hayali olduðunu varsayýyorum; Yanýltýcý belleðimin temsil ettiði nesnelerden hiçbirinin var olmadýðýna inanýyorum; Sanýrým hiçbir duyuya sahip deðilim; Bedenin, figürün, uzantýnýn, hareketin ve yerin sadece zihnimin kurgularý olduðuna inanýyorum. O halde, doðru kabul edilebilecek ne var? Belki de sadece bu, kesinlikle kesin bir þey olmadýðý.”";
+            text.transform.GetComponent<Text>().text = "Buna göre, gördügüm her seyin yanlis ve hayali oldugunu varsayiyorum; Yaniltici bellegimin temsil etti?i nesnelerden hiçbirinin var olmadigina inaniyorum; Sanirim hiçbir duyuya sahip degilim; Bedenin, figürün, uzantinin, hareketin ve yerin sadece zihnimin kurgulari olduguna inaniyorum. O halde, dogru kabul edilebilecek ne var? Belki de sadece bu, kesinlikle kesin bir sey olmadigi.”";
             ContinueCount++;
         }
         else if (ContinueCount==1)
@@ -172,7 +166,8 @@ public class NPCDialogue : MonoBehaviour
         }
         else 
         {
-            text.transform.GetComponent<Text>().text = "…- deðiþik homurtular ve derin sesler-… Ýnsan… Buraya gelenler gerçekliðin ne kadar þaþýrtýcý olabileceðini göremiyorlar. Size verilen gözler sadece görmenize yarýyor, daha ötesine bakamýyorsunuz… Ýleride, tepede bir kapý var. Bu kapýyý açabilmek için en ilkel insan zekasýna ihtiyacýn olacak. Baþka bir kapýnýn ardýnda seni bekliyor.”";
+            text.transform.GetComponent<Text>().text =
+        text.transform.GetComponent<Text>().text = "…degisik homurtular ve derin sesler… " + "\n\nInsan… Buraya gelenler gerçekligin ne kadar sasirtici olabilecegini göremiyorlar. Size verilen gözler sadece görmenize yariyor, daha ötesine bakamiyorsunuz… Ileride, tepede bir kap? var. Bu kapiyi açabilmek için en ilkel insan zekasina ihtiyacin olacak. Baska bir kapinin ardinda seni bekliyor.";
             Cursor.visible = false;
             StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
@@ -236,7 +231,6 @@ public class NPCDialogue : MonoBehaviour
         PickUp.Light4.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         PickUp.Light5.SetActive(true);
-
 
     }
 }
