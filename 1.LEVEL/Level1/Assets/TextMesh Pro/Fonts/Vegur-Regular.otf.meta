@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 9fb06c69505768040b4630d623c9e5c1
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Vegur
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7e329ec78032ce745a70c71c3696ec5d, type: 3}
+  - {fileID: 12800000, guid: 481aad6f65b98a844aec4944c09e1a3b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

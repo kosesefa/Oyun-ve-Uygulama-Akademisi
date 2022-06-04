@@ -19,9 +19,4 @@ public class IntroCamMovement : MonoBehaviour
         StartCoroutine("KameraGecis");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
