@@ -558,8 +558,13 @@ MonoBehaviour:
     yerde kullanaca\u011F\u0131 r\xFCn ta\u015Flar\u0131 ile kendi yolunu a\xE7arak
     ger\xE7e\u011Fe ula\u015Fmaya \xE7al\u0131\u015F\u0131r."
   m_isRightToLeft: 0
+<<<<<<< Updated upstream
   m_fontAsset: {fileID: 11400000, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
   m_sharedMaterial: {fileID: 5700735926780883933, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: e2b3b4d18f8ea47408da7584decebac8, type: 2}
+  m_sharedMaterial: {fileID: -4626624041924101143, guid: e2b3b4d18f8ea47408da7584decebac8, type: 2}
+>>>>>>> Stashed changes
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
