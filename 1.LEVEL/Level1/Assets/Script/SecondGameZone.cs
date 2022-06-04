@@ -44,11 +44,6 @@ public class SecondGameZone : MonoBehaviour
     public GameObject MainCanvasSecondGame;
     public bool inSize = false;
 
-    //private string Line1 = "…- deðiþik homurtular ve derin sesler-… ";
-    //private string Line2 = "Ýnsan… Buraya gelenler gerçekliðin ne kadar þaþýrtýcý olabileceðini göremiyorlar. Size verilen gözler sadece görmenize yarýyor, daha ötesine bakamýyorsunuz… Ýleride, tepede bir kapý var. Bu kapýyý açabilmek için en ilkel insan zekasýna ihtiyacýn olacak. Baþka bir kapýnýn ardýnda seni bekliyor.”";
-
-    //RectTransform m_RectTransform;
-
 
 
     void Start()
@@ -61,7 +56,7 @@ public class SecondGameZone : MonoBehaviour
         DialogueGOSecondGame.AddComponent<Canvas>();
 
         infoTextCanvasSecondGame = new GameObject();
-        infoTextCanvasSecondGame.name = "Ýnfo Canvas";
+        infoTextCanvasSecondGame.name = "Info Canvas";
         infoTextCanvasSecondGame.AddComponent<Canvas>();
         infoTextCanvasSecondGame.AddComponent<CanvasScaler>();
         infoTextCanvasSecondGame.AddComponent<GraphicRaycaster>();
@@ -74,8 +69,6 @@ public class SecondGameZone : MonoBehaviour
         myCanvasSecondGame.renderMode = RenderMode.ScreenSpaceOverlay;
         DialogueGOSecondGame.AddComponent<CanvasScaler>();
         DialogueGOSecondGame.AddComponent<GraphicRaycaster>();
-
-
 
 
         //Panel Settings
@@ -95,7 +88,7 @@ public class SecondGameZone : MonoBehaviour
         myTextSecondGame.name = "Dialogue";
         myTextSecondGame.transform.SetSiblingIndex(666);
         textSecondGame = myTextSecondGame.AddComponent<Text>();
-        textSecondGame.transform.GetComponent<Text>().text = " Þifre Gir ";
+        textSecondGame.transform.GetComponent<Text>().text = "Gecmiste attigin adimi hatirliyor musun? Hafizani yenilemek icin ayak izlerini takip et, gecmise bir bakis at. Bu kapiyi acmak icin üstünden gectigin taslarin üzerindeki harfleri yazmalisin.";
         textSecondGame.transform.GetComponent<Text>().font = _fontSecondGame;
         textSecondGame.transform.GetComponent<Text>().fontSize = 29;
         rectTransformSecondGame = myTextSecondGame.GetComponent<RectTransform>();
@@ -115,7 +108,7 @@ public class SecondGameZone : MonoBehaviour
         infoTextSecondGame.transform.parent = infoTextCanvasSecondGame.transform;
         infoTextSecondGame.transform.SetSiblingIndex(666);
         _infoTextSecondGame = infoTextSecondGame.AddComponent<Text>();
-        _infoTextSecondGame.transform.GetComponent<Text>().text = "Press F to Talk to Wall";
+        _infoTextSecondGame.transform.GetComponent<Text>().text = "Okumak icin F'ye basin.";
         _infoTextSecondGame.transform.GetComponent<Text>().font = _fontSecondGame;
         _infoTextSecondGame.transform.GetComponent<Text>().fontSize = 29;
         _infoTextSecondGame.transform.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
@@ -147,7 +140,7 @@ public class SecondGameZone : MonoBehaviour
         rectTransformTextDCSecondGame = DialogueContinueSecondGame.GetComponent<RectTransform>();
         rectTransformTextDCSecondGame.sizeDelta = new Vector2(172, 82);
         rectTransformButtonSecondGame.sizeDelta = new Vector2(315, 100);
-        TextDCSecondGame.transform.GetComponent<Text>().text = "Continue";
+        TextDCSecondGame.transform.GetComponent<Text>().text = "Devam et";
         TextDCSecondGame.transform.GetComponent<Text>().font = _fontSecondGame;
         TextDCSecondGame.transform.GetComponent<Text>().fontSize = 45;
         TextDCSecondGame.transform.GetComponent<Transform>().localPosition = new Vector3(88.9f, -33, 0);
