@@ -5097,7 +5097,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768156511}
   m_LocalRotation: {x: -0, y: 0.25325733, z: -0, w: 0.96739894}
-  m_LocalPosition: {x: 46.22, y: 29.24, z: 226.97}
+  m_LocalPosition: {x: 51.79, y: 29.24, z: 321.55}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5791,7 +5791,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847900831}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.976, y: 2.4191349, z: -2.7372832}
+  m_LocalPosition: {x: 0.97600496, y: 2.4191349, z: -2.737292}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7134,7 +7134,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122932670}
   m_LocalRotation: {x: 0.121998966, y: -0, z: -0, w: 0.9925302}
-  m_LocalPosition: {x: 0.976, y: 2.4191349, z: -2.7372832}
+  m_LocalPosition: {x: 0.97600496, y: 2.4191349, z: -2.737292}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -43014,8 +43014,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSecondGame: {fileID: 0}
   panel: {fileID: 0}
-  _fontSecondGame: {fileID: 12800000, guid: 3563d1888ce68a74e9c5c23045ea0c12, type: 3}
-  _TMPfontSecondGame: {fileID: 12800000, guid: 3563d1888ce68a74e9c5c23045ea0c12, type: 3}
+  _fontSecondGame: {fileID: 12800000, guid: 076a7f11480529b4e871b60fefb5e5a2, type: 3}
+  _TMPfontSecondGame: {fileID: 12800000, guid: 076a7f11480529b4e871b60fefb5e5a2, type: 3}
   DialogueVirtualCameraSecondGame: {fileID: 1868113489}
   DialogueDollyCartSecondGame: {fileID: 647980628}
   DialogueContinueSecondGame: {fileID: 0}
@@ -43637,7 +43637,7 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_RichText: 1
-  m_GlobalFontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_GlobalFontAsset: {fileID: 11400000, guid: e2b3b4d18f8ea47408da7584decebac8, type: 2}
   m_OnFocusSelectAll: 1
   m_ResetOnDeActivation: 1
   m_RestoreOriginalTextOnEscape: 1
@@ -47437,15 +47437,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
-  m_sharedMaterial: {fileID: 5700735926780883933, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e2b3b4d18f8ea47408da7584decebac8, type: 2}
+  m_sharedMaterial: {fileID: -4626624041924101143, guid: e2b3b4d18f8ea47408da7584decebac8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190121
-  m_fontColor: {r: 0.16037738, g: 0, b: 0, a: 1}
+    rgba: 4289177515
+  m_fontColor: {r: 0.6698113, g: 0.6540139, b: 0.6540139, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
