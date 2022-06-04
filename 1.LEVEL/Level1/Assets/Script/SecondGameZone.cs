@@ -108,7 +108,7 @@ public class SecondGameZone : MonoBehaviour
         infoTextSecondGame.transform.parent = infoTextCanvasSecondGame.transform;
         infoTextSecondGame.transform.SetSiblingIndex(666);
         _infoTextSecondGame = infoTextSecondGame.AddComponent<Text>();
-        _infoTextSecondGame.transform.GetComponent<Text>().text = "Okumak icin F'ye basin.";
+        _infoTextSecondGame.transform.GetComponent<Text>().text = "Kapiyla konusmak icin F'ye basin.";
         _infoTextSecondGame.transform.GetComponent<Text>().font = _fontSecondGame;
         _infoTextSecondGame.transform.GetComponent<Text>().fontSize = 29;
         _infoTextSecondGame.transform.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
