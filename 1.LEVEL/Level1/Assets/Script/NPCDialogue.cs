@@ -167,7 +167,7 @@ public class NPCDialogue : MonoBehaviour
         else 
         {
             text.transform.GetComponent<Text>().text =
-        text.transform.GetComponent<Text>().text = "…degisik homurtular ve derin sesler… " + "\n\nInsan… Buraya gelenler gerçekligin ne kadar sasirtici olabilecegini göremiyorlar. Size verilen gözler sadece görmenize yariyor, daha ötesine bakamiyorsunuz… Ileride, tepede bir kap? var. Bu kapiyi açabilmek için en ilkel insan zekasina ihtiyacin olacak. Baska bir kapinin ardinda seni bekliyor.";
+        text.transform.GetComponent<Text>().text = "…degisik homurtular ve derin sesler… " + "\n\nInsan… Buraya gelenler gerçekligin ne kadar sasirtici olabilecegini göremiyorlar. Size verilen gözler sadece görmenize yariyor, daha ötesine bakamiyorsunuz… Ileride, tepede bir kapi var. Bu kapiyi açabilmek için en ilkel insan zekasina ihtiyacin olacak. Baska bir kapinin ardinda seni bekliyor.";
             Cursor.visible = false;
             StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
