@@ -238,7 +238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Devam et
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
   m_sharedMaterial: {fileID: 5700735926780883933, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
@@ -459,6 +459,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -543,29 +544,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
-
-
-
-
-    Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-    qui officia deserunt mollit anim id est laborum...
-
-
-
-
-    Lorem ipsum dolor
-    sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-    et dolore magna aliqua...
-
-
-
-
-    ...ccommodo consequat !'
+  m_text: "Otis, (Yunan dilinde hi\xE7lik anlam\u0131ndad\u0131r) farkl\u0131 bir
+    gezegende uyan\u0131r. Bu evren, daha \xF6nce g\xF6r\xFClmemi\u015F bir hayvan
+    pop\xFClasyonun oldu\u011Fu, \xE7e\u015Fitli enteresan bitkilerin yeti\u015Fti\u011Fi
+    e\u015Fsiz bir do\u011Fa g\xFCzelli\u011Fine sahiptir ancak ger\xE7ek d\xFCnyaya
+    benzer bir taraf\u0131 yoktur. Otis g\xF6zlerini a\xE7t\u0131\u011F\u0131nda
+    ortam\u0131 alg\u0131lamaya \xE7al\u0131\u015F\u0131r. Ellerine bakar, v\xFCcuduna
+    bakar fakat modern insan bi\xE7iminden \xE7ok daha farkl\u0131 bir bi\xE7imdedir. 
+    Otis, bu evreni anlamak ve tan\u0131mak ad\u0131na etrafta gezintiye \xE7\u0131kar.
+    Etrafta olan zehirli gazlar, eritici s\u0131cakl\u0131kta olan maddeler, garip
+    renkli yarat\u0131klar ve canl\u0131lar g\xF6r\xFCr. Yolcu\u011Fu boyunca ona
+    yard\u0131mc\u0131 olacak el\xE7ilerin e\u015Fli\u011Finde ilerler ve bir\xE7ok
+    yerde kullanaca\u011F\u0131 r\xFCn ta\u015Flar\u0131 ile kendi yolunu a\xE7arak
+    ger\xE7e\u011Fe ula\u015Fmaya \xE7al\u0131\u015F\u0131r."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
   m_sharedMaterial: {fileID: 5700735926780883933, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
@@ -602,11 +593,11 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 10
+  m_characterSpacing: 1.5
+  m_wordSpacing: 1.5
+  m_lineSpacing: 10.36
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 1.5
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.805
