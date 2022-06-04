@@ -36,8 +36,6 @@ public class NPCDialogue2 : MonoBehaviour
     public int ContinueCount = 0;
     [SerializeField] GameObject NPC;
     [SerializeField] GameObject Otis;
-    //private string Line1 = "…- deðiþik homurtular ve derin sesler-… ";
-    //private string Line2 = "Ýnsan… Buraya gelenler gerçekliðin ne kadar þaþýrtýcý olabileceðini göremiyorlar. Size verilen gözler sadece görmenize yarýyor, daha ötesine bakamýyorsunuz… Ýleride, tepede bir kapý var. Bu kapýyý açabilmek için en ilkel insan zekasýna ihtiyacýn olacak. Baþka bir kapýnýn ardýnda seni bekliyor.”";
 
     //RectTransform m_RectTransform;
 
@@ -50,7 +48,7 @@ public class NPCDialogue2 : MonoBehaviour
         DialogueGO.AddComponent<Canvas>();
 
         infoTextCanvas = new GameObject();
-        infoTextCanvas.name = "Ýnfo Canvas";
+        infoTextCanvas.name = "Info Canvas";
         infoTextCanvas.AddComponent<Canvas>();
         infoTextCanvas.AddComponent<CanvasScaler>();
         infoTextCanvas.AddComponent<GraphicRaycaster>();
@@ -63,8 +61,6 @@ public class NPCDialogue2 : MonoBehaviour
         myCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
         DialogueGO.AddComponent<CanvasScaler>();
         DialogueGO.AddComponent<GraphicRaycaster>();
-
-
 
 
         //Panel Settings
@@ -84,7 +80,7 @@ public class NPCDialogue2 : MonoBehaviour
         myText.name = "Dialogue";
         myText.transform.SetSiblingIndex(666);
         text = myText.AddComponent<Text>();
-        text.transform.GetComponent<Text>().text = " Ýnsan yazgýsýný kabul etmeli mi yoksa onunla oynayabilir mi? Bu bölgede insanüstü özellikler elde edeceksin.Yaratmanýn ve taklit etmenin gücünü bulacaksýn. Ayrýca daha önce görmediðin canlýlar ile karþýlaþacaksýn.Gerçeðin yolunda karþýna çýkacak engelleri aþacaksýn. ";
+        text.transform.GetComponent<Text>().text = "Insan yazgisini kabul etmeli mi yoksa onunla oynayabilir mi? Bu bölgede insanüstü özellikler elde edeceksin. Yaratmanin ve taklit etmenin gücünü bulacaksin, etrafta gördügün bazi objeleri hareket ettirebileceksin.";
         text.transform.GetComponent<Text>().font = _font;
         text.transform.GetComponent<Text>().fontSize = 29;
         rectTransform = myText.GetComponent<RectTransform>();
@@ -104,7 +100,7 @@ public class NPCDialogue2 : MonoBehaviour
         infoText.transform.parent = infoTextCanvas.transform;
         infoText.transform.SetSiblingIndex(666);
         _infoText = infoText.AddComponent<Text>();
-        _infoText.transform.GetComponent<Text>().text = "Press F to Talk";
+        _infoText.transform.GetComponent<Text>().text = "Konusmak icin F'ye basin.";
         _infoText.transform.GetComponent<Text>().font = _font;
         _infoText.transform.GetComponent<Text>().fontSize = 29;
         _infoText.transform.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
@@ -136,10 +132,10 @@ public class NPCDialogue2 : MonoBehaviour
         rectTransformTextDC = DialogueContinue.GetComponent<RectTransform>();
         rectTransformTextDC.sizeDelta = new Vector2(172, 82);
         rectTransformButton.sizeDelta = new Vector2(315, 100);
-        TextDC.transform.GetComponent<Text>().text = "Continue";
+        TextDC.transform.GetComponent<Text>().text = "Devam et";
         TextDC.transform.GetComponent<Text>().font = _font;
         TextDC.transform.GetComponent<Text>().fontSize = 45;
-        TextDC.transform.GetComponent<Transform>().localPosition = new Vector3(88.9f, -33, 0);
+        TextDC.transform.GetComponent<Transform>().localPosition = new Vector3(88.9f, -20, 0);
         DialogueContinue.GetComponent<Button>().onClick.AddListener(() => DialogueContinueOnClickEvent());
 
         infoTextCanvas.SetActive(false);
