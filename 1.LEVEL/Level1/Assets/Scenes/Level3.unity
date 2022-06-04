@@ -63428,6 +63428,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7228782156282639705, guid: 74d8af4a7f18d3c4abfa90be144cd262, type: 3}
+      propertyPath: m_text
+      value: Kaydedildi!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74d8af4a7f18d3c4abfa90be144cd262, type: 3}
 --- !u!1 &1792231412

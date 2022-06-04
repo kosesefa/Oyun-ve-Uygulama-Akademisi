@@ -94,6 +94,7 @@ public class NPCDialogue : MonoBehaviour
         rectTransform.localPosition = new Vector3(0, -220, 0);
         rectTransform.sizeDelta = new Vector2(1071, 243);
 
+
         // Info Text
         infoText = new GameObject();
         infoText.name = "Info Text";
