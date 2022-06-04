@@ -41,7 +41,7 @@ public class PickUp : MonoBehaviour
 
     private void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 2)
+        if (SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex==3)
         {
 
             Light1 = new GameObject();
