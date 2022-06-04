@@ -25,6 +25,7 @@ TagManager:
   - Level2TextZone
   - Level2GateCanvas2
   - Level2Text
+  - NotPickable
   layers:
   - Default
   - TransparentFX
