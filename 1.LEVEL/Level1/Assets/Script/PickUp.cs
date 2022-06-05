@@ -110,7 +110,7 @@ public class PickUp : MonoBehaviour
             if (heldObject == null)
             {
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, holdRange))
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, holdRange) && hit.collider.tag != "NotPickable")
                 {
                     //hit.point - (rayDir * -1 * yourValue);
                     PickUpObject(hit.transform.gameObject);
