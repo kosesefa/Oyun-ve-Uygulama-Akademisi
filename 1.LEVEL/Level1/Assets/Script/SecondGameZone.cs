@@ -43,6 +43,11 @@ public class SecondGameZone : MonoBehaviour
     public TMP_InputField typePass;
     public GameObject MainCanvasSecondGame;
     public bool inSize = false;
+    public GameObject door;
+    public GameObject doorBoxCollider;
+    public GameObject doorLight;
+    public Animator _animator;
+    public AudioSource _audioSource;
 
 
 
@@ -150,6 +155,10 @@ public class SecondGameZone : MonoBehaviour
         DialogueGOSecondGame.SetActive(false);
 
         MainCanvasSecondGame.SetActive(false);
+
+
+        door.GetComponent<BoxCollider>().enabled = false;
+        doorBoxCollider.GetComponent<BoxCollider>().enabled = true;
     }
 
     void DialogueContinueOnClickEvent()
@@ -171,7 +180,27 @@ public class SecondGameZone : MonoBehaviour
             if (typePassword == "ABACCA")
             {
                 Debug.Log("DOÐRU");
-                typePass.Select();
+                door.GetComponent<BoxCollider>().enabled = true;
+                doorBoxCollider.GetComponent<BoxCollider>().enabled = false;
+                doorLight.SetActive(true);
+                _audioSource.Play();
+                _animator.SetBool("isLightOut", true);
+                _animator.SetBool("isLightIn", false);
+                DialogueGOSecondGame.SetActive(false);
+                DialogueDollyCartSecondGame.SetActive(false);
+                //inDialogueSizeSecondGame = false;
+                infoTextCanvasSecondGame.SetActive(true);
+                canEscSecondGame = true;
+                DialogueVirtualCameraSecondGame.GetComponent<CinemachineVirtualCamera>().Priority = 5;
+                StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
+                StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
+                Cursor.visible = false;
+                Death.thirdPersonController.enabled = true;
+                textSecondGame.enabled = true;
+                panel.SetActive(true);
+                continueCounter = 0;
+                typePass.enabled = false;
+
             }
             typePass.Select();
         }

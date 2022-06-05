@@ -34,7 +34,10 @@ public class Platforms : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Move();  
+        if (RedButtonTrigger.checkmove == true)
+        {
+            Move();
+        }
     }
 
     private void Move()
