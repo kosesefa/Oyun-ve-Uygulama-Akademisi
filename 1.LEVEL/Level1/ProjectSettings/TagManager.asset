@@ -27,6 +27,11 @@ TagManager:
   - Level2Text
   - NotPickable
   - ChessKey
+  - A7
+  - C8
+  - F1
+  - C7
+  - H4
   layers:
   - Default
   - TransparentFX
@@ -37,7 +42,7 @@ TagManager:
   - IgnoreCam
   - Ground
   - Key
-  - 
+  - ChessKey
   - 
   - 
   - 
