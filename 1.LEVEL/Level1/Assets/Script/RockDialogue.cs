@@ -69,8 +69,8 @@ public class RockDialogue : MonoBehaviour
         RockPanel.GetComponent<Image>().color = new Color32(55, 55, 55, 237);
         RockPanel.GetComponent<Image>().raycastTarget = true;
         RockPanel.GetComponent<Image>().maskable = true;
-        RockPanel.GetComponent<Transform>().localPosition = new Vector3(0, -200, 0f);
-        RockPanel.GetComponent<Transform>().localScale = new Vector3(11.68f, 3f, 1);
+        RockPanel.GetComponent<Transform>().localPosition = new Vector3(0, -133, 0f);
+        RockPanel.GetComponent<Transform>().localScale = new Vector3(7.1f, 5.5f, 1);
         RockDialogueGO.SetActive(false);
 
 
@@ -80,20 +80,20 @@ public class RockDialogue : MonoBehaviour
         RockMyText.name = "Dialogue";
         RockMyText.transform.SetSiblingIndex(666);
         RockText = RockMyText.AddComponent<Text>();
-        RockText.transform.GetComponent<Text>().text = "Havada süzülen taslarin hareketini iyi takip etmelisin, onlar dogru zamanda yolunu açacak ve gerçegi gösterecek. Bastigin yerlere dikkatli bak, çünkü bilinmeyen sey her zaman gökyüzünde olmayabilir.";
+        RockText.transform.GetComponent<Text>().text = "Havada süzülen taslarin hareketini iyi takip etmelisin, onlar dogru zamanda yolunu açacak ve gercegi gösterecek. Bastigin yerlere dikkatli bak, cünkü bilinmeyen olan sey her zaman gökyüzünde olmayabilir.";
         RockText.transform.GetComponent<Text>().font = Rock_Font;
-        RockText.transform.GetComponent<Text>().fontSize = 29;
-        //RockText.transform.GetComponent<Text>().lineSpacing = 3;
+        RockText.transform.GetComponent<Text>().fontSize = 33;
+        RockText.transform.GetComponent<Text>().lineSpacing = 2;
         RockRectTransform = RockMyText.GetComponent<RectTransform>();
 
 
         // Text position
         RockRectTransform = RockText.GetComponent<RectTransform>();
-        //RockRectTransform.localPosition = new Vector3(0, -152, 0);
-        //RockRectTransform.sizeDelta = new Vector2(607, 500);
+        RockRectTransform.localPosition = new Vector3(0, -152, 0);
+        RockRectTransform.sizeDelta = new Vector2(607, 500);
         RockRectTransform2 = RockText.GetComponent<RectTransform>();
-        RockRectTransform2.localPosition = new Vector3(0, -220, 0);
-        RockRectTransform2.sizeDelta = new Vector2(1071, 243);
+        RockRectTransform2.localPosition = new Vector3(0, -152, 0);
+        RockRectTransform2.sizeDelta = new Vector2(607, 500);
 
         // Info Text
         RockInfoText = new GameObject();
@@ -101,7 +101,7 @@ public class RockDialogue : MonoBehaviour
         RockInfoText.transform.parent = RockInfoTextCanvas.transform;
         RockInfoText.transform.SetSiblingIndex(666);
         Rock_InfoText = RockInfoText.AddComponent<Text>();
-        Rock_InfoText.transform.GetComponent<Text>().text = "Okumak icin F'ye basin.";
+        Rock_InfoText.transform.GetComponent<Text>().text = "Okumak için F'ye basin.";
         Rock_InfoText.transform.GetComponent<Text>().font = Rock_Font;
         Rock_InfoText.transform.GetComponent<Text>().fontSize = 29;
         Rock_InfoText.transform.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
@@ -128,7 +128,7 @@ public class RockDialogue : MonoBehaviour
         RockDialogueContinue.GetComponent<Image>().color = new Color32(1, 1, 1, 0);
         RockDialogueContinue.AddComponent<Button>();
         RockDialogueContinue.transform.GetComponent<Transform>().localScale = new Vector3(1, 1, 1);
-        RockDialogueContinue.transform.GetComponent<Transform>().localPosition = new Vector3(427, -300, 0);
+        RockDialogueContinue.transform.GetComponent<Transform>().localPosition = new Vector3(222, -354, 0);
         RockRectTransformButton = RockTextDC.GetComponent<RectTransform>();
         RockRectTransformTextDC = RockDialogueContinue.GetComponent<RectTransform>();
         RockRectTransformTextDC.sizeDelta = new Vector2(172, 82);
@@ -136,7 +136,7 @@ public class RockDialogue : MonoBehaviour
         RockTextDC.transform.GetComponent<Text>().text = "Devam et";
         RockTextDC.transform.GetComponent<Text>().font = Rock_Font;
         RockTextDC.transform.GetComponent<Text>().fontSize = 45;
-        RockTextDC.transform.GetComponent<Transform>().localPosition = new Vector3(88.9f, -10, 0);
+        RockTextDC.transform.GetComponent<Transform>().localPosition = new Vector3(88.9f, -33, 0);
         RockDialogueContinue.GetComponent<Button>().onClick.AddListener(() => DialogueContinueOnClickEvent());
 
         RockInfoTextCanvas.SetActive(false);
