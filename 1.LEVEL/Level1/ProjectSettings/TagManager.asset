@@ -26,6 +26,7 @@ TagManager:
   - Level2GateCanvas2
   - Level2Text
   - NotPickable
+  - ChessKey
   layers:
   - Default
   - TransparentFX
