@@ -16,6 +16,7 @@ public class SoundManager : MonoBehaviour
     {
         NPCDialogue.canEsc = false;
         PauseMenu.GameIsPaused = true;
+        inControllsMenu = true;
         if (!PlayerPrefs.HasKey("musicVolume"))
         {
             PlayerPrefs.SetFloat("musicVolume", 1);
@@ -28,7 +29,7 @@ public class SoundManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && inControllsMenu==true)
         {
             _Pause();
         }

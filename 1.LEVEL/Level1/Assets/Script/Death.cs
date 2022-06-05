@@ -11,26 +11,29 @@ public class Death : MonoBehaviour
     public Animator animator;
     [SerializeField] GameObject canvas;
     public static bool isDead = false;
-
+    PauseMenu pauseMenu;
     public static ThirdPersonController thirdPersonController;
 
 
     public void Start()
     {
-
+        pauseMenu = new PauseMenu();
         canvas.SetActive(false);
         thirdPersonController = this.gameObject.GetComponent<ThirdPersonController>();
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("OnGround") || other.CompareTag("NPC"))
+        if (other.gameObject.CompareTag("OnGround") || other.gameObject.CompareTag("NPC"))
         {
             animator.SetTrigger("death");
             canvas.SetActive(true);
-            isDead = true;
             Cursor.visible = true;
+            isDead = true;
+            PauseMenu.GameIsPaused = false;
+            //pauseMenu.pauseMenuUI.SetActive(false);
             StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
+            Cursor.lockState = CursorLockMode.None;
             StarterAssets.ThirdPersonController.LockCameraPosition = true;
             thirdPersonController.enabled = false;
         }
@@ -38,22 +41,31 @@ public class Death : MonoBehaviour
 
     public void Restart()
     {
+        if (isDead == true) {
         Cursor.visible = false;
-        StarterAssets.ThirdPersonController.LockCameraPosition = false;
+        StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
+        StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
         isDead = false;
+        //pauseMenu.pauseMenuUI.SetActive(false);
+        PauseMenu.GameIsPaused = false;
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         thirdPersonController.enabled = true;
+        }
 
 
     }
-    private void OnTriggerExit(Collider other)
+    public void isDead_(bool isDead)
+    {
+        isDead = true;
+    }
+    /*private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("OnGround") || other.CompareTag("NPC"))
         {
             animator.enabled = false;
             canvas.SetActive(true);
-            isDead = true;
+            isDead = false;
             Cursor.visible = true;
             StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
@@ -61,5 +73,6 @@ public class Death : MonoBehaviour
             thirdPersonController.enabled = false;
         }
     }
+    */
 
 }

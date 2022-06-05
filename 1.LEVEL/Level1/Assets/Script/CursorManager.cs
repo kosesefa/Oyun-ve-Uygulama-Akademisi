@@ -10,6 +10,8 @@ public class CursorManager : MonoBehaviour
         Cursor.visible = false;
         StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
         StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
+        Cursor.lockState = CursorLockMode.None;
+        StarterAssets.ThirdPersonController.LockCameraPosition = false;
     }
 
     // Update is called once per frame

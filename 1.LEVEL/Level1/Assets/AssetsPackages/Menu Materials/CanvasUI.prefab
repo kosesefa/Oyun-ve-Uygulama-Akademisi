@@ -702,6 +702,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ControlsButton, Assembly-CSharp
+        m_MethodName: controllsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7228782155406053232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,10 +1170,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7228782156926516288}
-  - {fileID: 7445509219081697988}
   - {fileID: 7228782155601008555}
+  - {fileID: 7445509219081697988}
   m_Father: {fileID: 7228782155898420106}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1201,7 +1213,7 @@ RectTransform:
   m_Children:
   - {fileID: 7228782156226656160}
   m_Father: {fileID: 7228782155595252703}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1487,7 +1499,7 @@ RectTransform:
   - {fileID: 7228782156889638625}
   - {fileID: 7228782155595252703}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1512,7 +1524,6 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: -1
-  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2139,7 +2150,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: saved!
+  m_text: Kaydedildi!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
   m_sharedMaterial: {fileID: 5700735926780883933, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
@@ -3220,6 +3231,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 440069538325994386}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: controllsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7228782157120722675
 GameObject:
   m_ObjectHideFlags: 0
@@ -3265,7 +3288,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 7228782155595252703}
     m_Modifications:
     - target: {fileID: 216744793695010594, guid: ba3456fc42846814bb791a1599b649f2, type: 3}
@@ -3278,7 +3300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 216744793695010594, guid: ba3456fc42846814bb791a1599b649f2, type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 216744793695010594, guid: ba3456fc42846814bb791a1599b649f2, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3357,7 +3379,6 @@ PrefabInstance:
       value: RawImage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ba3456fc42846814bb791a1599b649f2, type: 3}
 --- !u!224 &7445509219081697988 stripped
 RectTransform:
@@ -3369,9 +3390,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 2
     m_TransformParent: {fileID: 7228782157120722684}
     m_Modifications:
+    - target: {fileID: 7082680053120254411, guid: dced1d5b848375f42851470e44bf6875, type: 3}
+      propertyPath: _PauseMenu
+      value: 
+      objectReference: {fileID: 7228782156419803606}
+    - target: {fileID: 7082680053120254411, guid: dced1d5b848375f42851470e44bf6875, type: 3}
+      propertyPath: _SettingsMenu
+      value: 
+      objectReference: {fileID: 7228782157120722675}
     - target: {fileID: 7082680053120254413, guid: dced1d5b848375f42851470e44bf6875, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3465,8 +3493,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: dced1d5b848375f42851470e44bf6875, type: 3}
+--- !u!114 &440069538325994386 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7082680053120254411, guid: dced1d5b848375f42851470e44bf6875, type: 3}
+  m_PrefabInstance: {fileID: 7228782156479093337}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad33e478acd9f8446bf9bbb583726cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &440069538325994388 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7082680053120254413, guid: dced1d5b848375f42851470e44bf6875, type: 3}
