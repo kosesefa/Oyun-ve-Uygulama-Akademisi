@@ -9,15 +9,14 @@ public class ControlsButton : MonoBehaviour
     public static bool inControllsMenu = false;
     void Start()
     {
-        NPCDialogue.canEsc = false;
-        PauseMenu.GameIsPaused = true;
-        inControllsMenu = true;
+        
+        
     }
 
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && inControllsMenu==true)
         {
             Debug.Log("esc bastý");
             _Pause();

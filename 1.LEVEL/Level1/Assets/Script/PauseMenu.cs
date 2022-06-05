@@ -13,18 +13,17 @@ public class PauseMenu : MonoBehaviour
         NPCDialogue.canEsc = true;
 
         CharacterController = GameObject.Find("PlayerArmature");
-        CharacterController.AddComponent<CharacterController>(); ;
     }
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape) && RockDialogue.RockCanESC==true && NPCDialogue2.SecondNPCCanEsc==true && SoundManager.inControllsMenu ==false && ControlsButton.inControllsMenu==false && Death.isDead == false && NPCDialogue.canEsc == true && SecondGameZone.canEscSecondGame==true)
+        if (Input.GetKeyDown(KeyCode.Escape) && RockDialogue.RockCanESC==true && NPCDialogue2.SecondNPCCanEsc==true && SoundManager.inControllsMenu == false && ControlsButton.inControllsMenu==false && Death.isDead == false && NPCDialogue.canEsc == true && SecondGameZone.canEscSecondGame==true)
         {
             if (GameIsPaused)
             {
                 ResumeGame();
             }
-            else
+            if(!GameIsPaused)
             {
                 PauseGame();
             }
