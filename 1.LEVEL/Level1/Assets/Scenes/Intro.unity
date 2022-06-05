@@ -543,16 +543,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Otis, (Yunan dilinde hiclik anlamindadir.) farkli bir gezegende uyanir.
-    Bu evren, daha \xF6nce g\xF6r\xFClmemis bir hayvan pop\xFClasyonun oldugu, cesitli
-    enteresan bitkilerin yetistigii essiz bir doga g\xFCzelligine sahiptir ancak
-    gercek d\xFCnyaya benzer bir tarafi yoktur. \n\n\nOtis g\xF6zlerini actiginda
-    ortami algilamaya calisir. Ellerine bakar, v\xFCcuduna bakar fakat modern insan
-    biciminden \xE7ok daha farkl\u0131 bir bicimdedir.  Otis, bu evreni anlamak ve
-    tanimak adina etrafta gezintiye cikar. Etrafta olan zehirli gazlar, eritici sicaklikta
-    olan maddeler, garip renkli yaratiklar ve canlilar g\xF6r\xFCr. \n\n\nYolcugu
-    boyunca ona yardimci olacak elcilerin esliginde ilerler ve bircok yerde kullanacagi
-    r\xFCn taslar\u0131 ile kendi yolunu acarak gercege ulasmaya calisir."
+  m_text: "Otis farkl\u0131 bir gezegende uyan\u0131r. G\xF6zlerini a\xE7ar, ortam\u0131
+    alg\u0131lamaya \xE7al\u0131\u015F\u0131r. Bu evren, daha \xF6nce g\xF6r\xFClmemi\u015F
+    bir hayvan pop\xFClasyonun oldu\u011Fu, \xE7e\u015Fitli enteresan bitkilerin
+    yeti\u015Fti\u011Fi, e\u015Fsiz bir do\u011Fa g\xFCzelli\u011Fine sahiptir ancak
+    ger\xE7ek d\xFCnyaya benzer bir taraf\u0131 yoktur. \n\n\nBu evreni anlamak ve
+    tan\u0131mak ad\u0131na bir gezintiye \xE7\u0131kar. Etraf\u0131nda bulunan zehirli
+    gazlar, eritici s\u0131cakl\u0131ktaki lavlar, garip renkli yarat\u0131klar ve
+    canl\u0131lar g\xF6r\xFCr. \n\n\nYolcu\u011Fu boyunca ona yol g\xF6sterecek el\xE7iler
+    ve evrenin bir\xE7ok yerinde kullanaca\u011F\u0131 r\xFCn ta\u015Flar\u0131 ile
+    kendi yolunu a\xE7arak, ger\xE7e\u011Fe ad\u0131m ad\u0131m ula\u015Fmaya \xE7al\u0131\u015F\u0131r."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2b3b4d18f8ea47408da7584decebac8, type: 2}
   m_sharedMaterial: {fileID: -4626624041924101143, guid: e2b3b4d18f8ea47408da7584decebac8, type: 2}
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 8.7578745, y: -9.157623, z: -0.80902094, w: 2.7149048}
+  m_margin: {x: 8.7578745, y: 74.24338, z: -0.80902094, w: 2.7149048}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1009,7 +1009,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -710}
+  m_AnchoredPosition: {x: 0, y: -749}
   m_SizeDelta: {x: 851.4518, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1908712995
