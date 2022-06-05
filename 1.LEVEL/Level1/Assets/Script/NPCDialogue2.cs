@@ -36,6 +36,7 @@ public class NPCDialogue2 : MonoBehaviour
     public int ContinueCount = 0;
     [SerializeField] GameObject NPC;
     [SerializeField] GameObject Otis;
+    [SerializeField] public GameObject Key;
 
     //RectTransform m_RectTransform;
 
@@ -186,6 +187,7 @@ public class NPCDialogue2 : MonoBehaviour
             StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
             Cursor.lockState = CursorLockMode.None;
+            Key.gameObject.tag="Key";
         }
     }
     IEnumerator LightsScript()

@@ -17,7 +17,7 @@ public class ColumnTrigger : MonoBehaviour
 
     private void Start()
     {    
-        door.GetComponent<BoxCollider>().enabled = false;        
+        door.GetComponent<BoxCollider>().enabled = false;
         doorBoxCollider.GetComponent<BoxCollider>().enabled = true;
         
 
