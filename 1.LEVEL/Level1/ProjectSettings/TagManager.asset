@@ -32,6 +32,7 @@ TagManager:
   - F1
   - C7
   - H4
+  - notPushable
   layers:
   - Default
   - TransparentFX
@@ -43,7 +44,7 @@ TagManager:
   - Ground
   - Key
   - ChessKey
-  - 
+  - Gate
   - 
   - 
   - 
