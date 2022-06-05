@@ -30,7 +30,6 @@ public class SoundManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("esc bastý");
             _Pause();
         }
     }
