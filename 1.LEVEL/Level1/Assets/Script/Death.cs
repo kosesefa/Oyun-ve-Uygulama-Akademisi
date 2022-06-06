@@ -14,6 +14,7 @@ public class Death : MonoBehaviour
     public GameObject CanvasUI;
     PauseMenu pauseMenu;
     public static ThirdPersonController thirdPersonController;
+    [SerializeField] AudioSource DeathAudio;
 
 
     public void Start()
@@ -28,6 +29,7 @@ public class Death : MonoBehaviour
         if (other.gameObject.CompareTag("OnGround") || other.gameObject.CompareTag("NPC"))
         {
             animator.SetTrigger("death");
+            DeathAudio.Play();
             canvas.SetActive(true);
             Cursor.visible = true;
             isDead = true;
@@ -49,8 +51,7 @@ public class Death : MonoBehaviour
         Cursor.visible = false;
         StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
         StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
-        isDead = false;
-        PauseMenu.GameIsPaused = false;
+        isDead = false; 
         //pauseMenu.pauseMenuUI.SetActive(false);
         PauseMenu.GameIsPaused = false;
         Time.timeScale = 1;
@@ -61,23 +62,13 @@ public class Death : MonoBehaviour
 
 
     }
-    private void Update()
-    {
-        if (isDead==true)
-        {
-            Debug.Log("isdead true");
-        }
-        else
-        {
-            Debug.Log("isdead false");
-        }
-    }
 
-    /*private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("OnGround") || other.CompareTag("NPC"))
         {
             animator.enabled = false;
+            DeathAudio.enabled = false;
             canvas.SetActive(true);
             isDead = false;
             Cursor.visible = true;
@@ -85,8 +76,9 @@ public class Death : MonoBehaviour
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
             StarterAssets.ThirdPersonController.LockCameraPosition = true;
             thirdPersonController.enabled = false;
+            CanvasUI.SetActive(true);
         }
     }
-    */
+    
 
 }

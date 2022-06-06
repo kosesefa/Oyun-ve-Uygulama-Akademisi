@@ -101,7 +101,7 @@ public class NPCDialogue3 : MonoBehaviour
         infoText.transform.parent = infoTextCanvas.transform;
         infoText.transform.SetSiblingIndex(666);
         _infoText = infoText.AddComponent<Text>();
-        _infoText.transform.GetComponent<Text>().text = "Konusmak icin F'ye basin.";
+        _infoText.transform.GetComponent<Text>().text = "Konuþmak için F'ye basýn.";
         _infoText.transform.GetComponent<Text>().font = _font;
         _infoText.transform.GetComponent<Text>().fontSize = 29;
         _infoText.transform.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;

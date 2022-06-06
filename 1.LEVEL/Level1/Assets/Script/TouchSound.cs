@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class TouchSound : MonoBehaviour
 {
-    public AudioSource audio;
+    public AudioSource SlimeAudio;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Slime"))
+        if (other.CompareTag("Slime")|| other.CompareTag("NPC"))
         {
-           audio.Play();
+           SlimeAudio.Play();
         }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Slime") || other.CompareTag("NPC"))
+        {
+            SlimeAudio.enabled = false; 
+        }
+
     }
 
 
