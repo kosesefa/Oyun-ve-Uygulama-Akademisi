@@ -22,6 +22,7 @@ public class MeteorSpawner : MonoBehaviour
             //chosenAsteroid.AddComponent<Rigidbody>();
             chosenAsteroid.GetComponent<Rigidbody>().velocity = new Vector3(-4,-4,0);
 
+
             // You can still manipulate asteroid afterwards like .AddComponent etc
         }
     }

@@ -224,16 +224,18 @@ public class LastSceneBreak2 : MonoBehaviour
     IEnumerator outro()
     {
         yield return new WaitForSeconds(3);
-        FadeToNextLevel();
+        animator.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Credits");
 
     }
     public void FadeToNextLevel()
     {
-        FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
+        
     }
-    public void FadeToLevel(int levelIndex)
+    public void FadeToLevel()
     {
-        levelToLoad = levelIndex;
+        
         animator.SetTrigger("FadeOut");
 
     }

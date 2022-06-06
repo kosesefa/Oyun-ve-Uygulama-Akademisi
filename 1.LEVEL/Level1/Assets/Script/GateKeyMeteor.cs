@@ -5,7 +5,6 @@ using DG.Tweening;
 
 public class GateKeyMeteor : MonoBehaviour
 {
-    CameraShake3 cs;
     // Adjust the speed for the application.
     public float speed;
     public static bool fell = false;
