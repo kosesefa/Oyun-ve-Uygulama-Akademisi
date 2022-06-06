@@ -1,5 +1,56 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2071452935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2071452937}
+  - component: {fileID: 2071452936}
+  m_Layer: 5
+  m_Name: Controller Menu Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2071452937
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071452935}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7228782155595252703}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2071452936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071452935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0e30c77bf7e7f44a9169ba1a3851173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _PauseMenu: {fileID: 7228782156419803606}
+  _ControllsMenu: {fileID: 7228782155595252702}
 --- !u!1 &7228782155101856162
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,7 +117,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: volume
+  m_text: SES AYARI
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
   m_sharedMaterial: {fileID: 5700735926780883933, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
@@ -702,7 +753,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2071452936}
         m_TargetAssemblyTypeName: ControlsButton, Assembly-CSharp
         m_MethodName: controllsButton
         m_Mode: 1
@@ -926,7 +977,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: YOU DIED
+  m_text: "\xD6LD\xDCN !"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54d5a9e54e03d774cbbb29fd94ce8a30, type: 2}
   m_sharedMaterial: {fileID: 4429896947488824569, guid: 54d5a9e54e03d774cbbb29fd94ce8a30, type: 2}
@@ -1141,6 +1192,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 440069538325994386}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: BackButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7228782155595252702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,6 +1235,7 @@ RectTransform:
   - {fileID: 7228782156926516288}
   - {fileID: 7228782155601008555}
   - {fileID: 7445509219081697988}
+  - {fileID: 2071452937}
   m_Father: {fileID: 7228782155898420106}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1318,6 +1382,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2071452936}
+        m_TargetAssemblyTypeName: ControlsButton, Assembly-CSharp
+        m_MethodName: BackButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2365,7 +2441,7 @@ GameObject:
   - component: {fileID: 7228782156419803600}
   m_Layer: 5
   m_Name: Pause Menu
-  m_TagString: GameManager
+  m_TagString: PauseMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2633,7 +2709,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: back
+  m_text: "GER\u0130 DON"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
   m_sharedMaterial: {fileID: 5700735926780883933, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
@@ -2768,7 +2844,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: restart
+  m_text: "yeniden ba\u015Fla"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
   m_sharedMaterial: {fileID: 5700735926780883933, guid: d7fdec77deea65e4eb9671f7455e9297, type: 2}
@@ -3231,7 +3307,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 440069538325994386}
+      - m_Target: {fileID: 7082680053120254411, guid: dced1d5b848375f42851470e44bf6875, type: 3}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: controllsButton
         m_Mode: 1
@@ -3253,8 +3329,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7228782157120722684}
   m_Layer: 5
-  m_Name: Options Menu
-  m_TagString: Untagged
+  m_Name: Volume Settings
+  m_TagString: SettingsMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3394,11 +3470,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7082680053112004429, guid: dced1d5b848375f42851470e44bf6875, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.262
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7082680053112004429, guid: dced1d5b848375f42851470e44bf6875, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7082680053120254411, guid: dced1d5b848375f42851470e44bf6875, type: 3}
       propertyPath: _PauseMenu
@@ -3502,15 +3578,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7082680054377767711, guid: dced1d5b848375f42851470e44bf6875, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.262
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7082680054377767711, guid: dced1d5b848375f42851470e44bf6875, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7082680054377767711, guid: dced1d5b848375f42851470e44bf6875, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.262
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dced1d5b848375f42851470e44bf6875, type: 3}

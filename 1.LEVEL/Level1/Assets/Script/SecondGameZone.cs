@@ -93,7 +93,7 @@ public class SecondGameZone : MonoBehaviour
         myTextSecondGame.name = "Dialogue";
         myTextSecondGame.transform.SetSiblingIndex(666);
         textSecondGame = myTextSecondGame.AddComponent<Text>();
-        textSecondGame.transform.GetComponent<Text>().text = "Gecmiste attigin adimi hatirliyor musun? Hafizani yenilemek icin ayak izlerini takip et, gecmise bir bakis at. Bu kapiyi acmak icin üstünden gectigin taslarin üzerindeki harfleri yazmalisin.";
+        textSecondGame.transform.GetComponent<Text>().text = "Geçmiþte attýðýn adýmý hatýrlýyor musun? Hafýzaný yenilemek için ayak izlerini takip et, geçmiþe bir bakýþ at. Bu kapýyý açmak için üstünden geçtiðin taþlarýn üzerindeki harfleri yazmalýsýn.";
         textSecondGame.transform.GetComponent<Text>().font = _fontSecondGame;
         textSecondGame.transform.GetComponent<Text>().fontSize = 29;
         rectTransformSecondGame = myTextSecondGame.GetComponent<RectTransform>();
@@ -113,7 +113,7 @@ public class SecondGameZone : MonoBehaviour
         infoTextSecondGame.transform.parent = infoTextCanvasSecondGame.transform;
         infoTextSecondGame.transform.SetSiblingIndex(666);
         _infoTextSecondGame = infoTextSecondGame.AddComponent<Text>();
-        _infoTextSecondGame.transform.GetComponent<Text>().text = "Kapiyla konusmak icin F'ye basin.";
+        _infoTextSecondGame.transform.GetComponent<Text>().text = "Kapýyla konuþmak için F'ye basýn.";
         _infoTextSecondGame.transform.GetComponent<Text>().font = _fontSecondGame;
         _infoTextSecondGame.transform.GetComponent<Text>().fontSize = 29;
         _infoTextSecondGame.transform.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;

@@ -105,7 +105,7 @@ namespace StarterAssets
         private CharacterController _controller;
         private StarterAssetsInputs _input;
         private GameObject _mainCamera;
-
+        [SerializeField] AudioSource JumpSound;
         private const float _threshold = 0.01f;
 
         private bool _hasAnimator;
@@ -309,6 +309,7 @@ namespace StarterAssets
                     if (_hasAnimator)
                     {
                         _animator.SetBool(_animIDJump, true);
+                        JumpSound.Play();
                     }
                 }
 

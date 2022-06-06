@@ -101,7 +101,7 @@ public class RockDialogue3 : MonoBehaviour
         RockInfoText2.transform.parent = RockInfoTextCanvas2.transform;
         RockInfoText2.transform.SetSiblingIndex(666);
         Rock_InfoText2 = RockInfoText2.AddComponent<Text>();
-        Rock_InfoText2.transform.GetComponent<Text>().text = "Okumak için F'ye basin.";
+        Rock_InfoText2.transform.GetComponent<Text>().text = "Okumak için F'ye basýn.";
         Rock_InfoText2.transform.GetComponent<Text>().font = Rock_Font2;
         Rock_InfoText2.transform.GetComponent<Text>().fontSize = 29;
         Rock_InfoText2.transform.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;

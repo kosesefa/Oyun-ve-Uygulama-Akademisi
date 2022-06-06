@@ -83,7 +83,7 @@ public class NPCDialogue : MonoBehaviour
         myText.name = "Dialogue";
         myText.transform.SetSiblingIndex(666);
         text = myText.AddComponent<Text>();
-        text.transform.GetComponent<Text>().text = "…degisik homurtular ve derin sesler… " + "\n\nInsan… Buraya gelenler gerçekligin ne kadar sasirtici olabilecegini göremiyorlar. Size verilen gözler sadece görmenize yariyor, daha ötesine bakamiyorsunuz… Ileride, tepede bir kap? var. Bu kapiyi açabilmek için en ilkel insan zekasina ihtiyacin olacak. Baska bir kapinin ardinda seni bekliyor.";
+        text.transform.GetComponent<Text>().text = "…deðiþik homurtular ve derin sesler… " + "\n\nÝnsan… Buraya gelenler gerçekliðin ne kadar þaþýrtýcý olabileceðini göremiyorlar. Size verilen gözler sadece görmenize yarýyor, daha ötesine bakamýyorsunuz… Ýleride, tepede bir kapý var. Bu kapýyý açabilmek için en ilkel insan zekasýna ihtiyacýn olacak. Baþka bir kapýnýn ardýnda seni bekliyor.";
         text.transform.GetComponent<Text>().font = _font;
         text.transform.GetComponent<Text>().fontSize = 29;
         rectTransform = myText.GetComponent<RectTransform>();
@@ -101,7 +101,7 @@ public class NPCDialogue : MonoBehaviour
         infoText.transform.parent = infoTextCanvas.transform;
         infoText.transform.SetSiblingIndex(666);
         _infoText = infoText.AddComponent<Text>();
-        _infoText.transform.GetComponent<Text>().text = "Konusmak icin F'ye basin.";
+        _infoText.transform.GetComponent<Text>().text = "Konuþmak için F'ye basýn.";
         _infoText.transform.GetComponent<Text>().font = _font;
         _infoText.transform.GetComponent<Text>().fontSize = 29;
         _infoText.transform.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
