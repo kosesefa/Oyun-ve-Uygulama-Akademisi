@@ -5,18 +5,27 @@ using UnityEngine.SceneManagement;
 public class CreditController : MonoBehaviour
 {
     [SerializeField] GameObject ReturnMenu;
+
     private void Start()
     {
+        Cursor.visible = false;
         StartCoroutine(CursorVisible());
     }
+
     public void Menu()
     {
         Cursor.visible = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Menu 1");
     }
+
+    public void QuitGame()
+    {
+       Application.Quit();
+    }
+
     IEnumerator CursorVisible()
     {
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(20);
         Cursor.visible = true;
     }
 }

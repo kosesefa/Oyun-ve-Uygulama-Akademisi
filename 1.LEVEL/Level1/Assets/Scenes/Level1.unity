@@ -7428,6 +7428,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7228782156191013809, guid: 74d8af4a7f18d3c4abfa90be144cd262, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1702.6907
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228782156191013809, guid: 74d8af4a7f18d3c4abfa90be144cd262, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 799.9999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228782156191013809, guid: 74d8af4a7f18d3c4abfa90be144cd262, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 586.1908
+      objectReference: {fileID: 0}
     - target: {fileID: 7228782156995262951, guid: 74d8af4a7f18d3c4abfa90be144cd262, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
