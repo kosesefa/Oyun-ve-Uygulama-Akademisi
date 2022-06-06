@@ -35,7 +35,10 @@ TagManager:
   - notPushable
   - PauseMenu
   - SettingsMenu
-  - GameMusic
+
+  - Meteor
+  - RealMeteor
+
   layers:
   - Default
   - TransparentFX

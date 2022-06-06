@@ -15,10 +15,12 @@ public class Death : MonoBehaviour
     PauseMenu pauseMenu;
     public static ThirdPersonController thirdPersonController;
     [SerializeField] AudioSource DeathAudio;
+    public static ThirdPersonController cc;
 
 
     public void Start()
     {
+        cc = GetComponent(typeof(ThirdPersonController)) as ThirdPersonController;
         pauseMenu = new PauseMenu();
         PauseMenu.GameIsPaused = false;
         canvas.SetActive(false);

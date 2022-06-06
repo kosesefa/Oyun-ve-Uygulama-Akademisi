@@ -54,8 +54,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - FogDensity: 0.71
-    - FogNoise: 84.5
+    - FogDensity: 0.018
+    - FogNoise: 65.67
     - FogSpeed: 0.02
     - _AddPrecomputedVelocity: 0
     - _AlphaCutoffEnable: 0
