@@ -153,7 +153,7 @@ public class NPCDialogue : MonoBehaviour
             DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().Priority = 20;
             DialogueVirtualCamera.GetComponent<CinemachineVirtualCamera>().LookAt = Otis.transform;
 
-            text.transform.GetComponent<Text>().text = "Buna göre, gördügüm her seyin yanlis ve hayali oldugunu varsayiyorum; Yaniltici bellegimin temsil etti?i nesnelerden hiçbirinin var olmadigina inaniyorum; Sanirim hiçbir duyuya sahip degilim; Bedenin, figürün, uzantinin, hareketin ve yerin sadece zihnimin kurgulari olduguna inaniyorum. O halde, dogru kabul edilebilecek ne var? Belki de sadece bu, kesinlikle kesin bir sey olmadigi.”";
+            text.transform.GetComponent<Text>().text = "Buna göre, gördüðüm her þeyin yanlýþ ve hayali olduðunu varsayýyorum; Yanýltýcý belleðimin temsil ettiði nesnelerden hiçbirinin var olmadýðýna inanýyorum; Sanýrým hiçbir duyuya sahip deðilim; Bedenin, figürün, uzantýnýn, hareketin ve yerin sadece zihnimin kurgularý olduðuna inanýyorum. O halde, doðru kabul edilebilecek ne var? Belki de sadece bu, kesinlikle kesin bir þey olmadýðý.”";
             ContinueCount++;
         }
         else if (ContinueCount==1)
@@ -168,7 +168,7 @@ public class NPCDialogue : MonoBehaviour
         else 
         {
             text.transform.GetComponent<Text>().text =
-        text.transform.GetComponent<Text>().text = "…degisik homurtular ve derin sesler… " + "\n\nInsan… Buraya gelenler gerçekligin ne kadar sasirtici olabilecegini göremiyorlar. Size verilen gözler sadece görmenize yariyor, daha ötesine bakamiyorsunuz… Ileride, tepede bir kapi var. Bu kapiyi açabilmek için en ilkel insan zekasina ihtiyacin olacak. Baska bir kapinin ardinda seni bekliyor.";
+        text.transform.GetComponent<Text>().text = "…deðiþik homurtular ve derin sesler… " + "\n\nÝnsan… Buraya gelenler gerçekliðin ne kadar þaþýrtýcý olabileceðini göremiyorlar. Size verilen gözler sadece görmenize yarýyor, daha ötesine bakamýyorsunuz… Ýleride, tepede bir kapý var. Bu kapýyý açabilmek için en ilkel insan zekasýna ihtiyacýn olacak. Baþka bir kapýnýn ardýnda seni bekliyor.";
             Cursor.visible = false;
             StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
             StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;

@@ -5238,7 +5238,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 66ab16d0c5d22a14d99ea1209d6dba18, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.756
+  m_Volume: 0.216
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5282,7 +5282,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -8741,9 +8741,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5e9a942370f234913b1d29e89b4925be, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 471b9abfc6389eb4aa3238dd200b3571, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.015
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9093,6 +9093,7 @@ GameObject:
   - component: {fileID: 1122932674}
   - component: {fileID: 1122932673}
   - component: {fileID: 1122932672}
+  - component: {fileID: 1122932677}
   m_Layer: 2
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -9259,6 +9260,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1122932677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122932670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde387cac5b6b004593a7d5e6502ce62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1129020356
 GameObject:
   m_ObjectHideFlags: 0
@@ -56555,6 +56568,7 @@ GameObject:
   - component: {fileID: 2065797238585925752}
   - component: {fileID: 3099870938887008221}
   - component: {fileID: 927745337638673175}
+  - component: {fileID: 3099870938887008222}
   m_Layer: 0
   m_Name: EA_RockMini_PRE
   m_TagString: Untagged
@@ -58672,6 +58686,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720655468240960194}
+  m_Mesh: {fileID: 1180676026550898293, guid: 01cc1709ffffd6b4481aa6fce45faaaa, type: 3}
+--- !u!64 &3099870938887008222
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720655468240960194}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 1180676026550898293, guid: 01cc1709ffffd6b4481aa6fce45faaaa, type: 3}
 --- !u!1 &3142905136214111500
 GameObject:

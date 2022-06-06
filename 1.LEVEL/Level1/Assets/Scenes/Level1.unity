@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: df0fa8e9a0beae243aa1e7856ac1a667, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: e1d51ab0e5f0cba4dbdbcce15ed806c8, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -7427,6 +7427,18 @@ PrefabInstance:
     - target: {fileID: 7228782155898420110, guid: 74d8af4a7f18d3c4abfa90be144cd262, type: 3}
       propertyPath: m_Name
       value: CanvasUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228782156191013809, guid: 74d8af4a7f18d3c4abfa90be144cd262, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1702.6907
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228782156191013809, guid: 74d8af4a7f18d3c4abfa90be144cd262, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 799.9999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228782156191013809, guid: 74d8af4a7f18d3c4abfa90be144cd262, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 586.1908
       objectReference: {fileID: 0}
     - target: {fileID: 7228782156995262951, guid: 74d8af4a7f18d3c4abfa90be144cd262, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -54305,6 +54317,7 @@ GameObject:
   - component: {fileID: 5563690194365996357}
   - component: {fileID: 1446870986}
   - component: {fileID: 5563690194365996358}
+  - component: {fileID: 5563690194365996359}
   m_Layer: 2
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -54438,6 +54451,18 @@ MonoBehaviour:
   maxPushDistance: 20
   maxPullDistance: 6
   animator: {fileID: 5777780407144355994}
+--- !u!114 &5563690194365996359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5542111180004417880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde387cac5b6b004593a7d5e6502ce62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &5565772321580728682
 MeshFilter:
   m_ObjectHideFlags: 0
