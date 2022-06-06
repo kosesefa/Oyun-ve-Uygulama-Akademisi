@@ -81,7 +81,7 @@ public class NPCDialogue2 : MonoBehaviour
         myText.name = "Dialogue";
         myText.transform.SetSiblingIndex(666);
         text = myText.AddComponent<Text>();
-        text.transform.GetComponent<Text>().text = "Ýnsan yazgýsýný kabul etmeli mi yoksa onunla oynayabilir mi? Bu bölgede insanüstü özellikler elde edeceksin. Yaratmanýn ve taklit etmenin gücünü bulacaksýn, etrafta gördüðün bazý objeleri hareket ettirebileceksin.";
+        text.transform.GetComponent<Text>().text = "?nsan yazg?s?n? kabul etmeli mi yoksa onunla oynayabilir mi? Bu bölgede insanüstü özellikler elde edeceksin. Yaratman?n ve taklit etmenin gücünü bulacaks?n, etrafta gördü?ün baz? objeleri hareket ettirebileceksin.";
         text.transform.GetComponent<Text>().font = _font;
         text.transform.GetComponent<Text>().fontSize = 29;
         rectTransform = myText.GetComponent<RectTransform>();
@@ -101,7 +101,7 @@ public class NPCDialogue2 : MonoBehaviour
         infoText.transform.parent = infoTextCanvas.transform;
         infoText.transform.SetSiblingIndex(666);
         _infoText = infoText.AddComponent<Text>();
-        _infoText.transform.GetComponent<Text>().text = "Konuþmak için F'ye basýn";
+        _infoText.transform.GetComponent<Text>().text = "Konu?mak için F'ye bas?n";
         _infoText.transform.GetComponent<Text>().font = _font;
         _infoText.transform.GetComponent<Text>().fontSize = 29;
         _infoText.transform.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;

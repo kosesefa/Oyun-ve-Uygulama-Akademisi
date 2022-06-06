@@ -80,7 +80,7 @@ public class RockDialogue : MonoBehaviour
         RockMyText.name = "Dialogue";
         RockMyText.transform.SetSiblingIndex(666);
         RockText = RockMyText.AddComponent<Text>();
-        RockText.transform.GetComponent<Text>().text = "Havada süzülen taþlarýn hareketini iyi takip etmelisin, onlar doðru zamanda yolunu açacak ve gerçeði gösterecek. Bastýðýn yerlere dikkatli bak, çünkü bilinmeyen olan þey her zaman gökyüzünde olmayabilir.";
+        RockText.transform.GetComponent<Text>().text = "Havada süzülen ta?lar?n hareketini iyi takip etmelisin, onlar do?ru zamanda yolunu açacak ve gerçe?i gösterecek. Bast???n yerlere dikkatli bak, çünkü bilinmeyen olan ?ey her zaman gökyüzünde olmayabilir.";
         RockText.transform.GetComponent<Text>().font = Rock_Font;
         RockText.transform.GetComponent<Text>().fontSize = 33;
         RockText.transform.GetComponent<Text>().lineSpacing = 2;
@@ -101,7 +101,7 @@ public class RockDialogue : MonoBehaviour
         RockInfoText.transform.parent = RockInfoTextCanvas.transform;
         RockInfoText.transform.SetSiblingIndex(666);
         Rock_InfoText = RockInfoText.AddComponent<Text>();
-        Rock_InfoText.transform.GetComponent<Text>().text = "Okumak için F'ye basýn.";
+        Rock_InfoText.transform.GetComponent<Text>().text = "Okumak için F'ye bas?n.";
         Rock_InfoText.transform.GetComponent<Text>().font = Rock_Font;
         Rock_InfoText.transform.GetComponent<Text>().fontSize = 29;
         Rock_InfoText.transform.GetComponent<Text>().alignment = TextAnchor.MiddleCenter;
