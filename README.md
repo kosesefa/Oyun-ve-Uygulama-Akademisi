@@ -111,5 +111,33 @@ https://miro.com/app/board/uXjVO5siros=/
 ---
 
 # Sprint 3
+- **Sprint Notları**: Product backlog item'lara tıklandığında görevlerin detayları okunabilir.
 
+- **Sprint içinde tamamlanması tahmin edilen puan**: 140 Puan
+
+- **Puan tamamlama mantığı**: Proje boyunca toplam tamamlanması gereken 330 puanlık backlog bulunmaktadır. 3.sprint boyunca tamamlanması gereken puan ise 140 olarak belirlenmiştir.
+
+- **Backlog düzeni ve Story seçimleri**: Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmış ve tamamlanmıştır.
+
+- **Daily Scrum**: Daily Scrum toplantılarımız çeşitli koşullar sebebiyle bazen Discord bazen de Whatsapp üzerinden gerçekleşmiştir. Daily Scrum toplantısı örneği jpeg ve PDF olarak Readme dosyası üzerinden tarafımızca paylaşılmaktadır.[Belge 2.pdf](https://github.com/kosesefa/Oyun-ve-Uygulama-Akademisi/files/8847558/Belge.2.pdf)
+
+
+
+- **Sprint board update**: ![miro1](https://user-images.githubusercontent.com/99612318/172240780-db78c577-090e-4e07-a7c7-17d2b2324beb.png)
+![miro2](https://user-images.githubusercontent.com/99612318/172240789-c524f4c2-4266-4a04-a4ff-72b2a658f9f1.png)
+![miro3](https://user-images.githubusercontent.com/99612318/172240802-a70ac667-d531-4012-89e5-d47a71ee1c84.png)
+
+
+- **Ürün Durumu**: ![Oyun1](https://user-images.githubusercontent.com/99612318/172240858-d237d48c-b78d-4ea3-9f40-3292456a4700.png)
+![oyun2](https://user-images.githubusercontent.com/99612318/172240868-cc46ad9a-edb2-4cd7-b00e-e503055f4bf4.png)
+![oyun3](https://user-images.githubusercontent.com/99612318/172240877-2928d60c-6014-4857-81da-d30cba1f7b8d.png)
+![oyun4](https://user-images.githubusercontent.com/99612318/172240883-5d632182-2493-4620-91ed-bc2ebbb43b65.png)
+
+
+- **Sprint Review**: Alınan Kararlar: Bu sprintte sprint başında belirlenen 140 puanlık sprint hedeflerine tamamıyla ulaşıldı. Seviyelerin hepsi tamamlandı ve oyuna müzikler,sesler,pick up, pick down, drag and drop gibi mekanikler eklendi. Puzzle tasarımları yapıldı ve puzzle sistemleri yapıldı. 2.sprint içerisinde yapılamayan bütün işler bu sprintte başarıyla tamamlandı. 
+- Sprint Review Katılımcıları: Sefa Köse, Selin Moralı, Haluk Mert Özdemir, M.Fırat Fidan, Asrın Sıla Şimşek.
+
+------
+- **Sprint Retrospective**:
+-3.sprint takım adına en verimli ve deneyim kazandıran sprint olarak geçti. Bu süreçte takımca Unity 3D alanında pek çok yeni mekaniği ve özelliği öğrenmiş,deneyimlemiş olduk. Bu süreç içinde oyunumuzu geliştirirken önümüze çıkan hem kod hataları hem de Unity Engine üzerinde ortaya çıkan hataları çözümlemeye çalışarak problem çözme yetimizin gelişmesini sağladık. Oyunumuzu geliştirme sürecinde aldığımız bu bütün deneyimler neticisinde bütün bu projenin takımca bize büyük bir katkı sağladığını söyleyebiliriz. 
 ---
