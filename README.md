@@ -148,3 +148,48 @@ https://miro.com/app/board/uXjVO5siros=/
 - **Sprint Retrospective**:
 -3.sprint takım adına en verimli ve deneyim kazandıran sprint olarak geçti. Bu süreçte takımca Unity 3D alanında pek çok yeni mekaniği ve özelliği öğrenmiş,deneyimlemiş olduk. Bu süreç içinde oyunumuzu geliştirirken önümüze çıkan hem kod hataları hem de Unity Engine üzerinde ortaya çıkan hataları çözümlemeye çalışarak problem çözme yetimizin gelişmesini sağladık. Oyunumuzu geliştirme sürecinde aldığımız bu bütün deneyimler neticisinde bütün bu projenin takımca bize büyük bir katkı sağladığını söyleyebiliriz. 
 ---
+KULLANDIĞIMIZ ASSETLER,SESLER VE MÜZİKLER
+
+Kullanılan Assetler
+https://assetstore.unity.com/packages/3d/environments/simplistic-low-poly-nature-93894#description
+https://assetstore.unity.com/packages/3d/characters/stone-monster-101433
+https://assetstore.unity.com/packages/3d/environments/sci-fi/asteroids-low-poly-pack-142164
+https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676
+https://assetstore.unity.com/packages/vfx/shaders/free-skybox-extended-shader-107400#description
+https://assetstore.unity.com/packages/3d/environments/low-poly-rock-pack-57874#publisher
+https://assetstore.unity.com/packages/3d/environments/low-poly-rock-pack-57874#publisher
+https://assetstore.unity.com/packages/vfx/shaders/dynamic-vertical-fog-189939#description
+https://assetstore.unity.com/packages/3d/environments/fantasy/free-low-poly-lava-plants-145043#description
+https://assetstore.unity.com/packages/3d/environments/fantasy/fantasy-tombs-necropoly-lite-205971#publisher
+https://assetstore.unity.com/packages/3d/environments/fantasy/fantasy-tombs-necropoly-lite-205971#publisher
+https://assetstore.unity.com/packages/3d/environments/simple-forest-pack-209273
+https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/mini-legion-lich-pbr-hp-polyart-91497#description
+https://assetstore.unity.com/packages/3d/environments/low-poly-free-pack-sample-polyworks-58821#publisher
+https://assetstore.unity.com/packages/3d/environments/low-poly-free-pack-sample-polyworks-58821#publisher
+https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/battle-wizard-poly-art-128097#description
+https://assetstore.unity.com/packages/essentials/starter-assets-third-person-character-controller-196526#publisher
+https://assetstore.unity.com/packages/audio/ambient/nature/nature-essentials-208227#description
+https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2018-4-32351
+
+Kullandığımız ses assetlerinin linkleri;
+https://mixkit.co/free-sound-effects/
+-Creature cry of hurt
+-Bubbling volcano lava flow
+-Voice from effort to punch
+-Magic sparkle whoosh
+-Ow exclamation of pain
+
+https://freesound.org/people/miguelab1998/sounds/408593/
+https://freesound.org/people/ristooooo1/sounds/539819/
+http://freesoundeffect.net/sound/gremlin-weeee-sound-effect
+
+
+Kullandığımız müzikler ve izinleri:
+https://www.youtube.com/watch?v=CwrMmAZ0_5c
+https://opengameart.org/content/dark-forest-theme
+https://www.youtube.com/watch?v=tch4bG1nzUI
+https://www.youtube.com/watch?v=-6qlLD27taE
+https://www.youtube.com/watch?v=-6qlLD27taE
+![Müzik izni](https://user-images.githubusercontent.com/99612318/172247580-8653ec4b-2005-4bb0-b804-c937bb060345.png)
+
+https://www.youtube.com/watch?v=tch4bG1nzUI
