@@ -44,20 +44,22 @@ public class Death : MonoBehaviour
         }
     }
 
+
+
     public void Restart()
     {
         if (isDead == true)
         {
-        Cursor.visible = false;
-        StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
-        StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
-        isDead = false; 
-        //pauseMenu.pauseMenuUI.SetActive(false);
-        PauseMenu.GameIsPaused = false;
-        Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        thirdPersonController.enabled = true;
-        CanvasUI.SetActive(true);
+            Cursor.visible = false;
+            StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
+            StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
+            isDead = false;
+            //pauseMenu.pauseMenuUI.SetActive(false);
+            PauseMenu.GameIsPaused = false;
+            Time.timeScale = 1;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            thirdPersonController.enabled = true;
+            CanvasUI.SetActive(false);
         }
 
 
@@ -65,20 +67,13 @@ public class Death : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("OnGround") || other.CompareTag("NPC"))
+        if (other.CompareTag("NPC"))
         {
             animator.enabled = false;
             DeathAudio.enabled = false;
-            canvas.SetActive(true);
-            isDead = false;
-            Cursor.visible = true;
-            StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
-            StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
-            StarterAssets.ThirdPersonController.LockCameraPosition = true;
-            thirdPersonController.enabled = false;
-            CanvasUI.SetActive(true);
+
         }
     }
-    
+
 
 }
