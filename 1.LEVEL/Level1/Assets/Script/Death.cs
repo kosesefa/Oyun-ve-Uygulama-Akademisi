@@ -11,6 +11,7 @@ public class Death : MonoBehaviour
     public Animator animator;
     [SerializeField] GameObject canvas;
     public static bool isDead = false;
+    public GameObject CanvasUI;
     PauseMenu pauseMenu;
     public static ThirdPersonController thirdPersonController;
 
@@ -18,6 +19,7 @@ public class Death : MonoBehaviour
     public void Start()
     {
         pauseMenu = new PauseMenu();
+        PauseMenu.GameIsPaused = false;
         canvas.SetActive(false);
         thirdPersonController = this.gameObject.GetComponent<ThirdPersonController>();
     }
@@ -36,29 +38,41 @@ public class Death : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             StarterAssets.ThirdPersonController.LockCameraPosition = true;
             thirdPersonController.enabled = false;
+            CanvasUI.SetActive(false);
         }
     }
 
     public void Restart()
     {
-        if (isDead == true) {
+        if (isDead == true)
+        {
         Cursor.visible = false;
         StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = true;
         StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
         isDead = false;
+        PauseMenu.GameIsPaused = false;
         //pauseMenu.pauseMenuUI.SetActive(false);
         PauseMenu.GameIsPaused = false;
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         thirdPersonController.enabled = true;
+        CanvasUI.SetActive(true);
         }
 
 
     }
-    public void isDead_(bool isDead)
+    private void Update()
     {
-        isDead = true;
+        if (isDead==true)
+        {
+            Debug.Log("isdead true");
+        }
+        else
+        {
+            Debug.Log("isdead false");
+        }
     }
+
     /*private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("OnGround") || other.CompareTag("NPC"))

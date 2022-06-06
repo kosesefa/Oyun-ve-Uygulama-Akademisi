@@ -14,9 +14,6 @@ public class SoundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        NPCDialogue.canEsc = false;
-        PauseMenu.GameIsPaused = true;
-        inControllsMenu = true;
         if (!PlayerPrefs.HasKey("musicVolume"))
         {
             PlayerPrefs.SetFloat("musicVolume", 1);
@@ -29,8 +26,9 @@ public class SoundManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && inControllsMenu==true)
+        if (Input.GetKeyDown(KeyCode.Escape) && inControllsMenu == true && Death.isDead == false)
         {
+            Debug.Log("esc bastý");
             _Pause();
         }
     }
@@ -54,12 +52,17 @@ public class SoundManager : MonoBehaviour
     {
         _PauseMenu.SetActive(true);
         _SettingsMenu.SetActive(false);
-        NPCDialogue.canEsc = true;
         inControllsMenu = false;
     }
     public void controllsButton()
     {
         inControllsMenu = true;
+    }
+    public void BackButton()
+    {
+        _PauseMenu.SetActive(true);
+        _SettingsMenu.SetActive(false);
+        inControllsMenu = false;
     }
 
 }

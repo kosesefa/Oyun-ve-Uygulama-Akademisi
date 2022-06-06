@@ -17,13 +17,13 @@ public class PauseMenu : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape) && RockDialogue.RockCanESC==true && NPCDialogue2.SecondNPCCanEsc==true && SoundManager.inControllsMenu == false && ControlsButton.inControllsMenu==false && Death.isDead == false && NPCDialogue.canEsc == true && SecondGameZone.canEscSecondGame==true)
+        if (Input.GetKeyDown(KeyCode.Escape) && RockDialogue.RockCanESC == true && NPCDialogue2.SecondNPCCanEsc == true && SoundManager.inControllsMenu == false && ControlsButton.inControllsMenu == false && Death.isDead == false && NPCDialogue.canEsc == true && SecondGameZone.canEscSecondGame == true)
         {
             if (GameIsPaused)
             {
                 ResumeGame();
             }
-            if(!GameIsPaused)
+            else if (!GameIsPaused)
             {
                 PauseGame();
             }
@@ -38,17 +38,19 @@ public class PauseMenu : MonoBehaviour
         StarterAssets.StarterAssetsInputs.instance.cursorLocked = true;
         pauseMenuUI.SetActive(false);
         GameIsPaused = false;
+        SoundManager.inControllsMenu = false;
+        ControlsButton.inControllsMenu=false;
     }
 
     public void PauseGame()
     {
-        
+
         Cursor.visible = true;
         StarterAssets.StarterAssetsInputs.instance.cursorInputForLook = false;
         StarterAssets.StarterAssetsInputs.instance.cursorLocked = false;
         pauseMenuUI.SetActive(true);
         GameIsPaused = true;
-        
+
     }
 
     public void QuitGame()
