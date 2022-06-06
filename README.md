@@ -2,6 +2,10 @@
 
 ATONAL
 
+![logo](https://user-images.githubusercontent.com/99612318/172245061-5b0a9c73-7d01-4347-92e7-e36a7598ad83.png)
+
+
+
 # Ürün İle İlgili Bilgiler
 
 ## Takım Elemanları
@@ -132,6 +136,9 @@ https://miro.com/app/board/uXjVO5siros=/
 ![oyun2](https://user-images.githubusercontent.com/99612318/172240868-cc46ad9a-edb2-4cd7-b00e-e503055f4bf4.png)
 ![oyun3](https://user-images.githubusercontent.com/99612318/172240877-2928d60c-6014-4857-81da-d30cba1f7b8d.png)
 ![oyun4](https://user-images.githubusercontent.com/99612318/172240883-5d632182-2493-4620-91ed-bc2ebbb43b65.png)
+![kod1](https://user-images.githubusercontent.com/99612318/172244689-c48b710c-d3e1-4cda-9962-1d859db9cd4f.png)
+![kod2](https://user-images.githubusercontent.com/99612318/172244702-7921d2c3-4d54-4a24-b52d-d65953c2e10e.png)
+![kod3](https://user-images.githubusercontent.com/99612318/172244713-1c973dbd-44f8-4195-b6e7-b0b6b199180d.png)
 
 
 - **Sprint Review**: Alınan Kararlar: Bu sprintte sprint başında belirlenen 140 puanlık sprint hedeflerine tamamıyla ulaşıldı. Seviyelerin hepsi tamamlandı ve oyuna müzikler,sesler,pick up, pick down, drag and drop gibi mekanikler eklendi. Puzzle tasarımları yapıldı ve puzzle sistemleri yapıldı. 2.sprint içerisinde yapılamayan bütün işler bu sprintte başarıyla tamamlandı. 
