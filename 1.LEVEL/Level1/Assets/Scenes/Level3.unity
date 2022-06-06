@@ -2366,6 +2366,7 @@ GameObject:
   - component: {fileID: 128681068}
   - component: {fileID: 128681067}
   - component: {fileID: 128681066}
+  - component: {fileID: 128681071}
   m_Layer: 2
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -2532,6 +2533,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &128681071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128681064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde387cac5b6b004593a7d5e6502ce62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &140328393
 GameObject:
   m_ObjectHideFlags: 0
@@ -20627,7 +20640,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d8e9a79c934ccba48929447442850474, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a79c4216f372f1d46874f3e31a78dc64, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.205
   m_Pitch: 1
@@ -20723,10 +20736,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.7152465
-  m_Height: 1.4304931
+  m_Radius: 0.75519353
+  m_Height: 1.6036266
   m_Direction: 1
-  m_Center: {x: -0.03856194, y: 0.28811026, z: -0.03494763}
+  m_Center: {x: -0.021628022, y: 0.374677, z: -0.057960752}
 --- !u!195 &807263670
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -24740,10 +24753,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.7152465
-  m_Height: 1.4304931
+  m_Radius: 0.7703843
+  m_Height: 1.5696318
   m_Direction: 1
-  m_Center: {x: -0.03856194, y: 0.28811026, z: -0.03494763}
+  m_Center: {x: -0.03856194, y: 0.35767627, z: -0.059587236}
 --- !u!82 &977831715
 AudioSource:
   m_ObjectHideFlags: 0
@@ -24754,7 +24767,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d8e9a79c934ccba48929447442850474, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a79c4216f372f1d46874f3e31a78dc64, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.205
   m_Pitch: 1
@@ -46392,7 +46405,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d8e9a79c934ccba48929447442850474, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a79c4216f372f1d46874f3e31a78dc64, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.205
   m_Pitch: 1
@@ -46489,9 +46502,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.7152465
-  m_Height: 1.4304931
+  m_Height: 1.6736071
   m_Direction: 1
-  m_Center: {x: -0.03856194, y: 0.28811026, z: -0.03494763}
+  m_Center: {x: -0.03856194, y: 0.40966725, z: -0.034947634}
 --- !u!195 &2060146891
 NavMeshAgent:
   m_ObjectHideFlags: 0

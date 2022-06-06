@@ -14,7 +14,7 @@ public class TouchSound : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Slime") || other.CompareTag("NPC"))
+        if (other.CompareTag("NPC"))
         {
             SlimeAudio.enabled = false; 
         }
