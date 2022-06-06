@@ -35,6 +35,7 @@ TagManager:
   - notPushable
   - PauseMenu
   - SettingsMenu
+  - GameMusic
   layers:
   - Default
   - TransparentFX
