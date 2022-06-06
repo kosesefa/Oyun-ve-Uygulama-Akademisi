@@ -9,14 +9,14 @@ public class ControlsButton : MonoBehaviour
     public static bool inControllsMenu = false;
     void Start()
     {
-        
-        
+
+
     }
 
-    
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && inControllsMenu==true)
+        if (Input.GetKeyDown(KeyCode.Escape) && inControllsMenu == true && Death.isDead==false)
         {
             Debug.Log("esc bastý");
             _Pause();
@@ -31,6 +31,8 @@ public class ControlsButton : MonoBehaviour
     }
     public void BackButton()
     {
+        _PauseMenu.SetActive(true);
+        _ControllsMenu.SetActive(false);
         inControllsMenu = false;
     }
     public void controllsButton()
