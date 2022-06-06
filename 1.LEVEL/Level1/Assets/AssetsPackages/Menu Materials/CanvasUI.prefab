@@ -3450,6 +3450,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 216744793695010595, guid: ba3456fc42846814bb791a1599b649f2, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 1da6abe5f4f575745bdba28407c9e580, type: 3}
     - target: {fileID: 216744793695010621, guid: ba3456fc42846814bb791a1599b649f2, type: 3}
       propertyPath: m_Name
       value: RawImage
