@@ -185,6 +185,9 @@ http://freesoundeffect.net/sound/gremlin-weeee-sound-effect
 
 
 Kullandığımız müzikler ve izinleri:
+Oyunumuzun 1. ve 2. seviyelerinde kullandığımız müzik takım arkadaşımız Haluk Mert Özdemir tarafından yapılmıştır.
+
+
 https://www.youtube.com/watch?v=CwrMmAZ0_5c
 https://opengameart.org/content/dark-forest-theme
 https://www.youtube.com/watch?v=tch4bG1nzUI
@@ -193,3 +196,5 @@ https://www.youtube.com/watch?v=-6qlLD27taE
 ![Müzik izni](https://user-images.githubusercontent.com/99612318/172247580-8653ec4b-2005-4bb0-b804-c937bb060345.png)
 
 https://www.youtube.com/watch?v=tch4bG1nzUI
+
+
